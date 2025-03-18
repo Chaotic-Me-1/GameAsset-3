@@ -1,15 +1,23 @@
 using UnityEngine;
 using System.Collections;
+using FMODUnity; 
+using FMOD.Studio;
 
-public class BabyCry : MonoBehaviour
+public class BabyCry: MonoBehaviour
 {
-    public Animator animator;      // Assign the Animator in the Inspector
-    public AudioSource crySound;   // Assign an AudioSource with the crying sound
-    public float minCryInterval = 10f;  // Minimum time before crying again
-    public float maxCryInterval = 30f;  // Maximum time before crying again
+    [SerializeField]
+    private Animator animator;   // Animator to make the baby cry
+    
+    [SerializeField]
+    private EventReference cryEvent; // FMOD event
+
+    public float minCryInterval = 10f;  // Minimum time before crying
+    public float maxCryInterval = 30f;  // Maximum time before crying
     public float cryDuration = 5f;      // How long the baby cries
 
-    void Start()
+    private EventInstance cryInstance;
+
+    private void Start()
     {
         StartCoroutine(CryRoutine());
     }
@@ -29,25 +37,42 @@ public class BabyCry : MonoBehaviour
 
     private void StartCrying()
     {
+        // Trigger animator
         if (animator != null)
         {
             animator.SetBool("IsCrying", true);
         }
-        if (crySound != null)
+
+        // Create and start FMOD event
+        if (!cryEvent.IsNull)
         {
-            crySound.Play();
+            cryInstance = RuntimeManager.CreateInstance(cryEvent);
+
+            RuntimeManager.AttachInstanceToGameObject(
+                cryInstance, 
+                transform, 
+                GetComponent<Rigidbody>() // or null if no Rigidbody
+            );
+
+            cryInstance.start();
         }
     }
 
     private void StopCrying()
     {
+        // Stop the animators crying animation
         if (animator != null)
         {
             animator.SetBool("IsCrying", false);
         }
-        if (crySound != null && crySound.isPlaying)
+
+        // Stop, release FMOD event
+        if (cryInstance.isValid())
         {
-            crySound.Stop();
+            cryInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            cryInstance.release();
+            cryInstance.clearHandle();
         }
     }
 }
+

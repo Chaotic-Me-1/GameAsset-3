@@ -1,14 +1,25 @@
 using UnityEngine;
 using System.Collections;
+using FMODUnity; 
+using FMOD.Studio;
 
 public class RandomSoundPlayer : MonoBehaviour
 {
-    public AudioSource audioSource; // Assign an AudioSource in the Inspector
+    [SerializeField]
+    private EventReference fmodEvent;
+
     public float minInterval = 180f; // 3 minutes
     public float maxInterval = 600f; // 10 minutes
 
-    void Start()
+    private void Start()
     {
+        // Play sound when game starts
+        if (!fmodEvent.IsNull)
+        {
+            RuntimeManager.PlayOneShot(fmodEvent, transform.position);
+        }
+
+        // Continue with random-interval coroutine
         StartCoroutine(PlaySoundAtRandomIntervals());
     }
 
@@ -19,10 +30,11 @@ public class RandomSoundPlayer : MonoBehaviour
             float waitTime = Random.Range(minInterval, maxInterval);
             yield return new WaitForSeconds(waitTime);
 
-            if (audioSource != null)
+            if (!fmodEvent.IsNull)
             {
-                audioSource.Play();
+                RuntimeManager.PlayOneShot(fmodEvent, transform.position);
             }
         }
     }
 }
+
