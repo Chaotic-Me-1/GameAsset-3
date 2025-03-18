@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{35ddb2e2-d96c-4e03-8f86-33df5b381480}">
 		<property name="name">
-			<value>Baby</value>
+			<value>CabinSounds</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -30,6 +30,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{cb99d034-e0b9-4d33-8c70-8d6324e583fc}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{32adf468-6055-4f79-846c-e12764aaec4d}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{ba3869ea-9347-4a6a-aaf9-6a927ba61fa1}">
@@ -88,6 +91,9 @@
 	<object class="SingleSound" id="{41f8459a-c5d2-4e5c-a52a-98b199ced3a4}">
 		<property name="length">
 			<value>376.62766439909296</value>
+		</property>
+		<property name="looping">
+			<value>true</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{61e11283-4af0-4a8a-80ac-0f6f52f381b4}</destination>
