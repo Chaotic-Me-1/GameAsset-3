@@ -31,13 +31,11 @@ public class WindowShutter : MonoBehaviour
         if (isTouching && Input.GetMouseButtonDown(0))
         {
             isGrabbing = true;
-            Debug.Log("Started grabbing shutter");
         }
 
         if (Input.GetMouseButtonUp(0))
         {
             isGrabbing = false;
-            Debug.Log("Released shutter");
         }
 
         if (isGrabbing)

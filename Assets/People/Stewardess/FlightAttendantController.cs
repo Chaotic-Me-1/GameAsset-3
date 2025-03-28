@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using FMODUnity;
 
 public class FlightAttendantController : MonoBehaviour
 {
@@ -12,11 +13,54 @@ public class FlightAttendantController : MonoBehaviour
     public float stopDuration = 2f;
 
     private bool movingToEnd = true;
+    private bool dialogueTriggered = false;
+    private bool waitingForPlayerChoice = false;
+    public DialogueData flightAttendantDialogue;
 
     void Start()
     {
         transform.position = startPoint.position;
         StartCoroutine(ServiceRoutine());
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!dialogueTriggered && other.CompareTag("PlayerSeat"))
+        {
+            waitingForPlayerChoice = true;
+            dialogueTriggered = true;
+            animator.SetBool("IsPushing", false);
+            animator.SetBool("IsTalking", true);
+
+            TriggerFlightAttendantDialogue();
+        }
+    }
+
+    private void TriggerFlightAttendantDialogue()
+    {
+        if (flightAttendantDialogue != null)
+        {
+            DialogueManager.instance.StartDialogue(flightAttendantDialogue, null);
+            StartCoroutine(WaitForDialogueToFinish());
+        }
+        else
+        {
+            Debug.LogWarning("Flight attendant dialogue not assigned!");
+        }
+    }
+
+    private IEnumerator WaitForDialogueToFinish()
+    {
+        // Wait until the dialogue UI is hidden
+        while (DialogueManager.instance.dialoguePanel.activeInHierarchy)
+        {
+            yield return null;
+        }
+
+        animator.SetBool("IsTalking", false);
+        animator.SetBool("IsPushing", true);
+        waitingForPlayerChoice = false;
     }
 
     private IEnumerator ServiceRoutine()
@@ -46,10 +90,12 @@ public class FlightAttendantController : MonoBehaviour
                     nextStop = endPoint.position;
                 }
 
-                // Move to nextStop
                 while (Vector3.Distance(transform.position, nextStop) > 0.05f)
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, nextStop, moveSpeed * Time.deltaTime);
+                    if (!waitingForPlayerChoice)
+                    {
+                        transform.position = Vector3.MoveTowards(transform.position, nextStop, moveSpeed * Time.deltaTime);
+                    }
                     yield return null;
                 }
 
