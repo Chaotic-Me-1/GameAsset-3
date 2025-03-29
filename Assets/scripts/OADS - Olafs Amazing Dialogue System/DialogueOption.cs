@@ -10,4 +10,8 @@ public class DialogueOption
 
     public EventReference playerVoiceLine;
     public EventReference npcReactionVoiceLine;
+
+    public DialogueData followUpDialogue;
+
+    public GameObject[] objectsToEnable; 
 }

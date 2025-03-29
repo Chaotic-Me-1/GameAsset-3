@@ -67,13 +67,11 @@ public class DialogueManager : MonoBehaviour
             btn.gameObject.SetActive(false);
         }
 
-        promptText.gameObject.SetActive(false); // 👈 Hide prompt text here
-
-        // Show reaction text
+        promptText.gameObject.SetActive(false);
         reactionText.text = choice.reactionText;
         reactionText.gameObject.SetActive(true);
 
-        // Play player’s selected voice line
+        // 🎤 Play player voice line
         if (!choice.playerVoiceLine.IsNull)
         {
             EventInstance playerLine = RuntimeManager.CreateInstance(choice.playerVoiceLine);
@@ -82,19 +80,39 @@ public class DialogueManager : MonoBehaviour
             playerLine.release();
         }
 
-        // Play NPC reaction voice line (delayed slightly to let player finish)
+        // 🗣️ Play NPC reaction line (delayed)
         StartCoroutine(PlayReactionVoiceLine(choice.npcReactionVoiceLine, 0.5f));
 
-        // Start coroutine to close dialogue after a short delay
-        StartCoroutine(CloseDialogueAfterDelay(3f));
+        // ✅ Enable GameObjects tied to this choice
+        if (choice.objectsToEnable != null)
+        {
+            foreach (GameObject obj in choice.objectsToEnable)
+            {
+                if (obj != null)
+                {
+                    obj.SetActive(true);
+                }
+            }
+        }
 
-        // Notify external systems
+        // 🌿 Branch or close
+        if (choice.followUpDialogue != null)
+        {
+            StartCoroutine(ContinueDialogueAfterDelay(choice.followUpDialogue, 3f));
+        }
+        else
+        {
+            StartCoroutine(CloseDialogueAfterDelay(3f));
+        }
+
+        // Optional: Notify specific systems like BabyCry
         if (currentBabyCry != null)
         {
             currentBabyCry.OnPlayerMadeChoice(optionIndex);
             currentBabyCry = null;
         }
     }
+
 
     private IEnumerator PlayReactionVoiceLine(EventReference voiceLine, float delay)
     {
@@ -108,7 +126,7 @@ public class DialogueManager : MonoBehaviour
             reaction.release();
         }
     }
-    
+
     private IEnumerator CloseDialogueAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
@@ -129,5 +147,19 @@ public class DialogueManager : MonoBehaviour
         if (playerCamera != null) playerCamera.cameraActive = true;
     }
 
+    private IEnumerator ContinueDialogueAfterDelay(DialogueData nextDialogue, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        reactionText.gameObject.SetActive(false);
+        promptText.gameObject.SetActive(true);
+
+        foreach (Button btn in optionButtons)
+        {
+            btn.gameObject.SetActive(true);
+        }
+
+        StartDialogue(nextDialogue); // Start the follow-up dialogue
+    }
 
 }

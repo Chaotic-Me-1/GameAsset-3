@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
-  m_Name: FlightAttendantDialogue
+  m_Name: Coffee
   m_EditorClassIdentifier: 
-  promptText: The flight attendant stops next to you and smiles politely.
+  promptText: She leans in closer... Alright, cream? Sugar?
   promptVoiceLine:
     Guid:
       Data1: 0
@@ -21,43 +21,9 @@ MonoBehaviour:
       Data4: 0
     Path: 
   options:
-  - optionText: Smile and ask for water.
-    karmaImpact: 5
-    reactionText: She nods and continues on her way."
-    playerVoiceLine:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    npcReactionVoiceLine:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-  - optionText: Complain about the noise.
-    karmaImpact: -10
-    reactionText: She apologizes stiffly, looking uncomfortable.
-    playerVoiceLine:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    npcReactionVoiceLine:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-  - optionText: Say nothing and look away.
+  - optionText: I'd like some cream, but no sugar, thanks.
     karmaImpact: 0
-    reactionText: She hesitates, then keeps moving.
+    reactionText: 
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -72,3 +38,40 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    followUpDialogue: {fileID: 0}
+  - optionText: I'll have both cream and sugar!
+    karmaImpact: 0
+    reactionText: 
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
+  - optionText: I'll take it black.
+    karmaImpact: 0
+    reactionText: 
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
