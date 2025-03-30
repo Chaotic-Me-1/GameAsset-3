@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
   m_Name: Alcohol
   m_EditorClassIdentifier: 
-  promptText: 
+  promptText: Oh, alright. What kind of alcohol do you want, sir?
   promptVoiceLine:
     Guid:
       Data1: 0
@@ -20,4 +20,61 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  options: []
+  options:
+  - optionText: I'll take whiskey, darling.
+    karmaImpact: 0
+    reactionText: 
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
+    objectsToEnable: []
+  - optionText: Martini please. Shaken, not stirred.
+    karmaImpact: 0
+    reactionText: 
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
+    objectsToEnable: []
+  - optionText: Your strongest vodka.
+    karmaImpact: 0
+    reactionText: 
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
+    objectsToEnable: []

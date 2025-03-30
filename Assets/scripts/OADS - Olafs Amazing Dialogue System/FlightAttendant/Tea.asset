@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
   m_Name: Tea
   m_EditorClassIdentifier: 
-  promptText: 
+  promptText: She brings out the cettle and looks at you. Would you like sugar in
+    your tea, or perhaps some milk?
   promptVoiceLine:
     Guid:
       Data1: 0
@@ -20,4 +21,61 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  options: []
+  options:
+  - optionText: No, thanks.
+    karmaImpact: 0
+    reactionText: 
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
+    objectsToEnable: []
+  - optionText: I'll have some sugar.
+    karmaImpact: 0
+    reactionText: 
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
+    objectsToEnable: []
+  - optionText: I'll take some milk and sugar.
+    karmaImpact: 0
+    reactionText: 
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
+    objectsToEnable: []
