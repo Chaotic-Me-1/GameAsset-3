@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{447cc9cc-8595-42c5-a539-556821ccabaf}">
+	<object class="AudioFile" id="{163cafcf-a2fb-4f13-ad35-0ac6d18d8ba9}">
 		<property name="assetPath">
-			<value>Ambient sounds.wav</value>
+			<value>untitled.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
@@ -14,7 +14,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>120</value>
+			<value>12.282895833333333</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{5d119a6c-b98b-482c-87b4-d041f895b4f3}</destination>
