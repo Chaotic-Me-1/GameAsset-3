@@ -8,7 +8,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 0
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000227F6A21A88 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002F816755DE8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,24 +17,189 @@
 [LOG] Manager::init                            : done.
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
-[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002F6C74A4B58, queue head = 000002F599D2F5B8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002F6C74A4B58
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9313376
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10816
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002F8190B8668
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='untitled', format=5, channels=2, frequency=48000, lengthbytes=127872, lengthpcm=589579, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.910991.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002F6C74A4B58
+[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded. Instrument {8c170fc9-c80c-4850-ab6e-2f7fab839661} started 64.00ms later than expected, sound may play at incorrect time. SCHEDULE_DELAY: 170.67ms.
+[LOG] SystemI::createSound                     : filename = Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002F6C74A1318, queue head = 000002F599D2F5B8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002F6C74A1318
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9313376
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10816
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002F8190BA348
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='untitled', format=5, channels=2, frequency=48000, lengthbytes=127872, lengthpcm=589579, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.910991.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002F6C74A1318
+[LOG] SystemI::createSound                     : filename = Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002F5BD3CD058, queue head = 000002F599D2F5B8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002F5BD3CD058
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9313376
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10816
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002F7A5B2D1F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='untitled', format=5, channels=2, frequency=48000, lengthbytes=127872, lengthpcm=589579, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.910991.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002F5BD3CD058
+[LOG] SoundI::release                          : airplanecabinchimes (000002F599D2EC98)
+[LOG] SoundI::release                          :     airplanecabinchimes (000002F5993156F8)
+[LOG] SoundI::release                          :     airplanecabinchimes (000002F7FFF52D18)
+[LOG] SystemI::createSound                     : filename = Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002F5BD3CD378, queue head = 000002F599D2F5B8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002F5BD3CD378
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9313376
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10816
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002F7A5B2D8D8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='2025-03-19 20-16-47', format=5, channels=2, frequency=48000, lengthbytes=338432, lengthpcm=1200000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002F5BD3CD378
+[LOG] SystemI::createSound                     : filename = Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002F5BD3CC888, queue head = 000002F599D2F5B8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002F5BD3CC888
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9313376
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10816
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002F7A5B2DFB8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='untitled', format=5, channels=2, frequency=48000, lengthbytes=127872, lengthpcm=589579, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.910991.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002F5BD3CC888
+[LOG] SoundI::release                          : untitled (000002F6C74A4B58)
+[LOG] SoundI::release                          :     untitled (000002F599315B78)
+[LOG] SoundI::release                          :     untitled (000002F5BEE16818)
+[LOG] SystemI::createSound                     : filename = Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002F5BD3CC248, queue head = 000002F599D2F5B8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002F5BD3CC248
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9313376
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10816
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002F7A5B2D778
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='untitled', format=5, channels=2, frequency=48000, lengthbytes=127872, lengthpcm=589579, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.910991.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002F5BD3CC248
+[LOG] SystemI::createSound                     : filename = Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002F5BD3CD828, queue head = 000002F599D2F5B8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002F5BD3CD828
+[LOG] SoundI::release                          :     untitled (000002F6C74A1318)
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :         exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :         exinfo->length             = 9313376
+[LOG] SoundI::release                          :         untitled (000002F599315CF8)
+[LOG] SystemI::createSoundInternal             :         exinfo->fileoffset         = 10816
+[LOG] SoundI::release                          :         untitled (000002F5BEB3DF88)
+[LOG] SystemI::createSoundInternal             :         exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002F7A5B2DA38
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='untitled', format=5, channels=2, frequency=48000, lengthbytes=127872, lengthpcm=589579, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.910991.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002F5BD3CD828
+[LOG] SystemI::createSound                     : filename = Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002F688D503C8, queue head = 000002F599D2F5B8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002F688D503C8
+[LOG] SoundI::release                          : untitled (000002F5BD3CD058)
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :         exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :         exinfo->length             = 9313376
+[LOG] SoundI::release                          :         untitled (000002F599314678)
+[LOG] SystemI::createSoundInternal             :         exinfo->fileoffset         = 10816
+[LOG] SoundI::release                          :         untitled (000002F688D50238)
+[LOG] SystemI::createSoundInternal             :         exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002F6F382A838
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='untitled', format=5, channels=2, frequency=48000, lengthbytes=127872, lengthpcm=589579, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.910991.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002F688D503C8
+[LOG] SystemI::createSound                     : filename = Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002F688D51368, queue head = 000002F599D2F5B8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002F688D51368
+[LOG] SoundI::release                          : untitled (000002F5BD3CC888)
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :         exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :         exinfo->length             = 9313376
+[LOG] SoundI::release                          :         untitled (000002F7DFDDB308)
+[LOG] SystemI::createSoundInternal             :         exinfo->fileoffset         = 10816
+[LOG] SoundI::release                          :         untitled (000002F688D4FD88)
+[LOG] SystemI::createSoundInternal             :         exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002F6F382A2B8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='untitled', format=5, channels=2, frequency=48000, lengthbytes=127872, lengthpcm=589579, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.910991.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002F688D51368
+[LOG] SoundI::release                          : 2025-03-19 20-16-47 (000002F5BD3CD378)
+[LOG] SoundI::release                          :     2025-03-19 20-16-47 (000002F7DFDD9E08)
+[LOG] SoundI::release                          :     2025-03-19 20-16-47 (000002F688D51048)
+[LOG] SoundI::release                          : untitled (000002F688D503C8)
+[LOG] SoundI::release                          :     untitled (000002F5993156F8)
+[LOG] SoundI::release                          :     untitled (000002F599DDB078)
+[LOG] SoundI::release                          : untitled (000002F5BD3CC248)
+[LOG] SoundI::release                          :     untitled (000002F7DFDDB488)
+[LOG] SoundI::release                          :     untitled (000002F5BE2E2568)
+[LOG] SoundI::release                          : untitled (000002F688D51368)
+[LOG] SoundI::release                          :     untitled (000002F599315B78)
+[LOG] SoundI::release                          :     untitled (000002F5BEE156E8)
+[LOG] SoundI::release                          : untitled (000002F5BD3CD828)
+[LOG] SoundI::release                          :     untitled (000002F7DFDD9808)
+[LOG] SoundI::release                          :     untitled (000002F5BD3CC3D8)
+[LOG] SoundI::release                          : Background noise (000002F599D2EB08)
+[LOG] SoundI::release                          :     Background noise (000002F599315578)
+[LOG] SoundI::release                          :     Background noise (000002F7FFF52098)
+[LOG] SoundI::release                          : Ambient sounds (000002F599D2E7E8)
+[LOG] SoundI::release                          :     Ambient sounds (000002F5993144F8)
+[LOG] SoundI::release                          :     Ambient sounds (000002F7FFF52868)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 2048 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 512 * 4
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
-[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[WRN] OutputWASAPI::mixerThread                : GetCurrentPadding returned 0x88890004. Device was unplugged.
-[WRN] OutputWASAPI::mixerThread                : GetCurrentPadding returned 0x88890004. Device was unplugged.
-[WRN] OutputWASAPI::mixerThread                : GetCurrentPadding returned 0x88890004. Device was unplugged.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 2048 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 512 * 4
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::closeInternal                   : Closed.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -42,3 +207,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::closeInternal                   : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
