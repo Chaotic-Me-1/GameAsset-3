@@ -18,40 +18,26 @@ public class EventSounds : MonoBehaviour
     public void Step() //footstep
     {
         
-        if (attendent.GetBool("IsPushing") == true)
-        {
             PlaySound(stepSound);
-            
-        }
-        else if (attendent.GetBool("IsPushing") == false)
-        {
-            //Stop(stepSound)
-        }
     }
 
     public void Talk() //talking
     {
-        if (attendent.GetBool("IsTalking") == true)
-        {
             PlaySound(talkSound);
-        }
-            
     }
 
     public void Serve() //serving food
     {
-        if (attendent.GetBool("IsServing") == true)
-        {
             PlaySound(serveSound);
-        }
-       
     }
 
     private void PlaySound(EventReference soundEvent) //plays the sound that is meant to be playing at the transform position of the gameobject with this script on it.
     {
         if (soundEvent.IsNull) return; //if there isnt a fmod sound event assigned we skip this so we don't get a gazillion errors.
 
-        //RuntimeManager.PlayOneShot(soundEvent, transform.position);
-        RuntimeManager.PlayOneShot(soundEvent);
+        RuntimeManager.PlayOneShot(soundEvent, transform.position);
+        
+        
     }
+    
 }

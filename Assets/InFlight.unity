@@ -1744,6 +1744,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 982087467}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f772c15a8066aa74f864a8f0149ada7a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 982087468}
   m_SourcePrefab: {fileID: 100100000, guid: f772c15a8066aa74f864a8f0149ada7a, type: 3}
 --- !u!1 &274644329 stripped
 GameObject:
@@ -6543,11 +6547,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1798416758
+      Data2: 1178944227
+      Data3: -211125856
+      Data4: 1870914689
+    Path: event:/Walk
   talkSound:
     Guid:
       Data1: 0
@@ -6562,6 +6566,22 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  attendent: {fileID: 982087465}
+--- !u!114 &982087468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274644329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters: []
+  TriggerEvent: 0
 --- !u!1 &983746381
 GameObject:
   m_ObjectHideFlags: 0
@@ -7673,11 +7693,11 @@ MonoBehaviour:
   leafletPanel: {fileID: 309367584}
   openLeafletEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 758192713
+      Data2: 1299885882
+      Data3: 967399298
+      Data4: 102484606
+    Path: event:/Flight manual
 --- !u!114 &1143294791
 MonoBehaviour:
   m_ObjectHideFlags: 0
