@@ -42,13 +42,17 @@ public class HandInteraction : MonoBehaviour
 
     void Update()
     {
-        if (currentInteractable != null && Input.GetMouseButtonDown(0)) // Left click
+        if (currentInteractable != null && Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Interacting with: " + currentInteractable.name);
-            // Optional: Call interaction method on object
             IInteractable interact = currentInteractable.GetComponent<IInteractable>();
             if (interact != null)
             {
+                // Inject the hand IK target if it's a drink
+                if (interact is DrinkInteractable drink)
+                {
+                    drink.followTarget = GameObject.FindWithTag("PlayerHand")?.transform;
+                }
+
                 interact.OnInteract();
             }
         }
