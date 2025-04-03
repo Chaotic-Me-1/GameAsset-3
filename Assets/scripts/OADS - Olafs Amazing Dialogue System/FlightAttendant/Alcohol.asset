@@ -22,8 +22,9 @@ MonoBehaviour:
     Path: 
   options:
   - optionText: I'll take whiskey, darling.
-    karmaImpact: 0
-    reactionText: 
+    karmaImpact: -5
+    reactionText: Whiskey? Yes, of course. *she hesitates, but hands you a glass
+      of whiskey, on the rocks*
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -40,9 +41,9 @@ MonoBehaviour:
       Path: 
     followUpDialogue: {fileID: 0}
     objectsToEnable: []
-  - optionText: Martini please. Shaken, not stirred.
-    karmaImpact: 0
-    reactionText: 
+  - optionText: A red wine, please.
+    karmaImpact: -1
+    reactionText: Sure. I have a 100 year old bottle that someone left behind...
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -60,8 +61,9 @@ MonoBehaviour:
     followUpDialogue: {fileID: 0}
     objectsToEnable: []
   - optionText: Your strongest vodka.
-    karmaImpact: 0
-    reactionText: 
+    karmaImpact: -10
+    reactionText: Aha... She stares at you while pouring some strange Russian brand
+      of vodka.
     playerVoiceLine:
       Guid:
         Data1: 0

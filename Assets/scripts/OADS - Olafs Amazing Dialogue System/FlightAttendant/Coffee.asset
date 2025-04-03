@@ -22,7 +22,7 @@ MonoBehaviour:
     Path: 
   options:
   - optionText: I'd like some cream, but no sugar, thanks.
-    karmaImpact: 0
+    karmaImpact: 5
     reactionText: 
     playerVoiceLine:
       Guid:
@@ -39,8 +39,9 @@ MonoBehaviour:
         Data4: 0
       Path: 
     followUpDialogue: {fileID: 0}
+    objectsToEnable: []
   - optionText: I'll have both cream and sugar!
-    karmaImpact: 0
+    karmaImpact: 10
     reactionText: 
     playerVoiceLine:
       Guid:
@@ -57,6 +58,7 @@ MonoBehaviour:
         Data4: 0
       Path: 
     followUpDialogue: {fileID: 0}
+    objectsToEnable: []
   - optionText: I'll take it black.
     karmaImpact: 0
     reactionText: 
@@ -75,3 +77,4 @@ MonoBehaviour:
         Data4: 0
       Path: 
     followUpDialogue: {fileID: 0}
+    objectsToEnable: []
