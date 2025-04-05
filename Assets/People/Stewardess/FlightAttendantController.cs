@@ -15,7 +15,7 @@ public class FlightAttendantController : MonoBehaviour
     private bool movingToEnd = true;
     private bool dialogueTriggered = false;
     private bool waitingForPlayerChoice = false;
-    public DialogueData flightAttendantDialogue;
+    public DialogueData[] possibleDialogues;
 
     void Start()
     {
@@ -39,14 +39,27 @@ public class FlightAttendantController : MonoBehaviour
 
     private void TriggerFlightAttendantDialogue()
     {
-        if (flightAttendantDialogue != null)
+        int currentLoop = LoopCycleManager.instance != null ? LoopCycleManager.instance.loopCount : 0;
+
+        DialogueData selectedDialogue = null;
+
+        foreach (var d in possibleDialogues)
         {
-            DialogueManager.instance.StartDialogue(flightAttendantDialogue, null);
+            if (d != null && (d.requiredLoop == -1 || d.requiredLoop == currentLoop))
+            {
+                selectedDialogue = d;
+                break;
+            }
+        }
+
+        if (selectedDialogue != null)
+        {
+            DialogueManager.instance.StartDialogue(selectedDialogue, null);
             StartCoroutine(WaitForDialogueToFinish());
         }
         else
         {
-            Debug.LogWarning("Flight attendant dialogue not assigned!");
+            Debug.LogWarning($"No flight attendant dialogue found for loop {currentLoop}!");
         }
     }
 

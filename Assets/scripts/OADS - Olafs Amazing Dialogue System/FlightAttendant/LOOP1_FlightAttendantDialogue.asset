@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
-  m_Name: FlightAttendantDialogue_1
+  m_Name: LOOP1_FlightAttendantDialogue
   m_EditorClassIdentifier: 
   promptText: The flight attendant stops next to you and smiles. Would you like something
     to drink, sir? Coffee? Tea?? Alcohol?

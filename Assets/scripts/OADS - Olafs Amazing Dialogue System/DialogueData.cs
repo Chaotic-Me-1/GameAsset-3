@@ -8,5 +8,8 @@ public class DialogueData : ScriptableObject
     public EventReference promptVoiceLine;
 
     public DialogueOption[] options;
+
+    [Header("Loop Requirements")]
+    public int requiredLoop = -1; // -1 means available on all loops
 }
 

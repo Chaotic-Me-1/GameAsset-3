@@ -13,5 +13,5 @@ public class DialogueOption
 
     public DialogueData followUpDialogue;
 
-    public GameObject[] objectsToEnable; 
+    public string[] objectIDsToEnable;
 }

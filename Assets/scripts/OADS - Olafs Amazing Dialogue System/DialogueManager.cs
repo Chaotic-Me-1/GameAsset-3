@@ -83,15 +83,16 @@ public class DialogueManager : MonoBehaviour
         // 🗣️ Play NPC reaction line (delayed)
         StartCoroutine(PlayReactionVoiceLine(choice.npcReactionVoiceLine, 0.5f));
 
-        // ✅ Enable GameObjects tied to this choice
-        if (choice.objectsToEnable != null)
+        // 🔄 Enable objects by ID (if any)
+        if (choice.objectIDsToEnable != null)
         {
-            foreach (GameObject obj in choice.objectsToEnable)
+            foreach (string id in choice.objectIDsToEnable)
             {
+                GameObject obj = SceneObjectLinker.instance.GetObjectByID(id);
                 if (obj != null)
-                {
                     obj.SetActive(true);
-                }
+                else
+                    Debug.LogWarning($"Object ID '{id}' not found in SceneObjectLinker.");
             }
         }
 
@@ -105,7 +106,7 @@ public class DialogueManager : MonoBehaviour
             StartCoroutine(CloseDialogueAfterDelay(3f));
         }
 
-        // Optional: Notify specific systems like BabyCry
+        // Notify systems like BabyCry
         if (currentBabyCry != null)
         {
             currentBabyCry.OnPlayerMadeChoice(optionIndex);
