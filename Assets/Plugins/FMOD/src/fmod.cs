@@ -1307,44 +1307,44 @@ namespace FMOD
         }
 
         // Sound/DSP/Channel/FX creation and retrieval.
-        public RESULT createSound(string name, MODE mode, ref CREATESOUNDEXINFO exinfo, out Sound sound)
+        public RESULT createSound(string name, MODE mode, ref CREATESOUNDEXINFO exinfo, out EventRefrence sound)
         {
             using (StringHelper.ThreadSafeEncoding encoder = StringHelper.GetFreeHelper())
             {
                  return FMOD5_System_CreateSound(this.handle, encoder.byteFromStringUTF8(name), mode, ref exinfo, out sound.handle);
             }
         }
-        public RESULT createSound(byte[] data, MODE mode, ref CREATESOUNDEXINFO exinfo, out Sound sound)
+        public RESULT createSound(byte[] data, MODE mode, ref CREATESOUNDEXINFO exinfo, out EventRefrence sound)
         {
             return FMOD5_System_CreateSound(this.handle, data, mode, ref exinfo, out sound.handle);
         }
-        public RESULT createSound(IntPtr name_or_data, MODE mode, ref CREATESOUNDEXINFO exinfo, out Sound sound)
+        public RESULT createSound(IntPtr name_or_data, MODE mode, ref CREATESOUNDEXINFO exinfo, out EventRefrence sound)
         {
             return FMOD5_System_CreateSound(this.handle, name_or_data, mode, ref exinfo, out sound.handle);
         }
-        public RESULT createSound(string name, MODE mode, out Sound sound)
+        public RESULT createSound(string name, MODE mode, out EventRefrence sound)
         {
             CREATESOUNDEXINFO exinfo = new CREATESOUNDEXINFO();
             exinfo.cbsize = Marshal.SizeOf<CREATESOUNDEXINFO>();
 
             return createSound(name, mode, ref exinfo, out sound);
         }
-        public RESULT createStream(string name, MODE mode, ref CREATESOUNDEXINFO exinfo, out Sound sound)
+        public RESULT createStream(string name, MODE mode, ref CREATESOUNDEXINFO exinfo, out EventRefrence sound)
         {
             using (StringHelper.ThreadSafeEncoding encoder = StringHelper.GetFreeHelper())
             {
                 return FMOD5_System_CreateStream(this.handle, encoder.byteFromStringUTF8(name), mode, ref exinfo, out sound.handle);
             }
         }
-        public RESULT createStream(byte[] data, MODE mode, ref CREATESOUNDEXINFO exinfo, out Sound sound)
+        public RESULT createStream(byte[] data, MODE mode, ref CREATESOUNDEXINFO exinfo, out EventRefrence sound)
         {
             return FMOD5_System_CreateStream(this.handle, data, mode, ref exinfo, out sound.handle);
         }
-        public RESULT createStream(IntPtr name_or_data, MODE mode, ref CREATESOUNDEXINFO exinfo, out Sound sound)
+        public RESULT createStream(IntPtr name_or_data, MODE mode, ref CREATESOUNDEXINFO exinfo, out EventRefrence sound)
         {
             return FMOD5_System_CreateStream(this.handle, name_or_data, mode, ref exinfo, out sound.handle);
         }
-        public RESULT createStream(string name, MODE mode, out Sound sound)
+        public RESULT createStream(string name, MODE mode, out EventRefrence sound)
         {
             CREATESOUNDEXINFO exinfo = new CREATESOUNDEXINFO();
             exinfo.cbsize = Marshal.SizeOf<CREATESOUNDEXINFO>();
@@ -1377,7 +1377,7 @@ namespace FMOD
         {
             return FMOD5_System_CreateReverb3D(this.handle, out reverb.handle);
         }
-        public RESULT playSound(Sound sound, ChannelGroup channelgroup, bool paused, out Channel channel)
+        public RESULT playSound(EventRefrence sound, ChannelGroup channelgroup, bool paused, out Channel channel)
         {
             return FMOD5_System_PlaySound(this.handle, sound.handle, channelgroup.handle, paused, out channel.handle);
         }
@@ -1459,7 +1459,7 @@ namespace FMOD
         {
             return FMOD5_System_GetRecordPosition(this.handle, id, out position);
         }
-        public RESULT recordStart(int id, Sound sound, bool loop)
+        public RESULT recordStart(int id, EventRefrence sound, bool loop)
         {
             return FMOD5_System_RecordStart(this.handle, id, sound.handle, loop);
         }
@@ -1738,7 +1738,7 @@ namespace FMOD
     /*
         'Sound' API.
     */
-    public struct Sound
+    public struct EventRefrence
     {
         public RESULT release()
         {
@@ -1791,11 +1791,11 @@ namespace FMOD
             return FMOD5_Sound_Get3DCustomRolloff(this.handle, out points, out numpoints);
         }
 
-        public RESULT getSubSound(int index, out Sound subsound)
+        public RESULT getSubSound(int index, out EventRefrence subsound)
         {
             return FMOD5_Sound_GetSubSound(this.handle, index, out subsound.handle);
         }
-        public RESULT getSubSoundParent(out Sound parentsound)
+        public RESULT getSubSoundParent(out EventRefrence parentsound)
         {
             return FMOD5_Sound_GetSubSoundParent(this.handle, out parentsound.handle);
         }
@@ -2051,7 +2051,7 @@ namespace FMOD
 
         public IntPtr handle;
 
-        public Sound(IntPtr ptr)    { this.handle = ptr; }
+        public EventRefrence(IntPtr ptr)    { this.handle = ptr; }
         public bool hasHandle()     { return this.handle != IntPtr.Zero; }
         public void clearHandle()   { this.handle = IntPtr.Zero; }
 
@@ -2199,7 +2199,7 @@ namespace FMOD
         {
             return FMOD5_Channel_IsVirtual(this.handle, out isvirtual);
         }
-        public RESULT getCurrentSound(out Sound sound)
+        public RESULT getCurrentSound(out EventRefrence sound)
         {
             return FMOD5_Channel_GetCurrentSound(this.handle, out sound.handle);
         }
@@ -3180,7 +3180,7 @@ namespace FMOD
         {
             return FMOD5_SoundGroup_GetNumSounds(this.handle, out numsounds);
         }
-        public RESULT getSound(int index, out Sound sound)
+        public RESULT getSound(int index, out EventRefrence sound)
         {
             return FMOD5_SoundGroup_GetSound(this.handle, index, out sound.handle);
         }
