@@ -1,4 +1,6 @@
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class LeafletInteractable : MonoBehaviour, IInteractable
 {
@@ -10,6 +12,9 @@ public class LeafletInteractable : MonoBehaviour, IInteractable
     [Header("Glow Settings (HDRP Nits)")]
     public Color emissionColor = Color.white;
     public float emissionNitsIntensity = 2000f; // Strong glow
+
+    [Header("Audio")]
+    public EventReference openLeafletEvent;
 
     void Start()
     {
@@ -24,6 +29,7 @@ public class LeafletInteractable : MonoBehaviour, IInteractable
     public void OnInteract()
     {
         leafletUI.ShowLeaflet();
+        PlayOpenSound();
         Debug.Log("Opened Leaflet: " + gameObject.name);
     }
 
@@ -47,6 +53,17 @@ public class LeafletInteractable : MonoBehaviour, IInteractable
 
         rend.SetPropertyBlock(propBlock);
         Debug.Log("[Glow OFF]");
+    }
+
+    private void PlayOpenSound()
+    {
+        if (!openLeafletEvent.IsNull)
+        {
+            EventInstance instance = RuntimeManager.CreateInstance(openLeafletEvent);
+            RuntimeManager.AttachInstanceToGameObject(instance, transform, GetComponent<Rigidbody>());
+            instance.start();
+            instance.release(); // Let FMOD handle cleanup
+        }
     }
 }
 
