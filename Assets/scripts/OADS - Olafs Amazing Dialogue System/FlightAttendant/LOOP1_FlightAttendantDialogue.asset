@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LOOP1_FlightAttendantDialogue
   m_EditorClassIdentifier: 
   promptText: The flight attendant stops next to you and smiles. Would you like something
-    to drink, sir? Coffee? Tea?? Alcohol?
+    to drink, sir? Coffee? Tea?? Alcohol? What do you choose, sir?"
   promptVoiceLine:
     Guid:
       Data1: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
   options:
   - optionText: Smile and ask politely for coffee.
     karmaImpact: 5
-    reactionText: 
+    reactionText: '"Coffee? Alright!"'
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -40,9 +40,10 @@ MonoBehaviour:
         Data4: 0
       Path: 
     followUpDialogue: {fileID: 11400000, guid: 99bef42a34f29af48b4f425c2e8d2eb6, type: 2}
+    objectIDsToEnable: []
   - optionText: Tea. please.
     karmaImpact: 5
-    reactionText: 
+    reactionText: '"Aha, tea, sure!"'
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -58,9 +59,10 @@ MonoBehaviour:
         Data4: 0
       Path: 
     followUpDialogue: {fileID: 11400000, guid: 939094c27b332014faf65dcb89732493, type: 2}
+    objectIDsToEnable: []
   - optionText: Alcohol.
     karmaImpact: -5
-    reactionText: 
+    reactionText: '"Alcohol, huh?"'
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -76,3 +78,5 @@ MonoBehaviour:
         Data4: 0
       Path: 
     followUpDialogue: {fileID: 11400000, guid: 5640fea9ec50e984eb9bc04ba885b27e, type: 2}
+    objectIDsToEnable: []
+  requiredLoop: 0

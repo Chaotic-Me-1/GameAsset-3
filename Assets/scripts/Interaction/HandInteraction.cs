@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HandInteraction : MonoBehaviour
 {
+    public MovementTutorial tutorial;
     private Collider currentInteractable;
     public bool IsTouchingInteractable()
     {
@@ -19,7 +20,7 @@ public class HandInteraction : MonoBehaviour
             IInteractable interact = currentInteractable.GetComponent<IInteractable>();
             if (interact != null)
             {
-                interact.OnTouchStart();  // 🔥 THIS fires glow
+                interact.OnTouchStart();
                 Debug.Log("Touching: " + other.name);
             }
         }
@@ -32,7 +33,7 @@ public class HandInteraction : MonoBehaviour
             IInteractable interact = currentInteractable.GetComponent<IInteractable>();
             if (interact != null)
             {
-                interact.OnTouchEnd();  // 🔥 THIS disables glow
+                interact.OnTouchEnd(); 
                 Debug.Log("Stopped touching: " + other.name);
             }
 
@@ -47,7 +48,13 @@ public class HandInteraction : MonoBehaviour
             IInteractable interact = currentInteractable.GetComponent<IInteractable>();
             if (interact != null)
             {
-                // Inject the hand IK target if it's a drink
+                //  Notify tutorial manually
+                if (tutorial != null)
+                {
+                    tutorial.MarkAsInteracted();
+                }
+
+                //  Inject hand target if drink
                 if (interact is DrinkInteractable drink)
                 {
                     drink.followTarget = GameObject.FindWithTag("PlayerHand")?.transform;

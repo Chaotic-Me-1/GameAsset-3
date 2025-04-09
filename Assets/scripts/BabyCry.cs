@@ -5,58 +5,50 @@ using FMOD.Studio;
 
 public class BabyCry : MonoBehaviour
 {
-    [SerializeField]
-    private Animator animator;   // Animator to make the baby cry
+    [SerializeField] private Animator animator;
+    [SerializeField] private EventReference cryEvent;
 
-    [SerializeField]
-    private EventReference cryEvent; // FMOD event
+    [Header("Timing")]
+    public float delayBeforeCry = 5f; // ⏱ Time after enable before crying starts
+    public float cryDuration = 5f;    // How long the baby cries
 
-    public float minCryInterval = 10f;  // Minimum time before crying
-    public float maxCryInterval = 30f;  // Maximum time before crying
-    public float cryDuration = 5f;      // How long the baby cries
+    [Header("Dialogue")]
+    public DialogueData cryingBabyDialogue;
 
     private EventInstance cryInstance;
 
-    // New logic variables
     private bool dialogueTriggered = false;
     private bool isCryingForever = false;
     private bool cryInterrupted = false;
 
-    private void Start()
+    void OnEnable()
     {
-        StartCoroutine(CryRoutine());
+        StopAllCoroutines(); // In case it's already running
+        StartCoroutine(DelayedCryStart());
     }
 
-    private IEnumerator CryRoutine()
+    private IEnumerator DelayedCryStart()
     {
-        while (true)
+        yield return new WaitForSeconds(delayBeforeCry);
+        StartCrying();
+
+        float timer = 0f;
+        while (timer < cryDuration && !cryInterrupted)
         {
-            float waitTime = Random.Range(minCryInterval, maxCryInterval);
-            yield return new WaitForSeconds(waitTime);
+            timer += Time.deltaTime;
+            yield return null;
+        }
 
-            StartCrying();
-
-            float timer = 0f;
-            while (timer < cryDuration && !cryInterrupted)
-            {
-                timer += Time.deltaTime;
-                yield return null;
-            }
-
-            if (!cryInterrupted)
-            {
-                StopCrying();
-            }
-            // If interrupted, StopCrying() was already called
+        if (!cryInterrupted)
+        {
+            StopCrying();
         }
     }
 
     private void StartCrying()
     {
         if (animator != null)
-        {
             animator.SetBool("IsCrying", true);
-        }
 
         if (!cryEvent.IsNull)
         {
@@ -75,9 +67,7 @@ public class BabyCry : MonoBehaviour
     private void StopCrying()
     {
         if (animator != null)
-        {
             animator.SetBool("IsCrying", false);
-        }
 
         if (cryInstance.isValid())
         {
@@ -105,62 +95,41 @@ public class BabyCry : MonoBehaviour
         }
 
         if (animator != null)
-        {
             animator.SetBool("IsCrying", true);
-        }
 
-        yield break; // Loop ends here; crying continues until manually stopped
+        yield break;
     }
 
     private void TriggerBabyDialogue()
     {
-        DialogueData babyDialogue = new DialogueData();
-        babyDialogue.promptText = "A baby starts crying loudly nearby...";
-
-        babyDialogue.options = new DialogueOption[3];
-
-        babyDialogue.options[0] = new DialogueOption
+        if (cryingBabyDialogue != null)
         {
-            optionText = "Gently reassure the baby.",
-            karmaImpact = 10,
-            reactionText = "The baby calms down, the parent gives you a thankful nod."
-        };
-
-        babyDialogue.options[1] = new DialogueOption
+            DialogueManager.instance.StartDialogue(cryingBabyDialogue, this);
+        }
+        else
         {
-            optionText = "Shout at the baby and the parents.",
-            karmaImpact = -10,
-            reactionText = "The crying intensifies. Other passengers glare at you."
-        };
-
-        babyDialogue.options[2] = new DialogueOption
-        {
-            optionText = "Ignore it and stay silent.",
-            karmaImpact = 0,
-            reactionText = "You do nothing. The crying continues unabated."
-        };
-
-        DialogueManager.instance.StartDialogue(babyDialogue, this); // Pass this BabyCry reference
+            Debug.LogWarning("No DialogueData assigned to BabyCry!", this);
+        }
     }
 
-    // Called by DialogueManager after choice is made
     public void OnPlayerMadeChoice(int choiceIndex)
     {
-        if (choiceIndex == 0) // Help baby
+        if (choiceIndex == 0)
         {
             cryInterrupted = true;
             StopCrying();
         }
-        else if (choiceIndex == 1) // Yell at baby
+        else if (choiceIndex == 1)
         {
             isCryingForever = true;
-            Debug.Log("The baby is now crying forever...");
-            // Current cry stops naturally, then CryForeverLoop begins
+            Debug.Log("The baby is now crying forever! >:)");
+            StopAllCoroutines();
+            StopCrying();
+            StartCoroutine(CryForeverLoop());
         }
-        else
+        else if (choiceIndex == 2)
         {
-            // Ignore: normal behavior
+            // Let it finish naturally
         }
     }
 }
-

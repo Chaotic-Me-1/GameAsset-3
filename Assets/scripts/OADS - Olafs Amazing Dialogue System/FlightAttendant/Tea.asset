@@ -39,8 +39,9 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 0}
-    objectsToEnable: []
+    followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
+    objectIDsToEnable:
+    - Tea
   - optionText: I'll have some sugar.
     karmaImpact: 5
     reactionText: 
@@ -58,8 +59,9 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 0}
-    objectsToEnable: []
+    followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
+    objectIDsToEnable:
+    - Tea
   - optionText: I'll take some milk and sugar.
     karmaImpact: 10
     reactionText: 
@@ -77,5 +79,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 0}
-    objectsToEnable: []
+    followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
+    objectIDsToEnable:
+    - Tea
+  requiredLoop: -1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
   m_Name: Coffee
   m_EditorClassIdentifier: 
-  promptText: She leans in closer... Alright, cream? Sugar?
+  promptText: She leans in closer... "Alright, cream? Sugar?"
   promptVoiceLine:
     Guid:
       Data1: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
   options:
   - optionText: I'd like some cream, but no sugar, thanks.
     karmaImpact: 5
-    reactionText: 
+    reactionText: '"Here you go, sir."'
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -38,11 +38,12 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 0}
-    objectsToEnable: []
+    followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
+    objectIDsToEnable:
+    - Coffee
   - optionText: I'll have both cream and sugar!
     karmaImpact: 10
-    reactionText: 
+    reactionText: '"Here you go, sir."'
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -57,11 +58,12 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 0}
-    objectsToEnable: []
+    followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
+    objectIDsToEnable:
+    - Coffee
   - optionText: I'll take it black.
     karmaImpact: 0
-    reactionText: 
+    reactionText: '"Here you go, sir."'
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -76,5 +78,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 0}
-    objectsToEnable: []
+    followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
+    objectIDsToEnable:
+    - Coffee
+  requiredLoop: -1
