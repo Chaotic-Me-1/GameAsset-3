@@ -28,13 +28,13 @@ public class MovementTutorial : MonoBehaviour
 
     void Start()
     {
-    // if (PlayerPrefs.GetInt("HasSeenTutorial", 0) == 1)
-    // {
-    //     skipTutorial = true;
-    //     tutorialText.gameObject.SetActive(false);
-    //     currentStep = TutorialStep.Done;
-    //     return;
-    // }
+    if (PlayerPrefs.GetInt("HasSeenTutorial", 0) == 1)
+    {
+        skipTutorial = true;
+        tutorialText.gameObject.SetActive(false);
+        currentStep = TutorialStep.Done;
+        return;
+    }
 
         ShowText("Use your mouse to look around");
     }
