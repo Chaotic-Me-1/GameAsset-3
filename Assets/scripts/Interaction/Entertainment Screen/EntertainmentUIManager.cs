@@ -2,24 +2,79 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
+using FMODUnity;
+using FMOD.Studio;
+using TMPro;
 
 public class EntertainmentUIManager : MonoBehaviour
 {
+    [Header("Main UI Panels")]
     public GameObject entertainmentPanel;
     public GameObject moviesPanel;
     public GameObject showsPanel;
     public GameObject musicPanel;
+    public GameObject mediaPlayerPanel;
 
+    [Header("Hand Cursor")]
     public Image handImage;
     public Sprite normalHandSprite;
     public Sprite clickHandSprite;
     public float clickDuration = 0.5f;
 
+    [Header("Shared Controls")]
+    public Button playPauseButton;
+    public Sprite playIcon;
+    public Sprite pauseIcon;
+    private bool isPlaying = false;
+    private bool isVideo = false;
+    public Slider musicSlider;
+
+    [Header("Music Player")]
+    public Image albumArtDisplay;
+    public TextMeshProUGUI trackNameText;
+
+    private EventInstance musicInstance;
+    private MusicTrackData currentTrack;
+
+    [Header("Video Player")]
+    public VideoPlayer videoPlayer;
+    public RawImage videoDisplay;
+
+    private EventInstance videoAudioInstance;
+
+    [Header("Video Data Buttons")]
+    public TextMeshProUGUI videoTitleText;
+    
     void Start()
     {
         CloseAllTabs();
         entertainmentPanel.SetActive(false);
+        mediaPlayerPanel.SetActive(false);
     }
+
+    void Update()
+    {
+        if (isVideo && videoPlayer.isPlaying && videoPlayer.length > 0)
+        {
+            double normalized = videoPlayer.time / videoPlayer.length;
+            musicSlider.value = (float)normalized;
+        }
+        else if (!isVideo && musicInstance.isValid())
+        {
+            musicInstance.getTimelinePosition(out int positionMS);
+            musicInstance.getDescription(out var desc);
+            desc.getLength(out int lengthMS);
+
+            if (lengthMS > 0)
+            {
+                float normalized = (float)positionMS / lengthMS;
+                musicSlider.value = normalized;
+            }
+        }
+    }
+
+    // ---------------- UI CONTROL ----------------
 
     public void ShowEntertainmentUI()
     {
@@ -32,6 +87,7 @@ public class EntertainmentUIManager : MonoBehaviour
     public void HideEntertainmentUI()
     {
         entertainmentPanel.SetActive(false);
+        mediaPlayerPanel.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
@@ -64,14 +120,197 @@ public class EntertainmentUIManager : MonoBehaviour
 
     public void AnimateHandClick()
     {
-        if (handImage != null && clickHandSprite != null && normalHandSprite != null)
+        if (handImage != null)
             StartCoroutine(ClickAnimation());
     }
 
-    private System.Collections.IEnumerator ClickAnimation()
+    private IEnumerator ClickAnimation()
     {
         handImage.sprite = clickHandSprite;
         yield return new WaitForSecondsRealtime(clickDuration);
         handImage.sprite = normalHandSprite;
+    }
+
+    // ---------------- MUSIC ----------------
+
+    public void PlayMusic(MusicTrackData track)
+    {
+        StopCurrentMedia();
+
+        mediaPlayerPanel.SetActive(true);
+        isVideo = false;
+
+        albumArtDisplay.gameObject.SetActive(true);
+        videoDisplay.gameObject.SetActive(false);
+
+        trackNameText.text = track.trackName;
+        albumArtDisplay.sprite = track.albumArt;
+
+        musicInstance = RuntimeManager.CreateInstance(track.fmodEvent);
+        RuntimeManager.AttachInstanceToGameObject(musicInstance, transform);
+        musicInstance.start();
+
+        isPlaying = true;
+        UpdatePlayPauseIcon();
+    }
+
+    public void PlayMusicFromButton(MusicTrackData track)
+    {
+        // Only start the music if it’s not already playing this one
+        if (currentTrack == track && musicInstance.isValid())
+        {
+            mediaPlayerPanel.SetActive(true); // Just reopen player for control
+            return;
+        }
+
+        StopCurrentMedia(); // Stop any previously playing music/video
+
+        currentTrack = track;
+
+        trackNameText.text = track.trackName;
+        albumArtDisplay.sprite = track.albumArt;
+
+        mediaPlayerPanel.SetActive(true);
+        isVideo = false;
+
+        albumArtDisplay.gameObject.SetActive(true);
+        videoDisplay.gameObject.SetActive(false);
+
+        musicInstance = RuntimeManager.CreateInstance(track.fmodEvent);
+        RuntimeManager.AttachInstanceToGameObject(musicInstance, transform);
+        musicInstance.start();
+
+        isPlaying = true;
+        UpdatePlayPauseIcon();
+    }
+
+    // ---------------- VIDEO ----------------
+
+    public void PlayMovie(VideoClip clip)
+    {
+        StopCurrentMedia();
+
+        mediaPlayerPanel.SetActive(true);
+        isVideo = true;
+
+        albumArtDisplay.gameObject.SetActive(false);
+        videoDisplay.gameObject.SetActive(true);
+
+        videoPlayer.clip = clip;
+        videoPlayer.Play();
+
+        isPlaying = true;
+        UpdatePlayPauseIcon();
+    }
+
+    // ---------------- SHARED CONTROLS ----------------
+
+    public void TogglePlayPause()
+    {
+        if (isVideo)
+        {
+            if (isPlaying)
+            {
+                videoPlayer.Pause();
+                if (videoAudioInstance.isValid()) videoAudioInstance.setPaused(true);
+            }
+            else
+            {
+                videoPlayer.Play();
+                if (videoAudioInstance.isValid()) videoAudioInstance.setPaused(false);
+            }
+        }
+        else
+        {
+            if (musicInstance.isValid())
+            {
+                musicInstance.setPaused(isPlaying);
+            }
+        }
+
+        isPlaying = !isPlaying;
+        UpdatePlayPauseIcon();
+    }
+
+    public void CloseMediaPlayer()
+    {
+        if (isVideo && videoPlayer != null)
+        {
+            videoPlayer.Stop();
+        }
+
+        mediaPlayerPanel.SetActive(false);
+    }
+    
+    public void ShowMediaPlayer()
+    {
+        mediaPlayerPanel.SetActive(true);
+        albumArtDisplay.gameObject.SetActive(!isVideo);
+        videoDisplay.gameObject.SetActive(isVideo);
+
+        // Optional: update the play/pause icon when reopening
+        UpdatePlayPauseIcon();
+    }
+
+    void StopCurrentMedia()
+    {
+        if (isVideo)
+        {
+            videoPlayer.Stop();
+
+            if (videoAudioInstance.isValid())
+            {
+                videoAudioInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                videoAudioInstance.release();
+                videoAudioInstance.clearHandle();
+            }
+        }
+        else if (musicInstance.isValid())
+        {
+            musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            musicInstance.release();
+            musicInstance.clearHandle();
+        }
+
+        isPlaying = false;
+    }
+
+    void UpdatePlayPauseIcon()
+    {
+        if (playPauseButton != null)
+        {
+            playPauseButton.image.sprite = isPlaying ? pauseIcon : playIcon;
+        }
+    }
+
+    public void PlayVideoFromButton(VideoTrackData track)
+    {
+        StopCurrentMedia();
+
+        isVideo = true;
+        isPlaying = true;
+
+        albumArtDisplay.gameObject.SetActive(false);
+        videoDisplay.gameObject.SetActive(true);
+        mediaPlayerPanel.SetActive(true);
+
+        videoTitleText.text = track.title;
+
+        videoPlayer.clip = track.clip;
+        videoDisplay.texture = videoPlayer.targetTexture;
+
+        // Reset and start video
+        videoPlayer.frame = 0;
+        videoPlayer.Play();
+
+        // Start FMOD audio
+        if (!track.fmodAudio.IsNull)
+        {
+            videoAudioInstance = RuntimeManager.CreateInstance(track.fmodAudio);
+            RuntimeManager.AttachInstanceToGameObject(videoAudioInstance, transform);
+            videoAudioInstance.start();
+        }
+
+        UpdatePlayPauseIcon();
     }
 }

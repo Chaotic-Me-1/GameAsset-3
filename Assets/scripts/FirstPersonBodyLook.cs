@@ -23,7 +23,10 @@ public class FirstPersonBodyLook : MonoBehaviour
 
     void LateUpdate()
     {
-        // 🎮 Input
+        // Freeze look during dialogue
+        if (DialogueManager.IsDialogueActive)
+            return;
+
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -33,24 +36,22 @@ public class FirstPersonBodyLook : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -60f, 60f);
 
-        // 🤢 Get drunk % from manager
+        // Drunk wobble
         float drunkLevel = DrunknessManager.instance != null ? DrunknessManager.instance.currentDrunkness / 100f : 0f;
 
-        // 🌀 Drunk wobble
-        float wobbleX = 0f; // up/down head bob
-        float wobbleZ = 0f; // side-to-side tilt
+        float wobbleX = 0f;
+        float wobbleZ = 0f;
 
         if (drunkLevel > 0.01f)
         {
             wobbleTimer += Time.deltaTime * wobbleSpeed * (0.5f + drunkLevel);
-
-            wobbleX = Mathf.Sin(wobbleTimer * 1.1f) * maxWobbleAngle * drunkLevel; // nodding
-            wobbleZ = Mathf.Cos(wobbleTimer) * maxWobbleAngle * drunkLevel;       // tilting
+            wobbleX = Mathf.Sin(wobbleTimer * 1.1f) * maxWobbleAngle * drunkLevel;
+            wobbleZ = Mathf.Cos(wobbleTimer) * maxWobbleAngle * drunkLevel;
         }
 
-        // 🦴 Apply blended rotation to each bone
+        // Apply rotation
         spineJoint.localRotation = Quaternion.Euler(wobbleX * 0.2f, yRotation * 0.3f + wobbleZ * 0.2f, 0f);
-        neckJoint.localRotation  = Quaternion.Euler(wobbleX * 0.4f, yRotation * 0.7f + wobbleZ * 0.4f, 0f);
-        headJoint.localRotation  = Quaternion.Euler(xRotation + wobbleX, 0f, wobbleZ);
+        neckJoint.localRotation = Quaternion.Euler(wobbleX * 0.4f, yRotation * 0.7f + wobbleZ * 0.4f, 0f);
+        headJoint.localRotation = Quaternion.Euler(xRotation + wobbleX, 0f, wobbleZ);
     }
 }

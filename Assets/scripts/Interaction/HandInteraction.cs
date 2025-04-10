@@ -20,7 +20,7 @@ public class HandInteraction : MonoBehaviour
             IInteractable interact = currentInteractable.GetComponent<IInteractable>();
             if (interact != null)
             {
-                interact.OnTouchStart();
+                interact.OnTouchStart();  
                 Debug.Log("Touching: " + other.name);
             }
         }
@@ -43,18 +43,22 @@ public class HandInteraction : MonoBehaviour
 
     void Update()
     {
+        // Don't allow interaction during dialogue
+        if (DialogueManager.IsDialogueActive)
+            return;
+
         if (currentInteractable != null && Input.GetMouseButtonDown(0))
         {
             IInteractable interact = currentInteractable.GetComponent<IInteractable>();
             if (interact != null)
             {
-                //  Notify tutorial manually
+                // Notify tutorial system
                 if (tutorial != null)
                 {
                     tutorial.MarkAsInteracted();
                 }
 
-                //  Inject hand target if drink
+                // Inject the hand IK target if it's a drink
                 if (interact is DrinkInteractable drink)
                 {
                     drink.followTarget = GameObject.FindWithTag("PlayerHand")?.transform;

@@ -65,14 +65,14 @@ public class MovementTutorial : MonoBehaviour
             case TutorialStep.Arm1:
                 if (Input.GetMouseButton(1) && (Mathf.Abs(Input.GetAxis("Mouse X")) > 0.1f || Mathf.Abs(Input.GetAxis("Mouse Y")) > 0.1f))
                 {
-                    StartCoroutine(AdvanceTutorial("Scroll your mouse wheel while holding RIGHT CLICK to move your hand forward or backward.", TutorialStep.Arm2));
+                    StartCoroutine(AdvanceTutorial("SCROLL your mouse wheel while holding RIGHT CLICK to move your hand forward or backward.", TutorialStep.Arm2));
                 }
                 break;
 
             case TutorialStep.Arm2:
                 if (Input.GetMouseButton(1) && Input.mouseScrollDelta.y != 0)
                 {
-                    StartCoroutine(AdvanceTutorial("Move your hand to something you want to interact with and press LEFT CLICK.\nObjects glow blue when you're able to interact.", TutorialStep.Arm3));
+                    StartCoroutine(AdvanceTutorial("Move your hand to something you want to interact with and press LEFT CLICK.\n(Objects glow blue when you're able to interact.)", TutorialStep.Arm3));
                 }
                 break;
 

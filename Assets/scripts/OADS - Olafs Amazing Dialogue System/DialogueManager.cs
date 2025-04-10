@@ -9,6 +9,7 @@ using FMOD.Studio;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
+    public static bool IsDialogueActive { get; private set; }
 
     public GameObject dialoguePanel;
     public TextMeshProUGUI promptText;
@@ -32,6 +33,7 @@ public class DialogueManager : MonoBehaviour
     // Start dialogue with optional BabyCry reference
     public void StartDialogue(DialogueData data, BabyCry baby = null)
     {
+        IsDialogueActive = true;
         currentDialogue = data;
         currentBabyCry = baby;
         dialoguePanel.SetActive(true);
@@ -134,7 +136,7 @@ public class DialogueManager : MonoBehaviour
 
         dialoguePanel.SetActive(false);
         reactionText.gameObject.SetActive(false);
-        promptText.gameObject.SetActive(true); // 👈 Re-enable prompt for next use
+        promptText.gameObject.SetActive(true);
 
         // Reactivate all buttons for next dialogue
         foreach (Button btn in optionButtons)
@@ -143,6 +145,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         // Resume game
+        IsDialogueActive = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         if (playerCamera != null) playerCamera.cameraActive = true;
