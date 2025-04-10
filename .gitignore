@@ -73,3 +73,8 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 /Assets/Plugins/FMOD/Cache
 Assets/Assets/NightSky/NightSky.mat
+/Assets/Bakery
+/Assets/Editor
+bakery_times.log
+Assets/Settings/BakeryProjectSettings.asset.meta
+Assets/Settings/BakeryProjectSettings.asset
