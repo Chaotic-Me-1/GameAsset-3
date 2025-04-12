@@ -43,7 +43,9 @@ public class HandInteraction : MonoBehaviour
 
     void Update()
     {
-        // Don't allow interaction during dialogue
+        // We dont want interactions while the magazine is open!!
+        if (GameState.IsMagazineOpen) return;
+        // No interaction during dialogue!!!!
         if (DialogueManager.IsDialogueActive)
             return;
 
@@ -52,7 +54,7 @@ public class HandInteraction : MonoBehaviour
             IInteractable interact = currentInteractable.GetComponent<IInteractable>();
             if (interact != null)
             {
-                // Notify tutorial system
+                // Tutorial system
                 if (tutorial != null)
                 {
                     tutorial.MarkAsInteracted();

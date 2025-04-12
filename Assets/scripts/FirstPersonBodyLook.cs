@@ -23,6 +23,7 @@ public class FirstPersonBodyLook : MonoBehaviour
 
     void LateUpdate()
     {
+        if (GameState.IsMagazineOpen) return;
         // Freeze look during dialogue
         if (DialogueManager.IsDialogueActive)
             return;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-// Assign this script to a part of the UI of the magazine, it will use an image component to overlay a hand sprite over the mouse cursor. Might be a better way to do this than using Update, I'm not sure. - Olaf
+
 public class MagazineHand : MonoBehaviour
 {
     [Header("Hand Sprite")]
@@ -15,6 +15,9 @@ public class MagazineHand : MonoBehaviour
 
     void Update()
     {
+        // Force cursor hidden every frame
+        Cursor.visible = false;
+
         if (handImage == null || !handImage.gameObject.activeInHierarchy)
             return;
 
@@ -28,14 +31,7 @@ public class MagazineHand : MonoBehaviour
         );
         handImage.rectTransform.anchoredPosition = pos;
 
-        // Update hand sprite based on if mouse is being held
-        if (Input.GetMouseButton(0))
-        {
-            handImage.sprite = holdingHandSprite;
-        }
-        else
-        {
-            handImage.sprite = regularHandSprite;
-        }
+        // Update hand sprite based on mouse state
+        handImage.sprite = Input.GetMouseButton(0) ? holdingHandSprite : regularHandSprite;
     }
 }

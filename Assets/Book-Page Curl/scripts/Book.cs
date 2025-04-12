@@ -155,10 +155,6 @@ public class Book : MonoBehaviour {
     {
         mode = FlipMode.LeftToRight;
         f = followLocation;
-
-        // ✅ Fix the clipping plane pivot for proper flipping
-        ClippingPlane.rectTransform.pivot = new Vector2(0, 0.35f);
-
         ShadowLTR.transform.SetParent(ClippingPlane.transform, true);
         ShadowLTR.transform.localPosition = new Vector3(0, 0, 0);
         ShadowLTR.transform.localEulerAngles = new Vector3(0, 0, 0);
@@ -171,11 +167,13 @@ public class Book : MonoBehaviour {
         c = Calc_C_Position(followLocation);
         Vector3 t1;
         float clipAngle = CalcClipAngle(c, ebl, out t1);
+        //0 < T0_T1_Angle < 180
         clipAngle = (clipAngle + 180) % 180;
 
         ClippingPlane.transform.localEulerAngles = new Vector3(0, 0, clipAngle - 90);
         ClippingPlane.transform.position = BookPanel.TransformPoint(t1);
 
+        //page position and angle
         Left.transform.position = BookPanel.TransformPoint(c);
         float C_T1_dy = t1.y - c.y;
         float C_T1_dx = t1.x - c.x;
@@ -190,7 +188,6 @@ public class Book : MonoBehaviour {
 
         ShadowLTR.rectTransform.SetParent(Left.rectTransform, true);
     }
-
     public void UpdateBookRTLToPoint(Vector3 followLocation)
     {
         mode = FlipMode.RightToLeft;
@@ -350,108 +347,55 @@ public class Book : MonoBehaviour {
     {
         if (interactable)
             ReleasePage();
+            Debug.Log("Mouse released!!");
     }
     public void ReleasePage()
     {
-        if (!pageDragging) return;
-
-        pageDragging = false;
-
-        float distanceToLeft = Vector2.Distance(c, ebl);
-        float distanceToRight = Vector2.Distance(c, ebr);
-
-        float flipThreshold = 50f; // 💡 You can adjust this value later for feel
-
-        Debug.Log($"📖 ReleasePage - Mode: {mode}, Dist L: {distanceToLeft}, Dist R: {distanceToRight}");
-
-        if (mode == FlipMode.RightToLeft)
+        if (pageDragging)
         {
-            if (distanceToRight < flipThreshold)
-            {
-                Debug.Log("↩️ Flip cancelled - snapping back (RTL)");
+            pageDragging = false;
+            float distanceToLeft = Vector2.Distance(c, ebl);
+            float distanceToRight = Vector2.Distance(c, ebr);
+            if (distanceToRight < distanceToLeft && mode == FlipMode.RightToLeft)
                 TweenBack();
-            }
-            else
-            {
-                Debug.Log("➡️ Flip confirmed - going forward (RTL)");
-                TweenForward();
-            }
-        }
-        else if (mode == FlipMode.LeftToRight)
-        {
-            if (distanceToLeft < flipThreshold)
-            {
-                Debug.Log("↩️ Flip cancelled - snapping back (LTR)");
+            else if (distanceToRight > distanceToLeft && mode == FlipMode.LeftToRight)
                 TweenBack();
-            }
             else
-            {
-                Debug.Log("➡️ Flip confirmed - going forward (LTR)");
                 TweenForward();
-            }
         }
     }
-
     Coroutine currentCoroutine;
-    public void UpdateSprites()
+    void UpdateSprites()
     {
-        // Safe bounds checking
-        Sprite leftSprite = (currentPage > 0 && currentPage - 1 < bookPages.Length) ? bookPages[currentPage - 1] : background;
-        Sprite rightSprite = (currentPage >= 0 && currentPage < bookPages.Length) ? bookPages[currentPage] : background;
-
-        LeftNext.sprite = leftSprite;
-        RightNext.sprite = rightSprite;
-
-        Debug.Log($"🖼 UpdateSprites: Left = {(currentPage > 0 ? currentPage - 1 : -1)}, Right = {currentPage}");
+        LeftNext.sprite= (currentPage > 0 && currentPage <= bookPages.Length) ? bookPages[currentPage-1] : background;
+        RightNext.sprite=(currentPage>=0 &&currentPage<bookPages.Length) ? bookPages[currentPage] : background;
     }
-
+    public void TweenForward()
+    {
+        if(mode== FlipMode.RightToLeft)
+        currentCoroutine = StartCoroutine(TweenTo(ebl, 0.15f, () => { Flip(); }));
+        else
+        currentCoroutine = StartCoroutine(TweenTo(ebr, 0.15f, () => { Flip(); }));
+    }
     void Flip()
     {
         if (mode == FlipMode.RightToLeft)
             currentPage += 2;
         else
             currentPage -= 2;
-
-        // Clamp to prevent out-of-range issues
-        currentPage = Mathf.Clamp(currentPage, 0, bookPages.Length - 2);
-
-        Debug.Log($"📖 Flipped to currentPage: {currentPage}");
-
-        // Reset hierarchy and visibility
+        LeftNext.transform.SetParent(BookPanel.transform, true);
         Left.transform.SetParent(BookPanel.transform, true);
         LeftNext.transform.SetParent(BookPanel.transform, true);
-        Right.transform.SetParent(BookPanel.transform, true);
-        RightNext.transform.SetParent(BookPanel.transform, true);
-
         Left.gameObject.SetActive(false);
         Right.gameObject.SetActive(false);
-
-        // Turn off shadows
+        Right.transform.SetParent(BookPanel.transform, true);
+        RightNext.transform.SetParent(BookPanel.transform, true);
+        UpdateSprites();
         Shadow.gameObject.SetActive(false);
         ShadowLTR.gameObject.SetActive(false);
-
-        // Update visuals
-        UpdateSprites();
-
-        // Trigger optional event
-        OnFlip?.Invoke();
+        if (OnFlip != null)
+            OnFlip.Invoke();
     }
-
-    public void TweenForward()
-    {
-        if (mode == FlipMode.RightToLeft)
-        {
-            currentCoroutine = StartCoroutine(TweenTo(ebl, 0.15f, () => { Flip(); }));
-        }
-        else
-        {
-            currentCoroutine = StartCoroutine(TweenTo(ebr, 0.15f, () => { Flip(); }));
-        }
-
-        Debug.Log("🚀 TweenForward triggered");
-    }
-
-
     public void TweenBack()
     {
         if (mode == FlipMode.RightToLeft)
@@ -490,19 +434,16 @@ public class Book : MonoBehaviour {
     {
         int steps = (int)(duration / 0.025f);
         Vector3 displacement = (to - f) / steps;
-        for (int i = 0; i < steps - 1; i++)
+        for (int i = 0; i < steps-1; i++)
         {
-            if (mode == FlipMode.RightToLeft)
-                UpdateBookRTLToPoint(f + displacement);
+            if(mode== FlipMode.RightToLeft)
+            UpdateBookRTLToPoint( f + displacement);
             else
                 UpdateBookLTRToPoint(f + displacement);
 
-            // ✅ Real-time wait so animation plays even when paused
-            yield return new WaitForSecondsRealtime(0.025f);
+            yield return new WaitForSeconds(0.025f);
         }
-
         if (onFinish != null)
             onFinish();
     }
-
 }

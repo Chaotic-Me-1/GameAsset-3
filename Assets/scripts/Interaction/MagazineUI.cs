@@ -8,7 +8,6 @@ using FMOD.Studio;
 public class MagazineUI : MonoBehaviour
 {
     public GameObject magazinePanel;
-    public Book magazineBook; // Reference to the Book script
 
     [Header("Audio")]
     public EventReference openMagazineEvent;
@@ -22,15 +21,9 @@ public class MagazineUI : MonoBehaviour
     {
         magazinePanel.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = false;
-        Time.timeScale = 0f;
+        Cursor.visible = true;
 
-        if (magazineBook != null)
-        {
-            magazineBook.gameObject.SetActive(true);
-            magazineBook.currentPage = 0;
-            magazineBook.UpdateSprites(); // Assuming this refreshes page visuals
-        }
+        GameState.OpenMagazine();
 
         if (!openMagazineEvent.IsNull)
         {
@@ -42,7 +35,8 @@ public class MagazineUI : MonoBehaviour
     {
         magazinePanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true;
-        Time.timeScale = 1f;
+        Cursor.visible = false;
+
+        GameState.CloseMagazine();
     }
 }
