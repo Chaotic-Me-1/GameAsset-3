@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a395bff53e2ab4d955116628290d99, type: 3}
+  m_Name: HorseWithNoName
+  m_EditorClassIdentifier: 
+  trackName: A Horse With No Name - America
+  albumArt: {fileID: 21300000, guid: 3f77a3bf1b813a943a1bdd3be6f96524, type: 3}
+  fmodEvent:
+    Guid:
+      Data1: -327468159
+      Data2: 1313995164
+      Data3: -1151849075
+      Data4: -321989557
+    Path: event:/HorseWithNoName

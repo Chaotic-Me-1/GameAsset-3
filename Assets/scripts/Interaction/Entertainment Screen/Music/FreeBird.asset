@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a395bff53e2ab4d955116628290d99, type: 3}
+  m_Name: FreeBird
+  m_EditorClassIdentifier: 
+  trackName: Free Bird - Lynyrd Skynyrd
+  albumArt: {fileID: 21300000, guid: b63c816c9bf2c0446be341099805af06, type: 3}
+  fmodEvent:
+    Guid:
+      Data1: -1206479548
+      Data2: 1226036353
+      Data3: 708920211
+      Data4: 635707159
+    Path: event:/FreeBird

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a395bff53e2ab4d955116628290d99, type: 3}
+  m_Name: StairWayToHeaven
+  m_EditorClassIdentifier: 
+  trackName: Stairway to Heaven - Led Zeppelin
+  albumArt: {fileID: 21300000, guid: 1bde7128634cbc341bbde1841f7400a5, type: 3}
+  fmodEvent:
+    Guid:
+      Data1: -1498517557
+      Data2: 1285005817
+      Data3: -830411625
+      Data4: -1744823033
+    Path: event:/StairwayToHeaven
