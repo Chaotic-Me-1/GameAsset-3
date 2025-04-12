@@ -1,0 +1,4 @@
+repository "GameAsset-3_3@Merzmerize@cloud"
+  path "/"
+    br "/main"
+    co "/main"
