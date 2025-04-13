@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6998b781a5e9845a093ec8c50cc506, type: 3}
+  m_Name: DonnieDarko
+  m_EditorClassIdentifier: 
+  title: Donnie Darko
+  thumbnail: {fileID: 21300000, guid: 23040da575935e84a9c2f1bbe6db0221, type: 3}
+  clip: {fileID: 0}
+  videoURL: https://archive.org/download/donnie-darko-directors-cut-DVD/DONNIE_DARKO_DIRECTORS_CUT_DISC1.mp4
+  fmodAudio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 

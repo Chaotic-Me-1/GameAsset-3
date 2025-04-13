@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6998b781a5e9845a093ec8c50cc506, type: 3}
+  m_Name: TheWitch
+  m_EditorClassIdentifier: 
+  title: The Witch
+  thumbnail: {fileID: 21300000, guid: c623c47a337b6f742a9975937e05c307, type: 3}
+  clip: {fileID: 0}
+  videoURL: https://archive.org/download/the-witch-2015/The%20Witch%202015.mp4
+  fmodAudio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6998b781a5e9845a093ec8c50cc506, type: 3}
+  m_Name: EternalSunshine
+  m_EditorClassIdentifier: 
+  title: Enternal Sunshine of the spotless mind
+  thumbnail: {fileID: 21300000, guid: 7c5049327a19f2946aae687550583a00, type: 3}
+  clip: {fileID: 0}
+  videoURL: https://archive.org/download/eternal.-sunshine.of.the.-spotless.-mind.-2004.m-hd.x-264/Eternal.Sunshine.of.the.Spotless.Mind.2004.m-HD.x264.mp4
+  fmodAudio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 

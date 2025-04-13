@@ -72,6 +72,15 @@ public class EntertainmentUIManager : MonoBehaviour
                 musicSlider.value = normalized;
             }
         }
+
+        if (entertainmentPanel.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+        {
+            HideEntertainmentUI();
+        }
+        if (mediaPlayerPanel.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+        {
+            CloseMediaPlayer();
+        }
     }
 
     // ---------------- UI CONTROL ----------------
@@ -241,7 +250,7 @@ public class EntertainmentUIManager : MonoBehaviour
 
         mediaPlayerPanel.SetActive(false);
     }
-    
+
     public void ShowMediaPlayer()
     {
         mediaPlayerPanel.SetActive(true);
@@ -296,21 +305,55 @@ public class EntertainmentUIManager : MonoBehaviour
 
         videoTitleText.text = track.title;
 
-        videoPlayer.clip = track.clip;
         videoDisplay.texture = videoPlayer.targetTexture;
+        videoPlayer.Stop();
 
-        // Reset and start video
-        videoPlayer.frame = 0;
-        videoPlayer.Play();
-
-        // Start FMOD audio
-        if (!track.fmodAudio.IsNull)
+        // URL-based video playback
+        if (!string.IsNullOrEmpty(track.videoURL))
         {
-            videoAudioInstance = RuntimeManager.CreateInstance(track.fmodAudio);
-            RuntimeManager.AttachInstanceToGameObject(videoAudioInstance, transform);
-            videoAudioInstance.start();
+            videoPlayer.source = VideoSource.Url;
+            videoPlayer.url = track.videoURL;
+
+            videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+            AudioSource videoAudioSource = videoPlayer.GetComponent<AudioSource>();
+            if (videoAudioSource != null)
+            {
+                videoPlayer.SetTargetAudioSource(0, videoAudioSource);
+                videoAudioSource.volume = 1f;
+                videoAudioSource.playOnAwake = false;
+            }
+
+            videoPlayer.Prepare();
+            StartCoroutine(PlayStreamedVideoWhenReady());
+        }
+        // Local clip + FMOD flow
+        else if (track.clip != null)
+        {
+            videoPlayer.source = VideoSource.VideoClip;
+            videoPlayer.clip = track.clip;
+            videoPlayer.Play();
+
+            if (!track.fmodAudio.IsNull)
+            {
+                videoAudioInstance = RuntimeManager.CreateInstance(track.fmodAudio);
+                RuntimeManager.AttachInstanceToGameObject(videoAudioInstance, transform);
+                videoAudioInstance.start();
+            }
         }
 
         UpdatePlayPauseIcon();
+    }
+
+    private IEnumerator PlayStreamedVideoWhenReady()
+    {
+        while (!videoPlayer.isPrepared)
+            yield return null;
+
+        videoPlayer.Play();
+        AudioSource videoAudioSource = videoPlayer.GetTargetAudioSource(0);
+        if (videoAudioSource != null)
+        {
+            videoAudioSource.Play();
+        }
     }
 }

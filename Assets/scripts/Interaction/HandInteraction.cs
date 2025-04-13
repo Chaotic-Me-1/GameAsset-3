@@ -1,73 +1,76 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class HandInteraction : MonoBehaviour
 {
     public MovementTutorial tutorial;
-    private Collider currentInteractable;
-    public bool IsTouchingInteractable()
-    {
-        return currentInteractable != null;
-    }
+    public float detectionRadius = 0.05f;
+    public LayerMask interactableLayer;
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Interactable"))
-        {
-            currentInteractable = other;
+    private IInteractable currentScript = null;
+    private Collider currentCollider = null;
 
-            IInteractable interact = currentInteractable.GetComponent<IInteractable>();
-            if (interact != null)
-            {
-                interact.OnTouchStart();  
-                Debug.Log("Touching: " + other.name);
-            }
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other == currentInteractable)
-        {
-            IInteractable interact = currentInteractable.GetComponent<IInteractable>();
-            if (interact != null)
-            {
-                interact.OnTouchEnd(); 
-                Debug.Log("Stopped touching: " + other.name);
-            }
-
-            currentInteractable = null;
-        }
-    }
+    private readonly Collider[] results = new Collider[5];
 
     void Update()
     {
-        // We dont want interactions while the magazine is open!!
-        if (GameState.IsMagazineOpen) return;
-        // No interaction during dialogue!!!!
-        if (DialogueManager.IsDialogueActive)
+        // Skip during dialogue or magazine interaction
+        if (GameState.IsMagazineOpen || DialogueManager.IsDialogueActive)
             return;
 
-        if (currentInteractable != null && Input.GetMouseButtonDown(0))
+        int hits = Physics.OverlapSphereNonAlloc(transform.position, detectionRadius, results, interactableLayer);
+
+        Collider newCollider = null;
+        IInteractable newScript = null;
+
+        for (int i = 0; i < hits; i++)
         {
-            IInteractable interact = currentInteractable.GetComponent<IInteractable>();
-            if (interact != null)
+            if (results[i].CompareTag("Interactable"))
             {
-                // Tutorial system
-                if (tutorial != null)
-                {
-                    tutorial.MarkAsInteracted();
-                }
-
-                // Inject the hand IK target if it's a drink
-                if (interact is DrinkInteractable drink)
-                {
-                    drink.followTarget = GameObject.FindWithTag("PlayerHand")?.transform;
-                }
-
-                interact.OnInteract();
+                newCollider = results[i];
+                newScript = newCollider.GetComponent<IInteractable>();
+                break;
             }
         }
+
+        // If we've touched something new
+        if (newScript != currentScript)
+        {
+            if (currentScript != null)
+            {
+                currentScript.OnTouchEnd();
+                Debug.Log("Touch ended: " + currentCollider?.name);
+            }
+
+            if (newScript != null)
+            {
+                newScript.OnTouchStart();
+                Debug.Log("Touch started: " + newCollider.name);
+            }
+
+            currentScript = newScript;
+            currentCollider = newCollider;
+        }
+
+        if (currentScript != null && Input.GetMouseButtonDown(0))
+        {
+            tutorial?.MarkAsInteracted();
+
+            if (currentScript is DrinkInteractable drink)
+                drink.followTarget = GameObject.FindWithTag("PlayerHand")?.transform;
+
+            currentScript.OnInteract();
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, detectionRadius);
+    }
+    
+    public bool IsTouchingInteractable()
+    {
+        return currentScript != null;
     }
 }

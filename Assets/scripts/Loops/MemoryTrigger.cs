@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using FMODUnity;
+using FMOD.Studio;
 
 public class MemoryTrigger : MonoBehaviour
 {
@@ -28,6 +29,15 @@ public class MemoryTrigger : MonoBehaviour
     private bool canWakeUp = false;
     private float skipCounter = 0f;
 
+    public VCA masterVCA;
+    public VCA memoryVCA;
+
+    void Awake()
+    {
+        masterVCA = RuntimeManager.GetVCA("vca:/Master");
+        memoryVCA = RuntimeManager.GetVCA("vca:/Memory");
+    }
+
     void OnEnable()
     {
         StartCoroutine(BeginMemoryAfterDelay());
@@ -48,6 +58,8 @@ public class MemoryTrigger : MonoBehaviour
 
         float fadeDuration = 3f;
         float t = 0f;
+
+        StartCoroutine(FadeVCAVolume(masterVCA, 1f, 0f, 2f)); // Fade down rest of game audio
 
         if (fadeImage != null)
             fadeImage.gameObject.SetActive(true);
@@ -125,6 +137,7 @@ public class MemoryTrigger : MonoBehaviour
         {
             PlayWakeUpSound();
             ResetLoop();
+            StartCoroutine(FadeVCAVolume(masterVCA, 0f, 1f, 2f, delay: 5f)); // Restore after memory
         }
     }
 
@@ -136,6 +149,22 @@ public class MemoryTrigger : MonoBehaviour
             LoopCycleManager.instance.RestartScene();
         else
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // fallback
+    }
+    
+    private IEnumerator FadeVCAVolume(VCA vca, float from, float to, float duration, float delay = 0f)
+    {
+        yield return new WaitForSeconds(delay);
+
+        float t = 0f;
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            float volume = Mathf.Lerp(from, to, t / duration);
+            vca.setVolume(volume);
+            yield return null;
+        }
+
+        vca.setVolume(to);
     }
 
     private void PlayWakeUpSound()

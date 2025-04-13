@@ -8,7 +8,9 @@ public class MagazineInteractable : MonoBehaviour, IInteractable
 {
     public MagazineUI magazineUI;
 
-    private Renderer rend;
+    [Header("Glow Target")]
+    public Renderer glowRenderer;
+
     private MaterialPropertyBlock propBlock;
 
     [Header("Glow Settings (HDRP Nits)")]
@@ -20,13 +22,11 @@ public class MagazineInteractable : MonoBehaviour, IInteractable
 
     void Start()
     {
-        rend = GetComponent<Renderer>();
         propBlock = new MaterialPropertyBlock();
 
-        if (rend != null)
-            DisableGlow(); // Only try glow logic if Renderer exists
+        if (glowRenderer != null)
+            DisableGlow(); // Ensure it's off by default
     }
-
 
     public void OnTouchStart() => EnableGlow();
     public void OnTouchEnd() => DisableGlow();
@@ -40,31 +40,29 @@ public class MagazineInteractable : MonoBehaviour, IInteractable
 
     void EnableGlow()
     {
-        if (rend == null) return;
+        if (glowRenderer == null) return;
 
-        rend.GetPropertyBlock(propBlock);
+        glowRenderer.GetPropertyBlock(propBlock);
 
         Color hdrColor = emissionColor.linear * emissionNitsIntensity;
         propBlock.SetColor("_EmissiveColor", hdrColor);
         propBlock.SetFloat("_EmissiveIntensity", emissionNitsIntensity);
 
-        rend.SetPropertyBlock(propBlock);
+        glowRenderer.SetPropertyBlock(propBlock);
         Debug.Log($"[Glow ON] HDRColor: {hdrColor}, Intensity: {emissionNitsIntensity}");
     }
 
-
     void DisableGlow()
     {
-        if (rend == null) return;
+        if (glowRenderer == null) return;
 
-        rend.GetPropertyBlock(propBlock);
+        glowRenderer.GetPropertyBlock(propBlock);
         propBlock.SetColor("_EmissiveColor", Color.black);
         propBlock.SetFloat("_EmissiveIntensity", 0f);
 
-        rend.SetPropertyBlock(propBlock);
+        glowRenderer.SetPropertyBlock(propBlock);
         Debug.Log("[Glow OFF]");
     }
-
 
     private void PlayOpenSound()
     {
@@ -73,7 +71,7 @@ public class MagazineInteractable : MonoBehaviour, IInteractable
             EventInstance instance = RuntimeManager.CreateInstance(openMagazineEvent);
             RuntimeManager.AttachInstanceToGameObject(instance, transform, GetComponent<Rigidbody>());
             instance.start();
-            instance.release(); // Let FMOD handle cleanup
+            instance.release();
         }
     }
 }

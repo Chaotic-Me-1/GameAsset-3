@@ -17,6 +17,14 @@ public class MagazineUI : MonoBehaviour
         magazinePanel.SetActive(false);
     }
 
+    void Update()
+    {
+        if (magazinePanel.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+        {
+            HideMagazine();
+        }
+    }
+    
     public void ShowMagazine()
     {
         magazinePanel.SetActive(true);

@@ -15,6 +15,14 @@ public class LeafletUI : MonoBehaviour
         leafletPanel.SetActive(false);
     }
 
+    void Update()
+    {
+        if (leafletPanel.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+        {
+            HideLeaflet();
+        }
+    }
+
     public void ShowLeaflet()
     {
         leafletPanel.SetActive(true);
