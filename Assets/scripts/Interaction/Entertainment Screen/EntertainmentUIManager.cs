@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using FMODUnity;
@@ -45,42 +46,46 @@ public class EntertainmentUIManager : MonoBehaviour
 
     [Header("Video Data Buttons")]
     public TextMeshProUGUI videoTitleText;
+
+    private bool isSeeking = false;
+    private bool wasPlayingBeforeSeek = false;
     
     void Start()
     {
         CloseAllTabs();
         entertainmentPanel.SetActive(false);
         mediaPlayerPanel.SetActive(false);
+        musicSlider.onValueChanged.AddListener(OnSliderValueChanged);
     }
 
     void Update()
     {
-        if (isVideo && videoPlayer.isPlaying && videoPlayer.length > 0)
+        if (!isSeeking)
         {
-            double normalized = videoPlayer.time / videoPlayer.length;
-            musicSlider.value = (float)normalized;
-        }
-        else if (!isVideo && musicInstance.isValid())
-        {
-            musicInstance.getTimelinePosition(out int positionMS);
-            musicInstance.getDescription(out var desc);
-            desc.getLength(out int lengthMS);
-
-            if (lengthMS > 0)
+            if (isVideo && videoPlayer.isPlaying && videoPlayer.length > 0)
             {
-                float normalized = (float)positionMS / lengthMS;
-                musicSlider.value = normalized;
+                double normalized = videoPlayer.time / videoPlayer.length;
+                musicSlider.SetValueWithoutNotify((float)normalized);
+            }
+            else if (!isVideo && musicInstance.isValid())
+            {
+                musicInstance.getTimelinePosition(out int positionMS);
+                musicInstance.getDescription(out var desc);
+                desc.getLength(out int lengthMS);
+
+                if (lengthMS > 0)
+                {
+                    float normalized = (float)positionMS / lengthMS;
+                    musicSlider.SetValueWithoutNotify(normalized);
+                }
             }
         }
 
         if (entertainmentPanel.activeSelf && Input.GetKeyDown(KeyCode.Escape))
-        {
             HideEntertainmentUI();
-        }
+
         if (mediaPlayerPanel.activeSelf && Input.GetKeyDown(KeyCode.Escape))
-        {
             CloseMediaPlayer();
-        }
     }
 
     // ---------------- UI CONTROL ----------------
@@ -239,6 +244,53 @@ public class EntertainmentUIManager : MonoBehaviour
 
         isPlaying = !isPlaying;
         UpdatePlayPauseIcon();
+    }
+
+    public void OnSliderValueChanged(float value)
+    {
+        if (isSeeking)
+        {
+            SeekInMedia(value); // only seek while dragging
+        }
+    }
+
+    public void OnSliderPointerDown(BaseEventData eventData)
+    {
+        isSeeking = true;
+
+        if (!isVideo && musicInstance.isValid())
+        {
+            musicInstance.getPaused(out bool paused);
+            wasPlayingBeforeSeek = !paused;
+        }
+    }
+
+    public void OnSliderPointerUp(BaseEventData eventData)
+    {
+        isSeeking = false;
+        SeekInMedia(musicSlider.value);
+
+        if (!isVideo && musicInstance.isValid() && wasPlayingBeforeSeek)
+        {
+            musicInstance.setPaused(false); // resume
+        }
+    }
+
+    public void SeekInMedia(float value)
+    {
+        if (isVideo && videoPlayer.length > 0)
+        {
+            double newTime = value * videoPlayer.length;
+            videoPlayer.time = newTime;
+        }
+        else if (!isVideo && musicInstance.isValid())
+        {
+            musicInstance.getDescription(out var desc);
+            desc.getLength(out int lengthMS);
+
+            int newTimeMS = Mathf.FloorToInt(value * lengthMS);
+            musicInstance.setTimelinePosition(newTimeMS);
+        }
     }
 
     public void CloseMediaPlayer()
