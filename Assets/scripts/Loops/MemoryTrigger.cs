@@ -23,9 +23,16 @@ public class MemoryTrigger : MonoBehaviour
     public Sprite memorySprite2;
     public float imageFadeDuration = 1f;
 
+    [Header("Wake Up Timing")]
+    public float wakeUpDelayAfterSecondMemory = 13f; // Default for this memory, set per memory object
+
     public KeyCode skipKey = KeyCode.Space;
     public KeyCode wakeUpKey = KeyCode.E;
     public int pressesToSkip = 10;
+    private bool hintShouldFlash = false;
+    [Range(0f, 10f)] public float hintFlashSpeed = 2f;
+    [Range(0f, 1f)] public float hintMinAlpha = 0.2f;
+    [Range(0f, 1f)] public float hintMaxAlpha = 1f;
 
     private bool isMemoryActive = false;
     private bool skipTriggered = false;
@@ -74,7 +81,8 @@ public class MemoryTrigger : MonoBehaviour
         if (hintText != null)
         {
             hintText.gameObject.SetActive(true);
-            hintText.color = new Color(hintText.color.r, hintText.color.g, hintText.color.b, 0f);
+            hintText.color = new Color(hintText.color.r, hintText.color.g, hintText.color.b, hintMinAlpha);
+            hintShouldFlash = true; // ✅ Start flashing right away
         }
 
         if (wakeUpText != null)
@@ -143,30 +151,65 @@ public class MemoryTrigger : MonoBehaviour
             }
         }
 
-        if (wakeUpText != null)
+        // After second image is faded in and sound played, wait before allowing wake-up
+        if (!skipTriggered)
         {
-            wakeUpText.gameObject.SetActive(true);
-            wakeUpText.color = new Color(wakeUpText.color.r, wakeUpText.color.g, wakeUpText.color.b, 1f);
-        }
+            yield return new WaitForSeconds(wakeUpDelayAfterSecondMemory); // Delay based on this specific memory
 
-        canWakeUp = true;
+            // Fade out the second image
+            if (memoryImage != null)
+                yield return StartCoroutine(FadeImage(memoryImage, 1f, 0f, imageFadeDuration));
+
+            if (hintText != null)
+            {
+                hintText.gameObject.SetActive(false); // Hide skip text
+                hintShouldFlash = false;
+            }
+
+            if (wakeUpText != null)
+            {
+                wakeUpText.gameObject.SetActive(true);
+                yield return StartCoroutine(FadeText(wakeUpText, 0f, 1f, 1f)); // 1 second fade
+            }
+
+            canWakeUp = true;
+        }
     }
 
     void Update()
     {
         if (!isMemoryActive) return;
 
+        // 🔁 Flashing logic: Only active when skipping
+        if (hintShouldFlash && hintText != null && hintText.gameObject.activeSelf)
+        {
+            float alpha = Mathf.Lerp(hintMinAlpha, hintMaxAlpha, Mathf.PingPong(Time.time * hintFlashSpeed, 1f));
+            Color faceColor = hintText.color;
+            hintText.color = new Color(faceColor.r, faceColor.g, faceColor.b, alpha);
+        }
+
         if (!skipTriggered && Input.GetKeyDown(skipKey))
         {
             skipCounter++;
-
-            if (hintText != null)
-                hintText.gameObject.SetActive(true);
 
             if (skipCounter >= pressesToSkip)
             {
                 skipTriggered = true;
                 Debug.Log("Memory skipped early!");
+
+                hintShouldFlash = false; // Stop flashing
+                if (hintText != null)
+                {
+                    hintText.gameObject.SetActive(false); // Hide completely now
+                }
+
+                if (wakeUpText != null)
+                {
+                    wakeUpText.gameObject.SetActive(true);
+                    wakeUpText.color = new Color(wakeUpText.color.r, wakeUpText.color.g, wakeUpText.color.b, 1f);
+                }
+
+                canWakeUp = true;
             }
         }
 
@@ -220,5 +263,21 @@ public class MemoryTrigger : MonoBehaviour
         image.color = new Color(color.r, color.g, color.b, toAlpha);
         if (toAlpha == 0f)
             image.gameObject.SetActive(false);
+    }
+
+    private IEnumerator FadeText(TextMeshProUGUI text, float fromAlpha, float toAlpha, float duration)
+    {
+        float t = 0f;
+        Color original = text.color;
+
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            float a = Mathf.Lerp(fromAlpha, toAlpha, t / duration);
+            text.color = new Color(original.r, original.g, original.b, a);
+            yield return null;
+        }
+
+        text.color = new Color(original.r, original.g, original.b, toAlpha);
     }
 }

@@ -167,8 +167,8 @@ Material:
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 0
     - _EmissiveColorMode: 1
-    - _EmissiveExposureWeight: 0.95
-    - _EmissiveIntensity: 444.56992
+    - _EmissiveExposureWeight: 0.9
+    - _EmissiveIntensity: 512
     - _EmissiveIntensityUnit: 1
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
@@ -208,7 +208,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
-    - _Smoothness: 0.5
+    - _Smoothness: 1
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
     - _SpecularAAScreenSpaceVariance: 0.1
@@ -260,8 +260,8 @@ Material:
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissiveColor: {r: 331.3304, g: 327.2609, b: 317.26447, a: 444.56992}
-    - _EmissiveColorLDR: {r: 0.8783681, g: 0.8735742, b: 0.8616489, a: 1}
+    - _EmissiveColor: {r: 399.34247, g: 399.34247, b: 399.34247, a: 512}
+    - _EmissiveColorLDR: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
