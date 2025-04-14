@@ -39,7 +39,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 0}
+    followUpDialogue: {fileID: 11400000, guid: 32a26f805a22e934f87544453babedef, type: 2}
     objectIDsToEnable: []
   - optionText: Coffe, please. Maybe I just need to wake up...
     karmaImpact: 5
@@ -58,7 +58,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 0}
+    followUpDialogue: {fileID: 11400000, guid: 95e00afa34209d54b81a72c5313d72f9, type: 2}
     objectIDsToEnable: []
   - optionText: "Screw this! Give me something strong to deal with this d\xE9j\xE0
       vu!"
@@ -78,6 +78,6 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 0}
+    followUpDialogue: {fileID: 11400000, guid: ac38d74b8235214408ad6afc4a434fa7, type: 2}
     objectIDsToEnable: []
   requiredLoop: -1

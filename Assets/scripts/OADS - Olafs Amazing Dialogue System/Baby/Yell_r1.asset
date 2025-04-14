@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
-  m_Name: Yell
+  m_Name: Yell_r1
   m_EditorClassIdentifier: 
-  promptText: '"Waaaaa!!! Waaaaa!!! Make that thing shut up!". The baby just starts
-    to cry even louder. The father turns in your direction, yelling at you. "What
-    is wrong with you?!".'
+  promptText: You lean back into your chair "I don't care. Just make it stop!". The
+    father has clearly had enough of you. "You better shut it. You're the worst!"
   promptVoiceLine:
     Guid:
       Data1: 0
@@ -23,10 +22,10 @@ MonoBehaviour:
       Data4: 0
     Path: 
   options:
-  - optionText: Answer back, "What's wrong with you?"
-    karmaImpact: 0
-    reactionText: "The mans face turns to a look of defeat. \"We've been trying all
-      day! He's fussy! Yelling won\u2019t help!\""
+  - optionText: Let the baby AND it's parents suffer.
+    karmaImpact: -5
+    reactionText: You see the parents try their best to comfort the little one, but
+      he just keeps crying.
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -41,6 +40,6 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 11400000, guid: bb11b82ac6653af4f984968627644dab, type: 2}
+    followUpDialogue: {fileID: 0}
     objectIDsToEnable: []
   requiredLoop: -1
