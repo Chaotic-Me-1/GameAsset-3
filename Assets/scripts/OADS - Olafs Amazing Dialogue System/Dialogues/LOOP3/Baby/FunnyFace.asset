@@ -22,5 +22,26 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  options: []
+  options:
+  - optionText: Lean back
+    karmaImpact: 0
+    reactionText: "Feeling relieved that you won\u2019t have to hear crying for hours
+      to come, something about the sound feels familiar."
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
+    objectIDsToEnable:
+    - Memory3
   requiredLoop: -1

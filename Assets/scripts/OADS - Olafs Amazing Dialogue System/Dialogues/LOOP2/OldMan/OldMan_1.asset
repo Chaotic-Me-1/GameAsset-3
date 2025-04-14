@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
+  m_Name: OldMan_1
+  m_EditorClassIdentifier: 
+  promptText: "You turn your attention to a new passenger\u2014an old man, struggling
+    to fasten his seatbelt."
+  promptVoiceLine:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  options:
+  - optionText: Help him
+    karmaImpact: 5
+    reactionText: You reach out to help him with his seatbelt.
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 11400000, guid: abe120aff81264247afd3838e27a3ccb, type: 2}
+    objectIDsToEnable: []
+  - optionText: Ignore him
+    karmaImpact: 0
+    reactionText: You ignore the old man
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
+    objectIDsToEnable:
+    - Memory2
+  - optionText: Laugh at him
+    karmaImpact: -5
+    reactionText: '"Hahaha! Old fart can''t do shit!"'
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 11400000, guid: bf7042078dbb1764889582b81665dbc4, type: 2}
+    objectIDsToEnable: []
+  requiredLoop: 1

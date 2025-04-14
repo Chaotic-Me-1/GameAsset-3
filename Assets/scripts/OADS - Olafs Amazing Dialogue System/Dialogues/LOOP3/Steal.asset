@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
+  m_Name: Steal
+  m_EditorClassIdentifier: 
+  promptText: '"Psst..." The passenger looks at you.'
+  promptVoiceLine:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  options:
+  - optionText: Get me a real drink!
+    karmaImpact: -5
+    reactionText: "\"I can't believe they gave me this. Get me something good, I
+      won\u2019t say anything\""
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 11400000, guid: 8d64d39052eaedb4782b96756053a4f2, type: 2}
+    objectIDsToEnable: []
+  - optionText: Look away, ignore him.
+    karmaImpact: 0
+    reactionText: You change your mind, and look away from him.
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
+    objectIDsToEnable: []
+  requiredLoop: -1

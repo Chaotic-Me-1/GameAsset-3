@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
+  m_Name: 1_HelpOldMan
+  m_EditorClassIdentifier: 
+  promptText: "\"Oh sir, let me help you out.\" You reach out and help him fasten
+    his seatbelt. \"Ohhh, thank you, good sir! That\u2019s so nice of you. My wife
+    usually helps me with this.\""
+  promptVoiceLine:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  options:
+  - optionText: No problem.
+    karmaImpact: 0
+    reactionText: '"Not a problem. I know my wife has the same issue."'
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 11400000, guid: 317f238aa0904d74fa677d5097546399, type: 2}
+    objectIDsToEnable: []
+  requiredLoop: -1

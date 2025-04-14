@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
-  m_Name: Thank Loop2
+  m_Name: LOOP3_FlightAttendantDialogue
   m_EditorClassIdentifier: 
-  promptText: The attendant looks at you for a while, as if expecting something...
+  promptText: The flight attendant stops next to you and smiles... Too much.... "Would
+    you like something to drink, sir?" Her smile drives shivvers down your spine.
+    She holds out three options...
   promptVoiceLine:
     Guid:
       Data1: 0
@@ -21,9 +23,9 @@ MonoBehaviour:
       Data4: 0
     Path: 
   options:
-  - optionText: Thank her for the drink.
+  - optionText: '"Blood?!"'
     karmaImpact: 0
-    reactionText: '"Thank you." - ""You''re welcome sir, enjoy."'
+    reactionText: '"Very well sir, ENJOY!" she grins at you.'
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -38,12 +40,11 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 0}
-    objectIDsToEnable:
-    - Memory2
-  - optionText: Ignore her
+    followUpDialogue: {fileID: 11400000, guid: 84413443b6228e645a697579f749812d, type: 2}
+    objectIDsToEnable: []
+  - optionText: '"Poison?!"'
     karmaImpact: 0
-    reactionText: You say nothing and look away. She leaves abruptly.
+    reactionText: '"Very well sir, ENJOY!" she grins at you.'
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -58,14 +59,11 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 0}
-    objectIDsToEnable:
-    - Memory2
-  - optionText: Tell her off for being slow
+    followUpDialogue: {fileID: 11400000, guid: 4995c7b6a1abb1a489faefc7d648ebcf, type: 2}
+    objectIDsToEnable: []
+  - optionText: '"Acid?!"'
     karmaImpact: 0
-    reactionText: "\u201CThis service is terrible. Slow and this is all the choices
-      you have? Pathetic\u201D. She looks a bit sad, but replies \"I am sorry sir
-      for the inconvinience. it won't happen again\"."
+    reactionText: '"Very well sir, ENJOY!" she grins at you.'
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -80,7 +78,6 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 0}
-    objectIDsToEnable:
-    - Memory2
-  requiredLoop: -1
+    followUpDialogue: {fileID: 11400000, guid: df45ae64c1e485f44b4a97fe74d4665a, type: 2}
+    objectIDsToEnable: []
+  requiredLoop: 2

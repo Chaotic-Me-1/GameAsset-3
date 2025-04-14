@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
+  m_Name: Coward
+  m_EditorClassIdentifier: 
+  promptText: "\"Jesus Christ, get your shit together, man. Stop being such a pussy\u2014it\u2019s
+    just a plane.\" The man turns his head in your direction, staring at you."
+  promptVoiceLine:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  options:
+  - optionText: Interrupt him
+    karmaImpact: -5
+    reactionText: "\"Come on, that\u2019s stupid. Goddamn scaredy-cat.\""
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 11400000, guid: e16820118fd1f204a919a644ea33f6c7, type: 2}
+    objectIDsToEnable: []
+  - optionText: Ignore him
+    karmaImpact: 0
+    reactionText: He turns his head away, still shaking of fear.
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
+    objectIDsToEnable:
+    - OldMan
+  requiredLoop: -1
