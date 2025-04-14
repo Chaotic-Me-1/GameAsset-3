@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{ef150a0a-f75c-4c46-be05-a38357206436}">
+		<property name="assetPath">
+			<value>WorkingHard.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>7.5232653061224486</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5d119a6c-b98b-482c-87b4-d041f895b4f3}</destination>
+		</relationship>
+	</object>
+</objects>

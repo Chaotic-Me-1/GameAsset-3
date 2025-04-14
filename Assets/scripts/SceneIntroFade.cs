@@ -20,6 +20,10 @@ public class SceneIntroFade : MonoBehaviour
 
     void Start()
     {
+        // Restore Master VCA volume on scene start
+        VCA masterVCA = RuntimeManager.GetVCA("vca:/Master");
+        masterVCA.setVolume(1f);
+
         if (fadeImage != null)
         {
             // Start the screen as black to fade it in

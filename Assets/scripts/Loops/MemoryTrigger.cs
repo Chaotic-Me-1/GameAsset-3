@@ -17,8 +17,11 @@ public class MemoryTrigger : MonoBehaviour
     public EventReference memoryStartSound;
     public EventReference memoryDeepSound;
 
-    [Header("Wakeup")]
-    public EventReference wakeUpSound;
+    [Header("Memory Images")]
+    public Image memoryImage;
+    public Sprite memorySprite1;
+    public Sprite memorySprite2;
+    public float imageFadeDuration = 1f;
 
     public KeyCode skipKey = KeyCode.Space;
     public KeyCode wakeUpKey = KeyCode.E;
@@ -59,44 +62,70 @@ public class MemoryTrigger : MonoBehaviour
         float fadeDuration = 3f;
         float t = 0f;
 
-        StartCoroutine(FadeVCAVolume(masterVCA, 1f, 0f, 2f)); // Fade down rest of game audio
-
+        // Enable memory UI if disabled
         if (fadeImage != null)
+        {
+            var parentGO = fadeImage.transform.parent.gameObject;
+            if (!parentGO.activeSelf)
+                parentGO.SetActive(true);
             fadeImage.gameObject.SetActive(true);
+        }
 
         if (hintText != null)
+        {
+            hintText.gameObject.SetActive(true);
             hintText.color = new Color(hintText.color.r, hintText.color.g, hintText.color.b, 0f);
+        }
 
         if (wakeUpText != null)
         {
-            wakeUpText.gameObject.SetActive(false); // hide initially
+            wakeUpText.gameObject.SetActive(false);
             wakeUpText.color = new Color(wakeUpText.color.r, wakeUpText.color.g, wakeUpText.color.b, 0f);
         }
 
+        StartCoroutine(FadeVCAVolume(masterVCA, 1f, 0f, 2f));
+
         // 🎧 Memory start sound
+        EventInstance memoryStart = default;
         if (!memoryStartSound.IsNull)
         {
-            var sfx = RuntimeManager.CreateInstance(memoryStartSound);
-            RuntimeManager.AttachInstanceToGameObject(sfx, transform);
-            sfx.start();
-            sfx.release();
+            memoryStart = RuntimeManager.CreateInstance(memoryStartSound);
+            RuntimeManager.AttachInstanceToGameObject(memoryStart, transform);
+            memoryStart.start();
+
+            if (memoryImage != null && memorySprite1 != null)
+            {
+                memoryImage.sprite = memorySprite1;
+                memoryImage.color = new Color(1, 1, 1, 0);
+                memoryImage.gameObject.SetActive(true);
+                StartCoroutine(FadeImage(memoryImage, 0f, 1f, imageFadeDuration));
+            }
         }
 
         while (t < fadeDuration)
         {
             t += Time.deltaTime;
             float alpha = Mathf.Lerp(0f, 1f, t / fadeDuration);
-
-            if (fadeImage != null)
-                fadeImage.color = new Color(0, 0, 0, alpha);
-
-            if (hintText != null)
-                hintText.color = new Color(hintText.color.r, hintText.color.g, hintText.color.b, alpha);
-
+            if (fadeImage != null) fadeImage.color = new Color(0, 0, 0, alpha);
+            if (hintText != null) hintText.color = new Color(hintText.color.r, hintText.color.g, hintText.color.b, alpha);
             yield return null;
         }
 
         yield return new WaitForSeconds(1f);
+
+        if (memoryStart.isValid())
+        {
+            memoryStart.getPlaybackState(out var state);
+            while (state == PLAYBACK_STATE.PLAYING)
+            {
+                memoryStart.getPlaybackState(out state);
+                yield return null;
+            }
+            memoryStart.release();
+        }
+
+        if (memoryImage != null)
+            yield return StartCoroutine(FadeImage(memoryImage, 1f, 0f, imageFadeDuration));
 
         if (!skipTriggered && !memoryDeepSound.IsNull)
         {
@@ -104,6 +133,14 @@ public class MemoryTrigger : MonoBehaviour
             RuntimeManager.AttachInstanceToGameObject(deep, transform);
             deep.start();
             deep.release();
+
+            if (memoryImage != null && memorySprite2 != null)
+            {
+                memoryImage.sprite = memorySprite2;
+                memoryImage.color = new Color(1, 1, 1, 0);
+                memoryImage.gameObject.SetActive(true);
+                yield return StartCoroutine(FadeImage(memoryImage, 0f, 1f, imageFadeDuration));
+            }
         }
 
         if (wakeUpText != null)
@@ -135,22 +172,22 @@ public class MemoryTrigger : MonoBehaviour
 
         if (canWakeUp && Input.GetKeyDown(wakeUpKey))
         {
-            PlayWakeUpSound();
             ResetLoop();
-            StartCoroutine(FadeVCAVolume(masterVCA, 0f, 1f, 2f, delay: 5f)); // Restore after memory
+            StartCoroutine(FadeVCAVolume(masterVCA, 0f, 1f, 2f, delay: 5f));
         }
     }
 
     private void ResetLoop()
     {
+        if (memoryImage != null)
+            StartCoroutine(FadeImage(memoryImage, 1f, 0f, imageFadeDuration));
         isMemoryActive = false;
-
         if (LoopCycleManager.instance != null)
             LoopCycleManager.instance.RestartScene();
         else
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // fallback
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    
+
     private IEnumerator FadeVCAVolume(VCA vca, float from, float to, float duration, float delay = 0f)
     {
         yield return new WaitForSeconds(delay);
@@ -167,14 +204,21 @@ public class MemoryTrigger : MonoBehaviour
         vca.setVolume(to);
     }
 
-    private void PlayWakeUpSound()
+    private IEnumerator FadeImage(Image image, float fromAlpha, float toAlpha, float duration)
     {
-        if (!wakeUpSound.IsNull)
+        float t = 0f;
+        Color color = image.color;
+
+        while (t < duration)
         {
-            var sfx = RuntimeManager.CreateInstance(wakeUpSound);
-            RuntimeManager.AttachInstanceToGameObject(sfx, transform);
-            sfx.start();
-            sfx.release();
+            t += Time.deltaTime;
+            float a = Mathf.Lerp(fromAlpha, toAlpha, t / duration);
+            image.color = new Color(color.r, color.g, color.b, a);
+            yield return null;
         }
+
+        image.color = new Color(color.r, color.g, color.b, toAlpha);
+        if (toAlpha == 0f)
+            image.gameObject.SetActive(false);
     }
 }

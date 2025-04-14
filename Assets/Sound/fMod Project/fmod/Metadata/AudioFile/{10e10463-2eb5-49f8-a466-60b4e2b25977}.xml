@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{10e10463-2eb5-49f8-a466-60b4e2b25977}">
+		<property name="assetPath">
+			<value>Yawn.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.0416326530612245</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5d119a6c-b98b-482c-87b4-d041f895b4f3}</destination>
+		</relationship>
+	</object>
+</objects>
