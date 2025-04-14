@@ -23,9 +23,10 @@ MonoBehaviour:
       Data4: 0
     Path: 
   options:
-  - optionText: Ask politely for coffee.
-    karmaImpact: 5
-    reactionText: '"Coffee? Alright!" She stares at you for what feels like too long.'
+  - optionText: Wait... Didn't you already ask me that?
+    karmaImpact: 0
+    reactionText: '"I''m sorry, sir, but I''m not sure what you mean. This is the
+      first time I''ve come around to you."'
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -40,44 +41,6 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 11400000, guid: 99bef42a34f29af48b4f425c2e8d2eb6, type: 2}
-    objectIDsToEnable: []
-  - optionText: Tea. please.
-    karmaImpact: 5
-    reactionText: '"Aha, tea, sure!" She stares at you for what feels like too long.'
-    playerVoiceLine:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    npcReactionVoiceLine:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    followUpDialogue: {fileID: 11400000, guid: 939094c27b332014faf65dcb89732493, type: 2}
-    objectIDsToEnable: []
-  - optionText: Alcohol.
-    karmaImpact: -5
-    reactionText: '"Alcohol, huh?" She stares at you for what feels like too long.'
-    playerVoiceLine:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    npcReactionVoiceLine:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    followUpDialogue: {fileID: 11400000, guid: 5640fea9ec50e984eb9bc04ba885b27e, type: 2}
+    followUpDialogue: {fileID: 11400000, guid: 8ebae0dc927dcb2499cf95eeff754a83, type: 2}
     objectIDsToEnable: []
   requiredLoop: 1

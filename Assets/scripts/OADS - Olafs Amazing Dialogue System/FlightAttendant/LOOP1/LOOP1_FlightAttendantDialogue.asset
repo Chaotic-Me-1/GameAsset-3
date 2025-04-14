@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
+  m_Name: LOOP1_FlightAttendantDialogue
+  m_EditorClassIdentifier: 
+  promptText: The flight attendant stops next to you and smiles. Would you like something
+    to drink, sir? Coffee? Tea?? Alcohol? What do you choose, sir?"
+  promptVoiceLine:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  options:
+  - optionText: Smile and ask politely for coffee.
+    karmaImpact: 5
+    reactionText: '"Coffee? Alright!"'
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 11400000, guid: 99bef42a34f29af48b4f425c2e8d2eb6, type: 2}
+    objectIDsToEnable: []
+  - optionText: Tea. please.
+    karmaImpact: 5
+    reactionText: '"Aha, tea, sure!"'
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 11400000, guid: 939094c27b332014faf65dcb89732493, type: 2}
+    objectIDsToEnable: []
+  - optionText: Alcohol.
+    karmaImpact: -5
+    reactionText: '"Alcohol, huh?"'
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 11400000, guid: 5640fea9ec50e984eb9bc04ba885b27e, type: 2}
+    objectIDsToEnable: []
+  requiredLoop: 0
