@@ -67,6 +67,9 @@ public class Book : MonoBehaviour {
     //current flip mode
     FlipMode mode;
 
+    public GameObject crosswordHotspot;
+
+
     void Start()
     {
         if (!canvas) canvas=GetComponentInParent<Canvas>();
@@ -391,6 +394,15 @@ public class Book : MonoBehaviour {
         Right.transform.SetParent(BookPanel.transform, true);
         RightNext.transform.SetParent(BookPanel.transform, true);
         UpdateSprites();
+        if (currentPage == 6)
+        {
+            crosswordHotspot.SetActive(true);
+        }
+        else
+        {
+            crosswordHotspot.SetActive(false);
+        }
+
         Shadow.gameObject.SetActive(false);
         ShadowLTR.gameObject.SetActive(false);
         if (OnFlip != null)

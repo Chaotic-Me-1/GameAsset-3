@@ -28,13 +28,20 @@ public class MagazineInteractable : MonoBehaviour, IInteractable
             DisableGlow(); // Ensure it's off by default
     }
 
+    [Header("Audio")]
+    public EventReference openMagazineSound;
+
+
     public void OnTouchStart() => EnableGlow();
     public void OnTouchEnd() => DisableGlow();
 
     public void OnInteract()
     {
         magazineUI.ShowMagazine();
-        PlayOpenSound();
+
+        if (!openMagazineSound.IsNull)
+            RuntimeManager.PlayOneShot(openMagazineSound);
+
         Debug.Log("Opened Magazine: " + gameObject.name);
     }
 

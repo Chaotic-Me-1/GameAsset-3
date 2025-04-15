@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -37,7 +37,6 @@ public class CrosswordManager : MonoBehaviour
             var (r, c) = (currentWord.Row, currentWord.Col);
             HighlightClue(r, c);
             cells[r, c].inputField.Select();
-            CrosswordCursorTracker.Instance.MoveToCell(cells[r, c].GetComponent<RectTransform>());
         }
     }
 
@@ -120,7 +119,7 @@ public class CrosswordManager : MonoBehaviour
 
         TextMeshProUGUI text = numberObj.AddComponent<TextMeshProUGUI>();
         text.text = clueNumber.ToString();
-        text.fontSize = 20;
+        text.fontSize = 20; // Bigger font
         text.enableAutoSizing = true;
         text.alignment = TextAlignmentOptions.TopLeft;
         text.color = Color.black;
@@ -158,11 +157,7 @@ public class CrosswordManager : MonoBehaviour
         {
             if (r == nextRow && c == nextCol)
             {
-                Debug.Log("MoveToNextCellInWord fired to: " + nextRow + "," + nextCol);
-
-                var nextCell = cells[nextRow, nextCol];
-                nextCell.inputField.Select();
-                CrosswordCursorTracker.Instance.MoveToCell(nextCell.GetComponent<RectTransform>());
+                cells[nextRow, nextCol].inputField.Select();
                 return;
             }
         }
@@ -177,7 +172,6 @@ public class CrosswordManager : MonoBehaviour
         if (next != null && next.inputField.interactable)
         {
             next.inputField.Select();
-            CrosswordCursorTracker.Instance.MoveToCell(next.GetComponent<RectTransform>());
         }
     }
 
@@ -197,9 +191,6 @@ public class CrosswordManager : MonoBehaviour
 
             currentWord = entries[0];
             HighlightClue(row, col);
-            cells[row, col].inputField.Select();
-            CrosswordCursorTracker.Instance.MoveToCell(cells[row, col].GetComponent<RectTransform>());
-
         }
     }
 

@@ -24,7 +24,13 @@ public class MagazineUI : MonoBehaviour
             HideMagazine();
         }
     }
-    
+    public void ResumeMagazine()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        magazinePanel.SetActive(true);
+    }
+
     public void ShowMagazine()
     {
         magazinePanel.SetActive(true);
