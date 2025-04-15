@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
+  m_Name: Help_1
+  m_EditorClassIdentifier: 
+  promptText: "You notice the passenger to your left acting strangely\u2014shaking
+    and sweating as if in distress."
+  promptVoiceLine:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  options:
+  - optionText: Ignore him
+    karmaImpact: 0
+    reactionText: "You turn your head in the other direction\u2014He's not your problem."
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
+    objectIDsToEnable:
+    - OldMan
+  - optionText: Coward
+    karmaImpact: -5
+    reactionText: "\"Jesus Christ, get your shit together, man. Stop being such a
+      pussy\u2014it\u2019s just a plane.\""
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 11400000, guid: 5312a3b6a85dfb141800b9d56629a1db, type: 2}
+    objectIDsToEnable: []
+  - optionText: Check on him
+    karmaImpact: 5
+    reactionText: '"Hey, sorry, but are you okay?"'
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 11400000, guid: c0fdfd7101b678b468f81a8fc23ba1e6, type: 2}
+    objectIDsToEnable: []
+  requiredLoop: 1

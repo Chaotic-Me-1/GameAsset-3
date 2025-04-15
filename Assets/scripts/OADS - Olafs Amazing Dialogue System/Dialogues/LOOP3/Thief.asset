@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
-  m_Name: LOOP2_FlightAttendantDialogue
+  m_Name: Thief
   m_EditorClassIdentifier: 
-  promptText: The flight attendant stops next to you and smiles uncannily. Would
-    you like something to drink, sir? Coffee? Tea?? Alcohol? What do you choose,
-    sir?"
+  promptText: As the flight attendant starts to move you notice a passenger tries
+    to steal a snack from her cart.
   promptVoiceLine:
     Guid:
       Data1: 0
@@ -23,9 +22,9 @@ MonoBehaviour:
       Data4: 0
     Path: 
   options:
-  - optionText: Ask politely for coffee.
+  - optionText: Notify the attendant
     karmaImpact: 5
-    reactionText: '"Coffee? Alright!" She stares at you for what feels like too long.'
+    reactionText: '"Miss!" - "Hmm?"'
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -40,30 +39,11 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 11400000, guid: 99bef42a34f29af48b4f425c2e8d2eb6, type: 2}
+    followUpDialogue: {fileID: 11400000, guid: e2320ebdd42fbb54ea88137f977232ab, type: 2}
     objectIDsToEnable: []
-  - optionText: Tea. please.
-    karmaImpact: 5
-    reactionText: '"Aha, tea, sure!" She stares at you for what feels like too long.'
-    playerVoiceLine:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    npcReactionVoiceLine:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    followUpDialogue: {fileID: 11400000, guid: 939094c27b332014faf65dcb89732493, type: 2}
-    objectIDsToEnable: []
-  - optionText: Alcohol.
+  - optionText: Whisper "Give me a real drink" to the thief
     karmaImpact: -5
-    reactionText: '"Alcohol, huh?" She stares at you for what feels like too long.'
+    reactionText: 
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -78,6 +58,26 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 11400000, guid: 5640fea9ec50e984eb9bc04ba885b27e, type: 2}
+    followUpDialogue: {fileID: 11400000, guid: 2f935f09a8a6ef5408d845a263572386, type: 2}
     objectIDsToEnable: []
-  requiredLoop: 1
+  - optionText: Ignore the thief
+    karmaImpact: 0
+    reactionText: "You look away. It\u2019s none of your concerns "
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
+    objectIDsToEnable:
+    - BabyCry
+  requiredLoop: -1

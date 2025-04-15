@@ -82,9 +82,8 @@ public class MemoryTrigger : MonoBehaviour
         {
             hintText.gameObject.SetActive(true);
             hintText.color = new Color(hintText.color.r, hintText.color.g, hintText.color.b, hintMinAlpha);
-            hintShouldFlash = true; // ✅ Start flashing right away
+            hintShouldFlash = true; // Start flashing the skip text
         }
-
         if (wakeUpText != null)
         {
             wakeUpText.gameObject.SetActive(false);
@@ -106,7 +105,7 @@ public class MemoryTrigger : MonoBehaviour
                 memoryImage.sprite = memorySprite1;
                 memoryImage.color = new Color(1, 1, 1, 0);
                 memoryImage.gameObject.SetActive(true);
-                StartCoroutine(FadeImage(memoryImage, 0f, 1f, imageFadeDuration));
+                StartCoroutine(FadeImage(memoryImage, 0f, 0.6f, imageFadeDuration));
             }
         }
 
@@ -114,7 +113,7 @@ public class MemoryTrigger : MonoBehaviour
         {
             t += Time.deltaTime;
             float alpha = Mathf.Lerp(0f, 1f, t / fadeDuration);
-            if (fadeImage != null) fadeImage.color = new Color(0, 0, 0, alpha);
+            if (fadeImage != null) fadeImage.color = new Color(0.5f, 0.5f, 0.5f, alpha);
             if (hintText != null) hintText.color = new Color(hintText.color.r, hintText.color.g, hintText.color.b, alpha);
             yield return null;
         }
@@ -133,7 +132,7 @@ public class MemoryTrigger : MonoBehaviour
         }
 
         if (memoryImage != null)
-            yield return StartCoroutine(FadeImage(memoryImage, 1f, 0f, imageFadeDuration));
+            yield return StartCoroutine(FadeImage(memoryImage, 0.6f, 0f, imageFadeDuration));
 
         if (!skipTriggered && !memoryDeepSound.IsNull)
         {
@@ -147,7 +146,7 @@ public class MemoryTrigger : MonoBehaviour
                 memoryImage.sprite = memorySprite2;
                 memoryImage.color = new Color(1, 1, 1, 0);
                 memoryImage.gameObject.SetActive(true);
-                yield return StartCoroutine(FadeImage(memoryImage, 0f, 1f, imageFadeDuration));
+                yield return StartCoroutine(FadeImage(memoryImage, 0f, 0.6f, imageFadeDuration));
             }
         }
 
@@ -158,7 +157,7 @@ public class MemoryTrigger : MonoBehaviour
 
             // Fade out the second image
             if (memoryImage != null)
-                yield return StartCoroutine(FadeImage(memoryImage, 1f, 0f, imageFadeDuration));
+                yield return StartCoroutine(FadeImage(memoryImage, 0.6f, 0f, imageFadeDuration));
 
             if (hintText != null)
             {
@@ -180,7 +179,6 @@ public class MemoryTrigger : MonoBehaviour
     {
         if (!isMemoryActive) return;
 
-        // 🔁 Flashing logic: Only active when skipping
         if (hintShouldFlash && hintText != null && hintText.gameObject.activeSelf)
         {
             float alpha = Mathf.Lerp(hintMinAlpha, hintMaxAlpha, Mathf.PingPong(Time.time * hintFlashSpeed, 1f));

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
-  m_Name: LOOP2_BabyDialogue
+  m_Name: LOOP3_BabyDialogue
   m_EditorClassIdentifier: 
   promptText: "The baby in front of you starts to cry out loud. The child\u2019s
     crying is ringing in your ears, and the parents don\u2019t look like they\u2019re
@@ -45,20 +45,11 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 0}
+    followUpDialogue: {fileID: 11400000, guid: c9743969df900014a9f49f04afc461d7, type: 2}
     objectIDsToEnable: []
   - optionText: Yell back
     karmaImpact: -5
-    reactionText: "You yell at the baby and its parents. \"Waaaaa!!! Waaaaa!!! Make
-      that thing shut up!\". The baby just starts to cry even louder. The father
-      turns in your direction, yelling at you. \"What is wrong with you?!\". Your
-      face turns red and you yell back at the man \"What is wrong with me? What's
-      wrong with you?! Make that thing shut up!\"  The mans face turns to a look
-      of defeat. \"We've been trying all day! He's fussy! Yelling won\u2019t help!\"
-      You lean back into your chair \"I don't care. Just make it stop!\". The father
-      has clearly had enough of you. \"You better shut it. You're the worst!\" -
-      The baby's cries grow even louder, ringing in your ears. There's something
-      about it..."
+    reactionText: 'You yell at the baby and its parents. '
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -73,7 +64,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
-    followUpDialogue: {fileID: 0}
+    followUpDialogue: {fileID: 11400000, guid: 33e875fd9a3031545b64798f77362c9e, type: 2}
     objectIDsToEnable: []
   - optionText: Say nothing
     karmaImpact: 0
@@ -94,5 +85,6 @@ MonoBehaviour:
         Data4: 0
       Path: 
     followUpDialogue: {fileID: 0}
-    objectIDsToEnable: []
-  requiredLoop: 1
+    objectIDsToEnable:
+    - Memory3
+  requiredLoop: -1

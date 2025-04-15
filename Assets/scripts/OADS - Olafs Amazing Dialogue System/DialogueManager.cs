@@ -5,20 +5,19 @@ using UnityEngine.UI;
 using TMPro;
 using FMODUnity;
 using FMOD.Studio;
+using UnityEngine.EventSystems;
 
-public class DialogueManager : MonoBehaviour
+public class DialogueManager : MonoBehaviour // script for managing all the dialogue within the game
 {
     public static DialogueManager instance;
     public static bool IsDialogueActive { get; private set; }
-
     public GameObject dialoguePanel;
     public TextMeshProUGUI promptText;
     public Button[] optionButtons;
     public FirstPersonCamera playerCamera;
-    public TextMeshProUGUI reactionText; // Assign in Inspector
-
+    public TextMeshProUGUI reactionText;
     private DialogueData currentDialogue;
-    private BabyCry currentBabyCry; // To notify after choice
+    private BabyCry currentBabyCry;
 
     void Awake()
     {
@@ -30,7 +29,6 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(false);
     }
 
-    // Start dialogue with optional BabyCry reference
     public void StartDialogue(DialogueData data, BabyCry baby = null)
     {
         IsDialogueActive = true;
@@ -41,7 +39,12 @@ public class DialogueManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         if (playerCamera != null) playerCamera.cameraActive = false;
 
+        // Clear previously selected UI
+        EventSystem.current.SetSelectedGameObject(null);
+
         promptText.text = data.promptText;
+
+        // Play prompt voice line
         if (!currentDialogue.promptVoiceLine.IsNull)
         {
             EventInstance promptVoice = RuntimeManager.CreateInstance(currentDialogue.promptVoiceLine);
@@ -49,12 +52,21 @@ public class DialogueManager : MonoBehaviour
             promptVoice.start();
             promptVoice.release();
         }
+
         for (int i = 0; i < optionButtons.Length; i++)
         {
-            int index = i;
-            optionButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = data.options[i].optionText;
-            optionButtons[i].onClick.RemoveAllListeners();
-            optionButtons[i].onClick.AddListener(() => SelectOption(index));
+            if (i < data.options.Length)
+            {
+                optionButtons[i].gameObject.SetActive(true);
+                int index = i;
+                optionButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = data.options[i].optionText;
+                optionButtons[i].onClick.RemoveAllListeners();
+                optionButtons[i].onClick.AddListener(() => SelectOption(index));
+            }
+            else
+            {
+                optionButtons[i].gameObject.SetActive(false);
+            }
         }
     }
 
@@ -63,7 +75,6 @@ public class DialogueManager : MonoBehaviour
         DialogueOption choice = currentDialogue.options[optionIndex];
         KarmaManager.instance.AddKarma(choice.karmaImpact);
 
-        // Hide buttons and prompt
         foreach (Button btn in optionButtons)
         {
             btn.gameObject.SetActive(false);
@@ -73,7 +84,7 @@ public class DialogueManager : MonoBehaviour
         reactionText.text = choice.reactionText;
         reactionText.gameObject.SetActive(true);
 
-        // 🎤 Play player voice line
+        // player voice line
         if (!choice.playerVoiceLine.IsNull)
         {
             EventInstance playerLine = RuntimeManager.CreateInstance(choice.playerVoiceLine);
@@ -82,10 +93,10 @@ public class DialogueManager : MonoBehaviour
             playerLine.release();
         }
 
-        // 🗣️ Play NPC reaction line (delayed)
+        // NPC reaction line
         StartCoroutine(PlayReactionVoiceLine(choice.npcReactionVoiceLine, 0.5f));
 
-        // 🔄 Enable objects by ID (if any)
+        // Enable objects by ID
         if (choice.objectIDsToEnable != null)
         {
             foreach (string id in choice.objectIDsToEnable)
@@ -98,7 +109,7 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        // 🌿 Branch or close
+        // Branch or close
         if (choice.followUpDialogue != null)
         {
             StartCoroutine(ContinueDialogueAfterDelay(choice.followUpDialogue, 3f));
@@ -108,14 +119,12 @@ public class DialogueManager : MonoBehaviour
             StartCoroutine(CloseDialogueAfterDelay(3f));
         }
 
-        // Notify systems like BabyCry
         if (currentBabyCry != null)
         {
             currentBabyCry.OnPlayerMadeChoice(optionIndex);
             currentBabyCry = null;
         }
     }
-
 
     private IEnumerator PlayReactionVoiceLine(EventReference voiceLine, float delay)
     {
@@ -138,13 +147,12 @@ public class DialogueManager : MonoBehaviour
         reactionText.gameObject.SetActive(false);
         promptText.gameObject.SetActive(true);
 
-        // Reactivate all buttons for next dialogue
+        // Reactivate buttons for next dialogue
         foreach (Button btn in optionButtons)
         {
             btn.gameObject.SetActive(true);
         }
 
-        // Resume game
         IsDialogueActive = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -163,7 +171,7 @@ public class DialogueManager : MonoBehaviour
             btn.gameObject.SetActive(true);
         }
 
-        StartDialogue(nextDialogue); // Start the follow-up dialogue
+        StartDialogue(nextDialogue); // Start follow-up dialogue
     }
 
 }

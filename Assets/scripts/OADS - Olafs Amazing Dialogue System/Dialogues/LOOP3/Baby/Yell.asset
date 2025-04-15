@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
+  m_Name: Yell
+  m_EditorClassIdentifier: 
+  promptText: '"Waaaaa!!! Waaaaa!!! Make that thing shut up!". The baby just starts
+    to cry even louder. The father turns in your direction, yelling at you. "What
+    is wrong with you?!".'
+  promptVoiceLine:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  options:
+  - optionText: Answer back, "What's wrong with you?"
+    karmaImpact: 0
+    reactionText: "The mans face turns to a look of defeat. \"We've been trying all
+      day! He's fussy! Yelling won\u2019t help!\""
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 11400000, guid: bb11b82ac6653af4f984968627644dab, type: 2}
+    objectIDsToEnable: []
+  requiredLoop: -1
