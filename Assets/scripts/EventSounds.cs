@@ -1,13 +1,16 @@
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using System.Collections;
 
 public class EventSounds : MonoBehaviour
 {
     [Header("FMOD Events")]
     [SerializeField] private EventReference stepSound;
     [SerializeField] private EventReference talkSound;
-    [SerializeField] private EventReference serveSound;
+    [SerializeField] private EventReference serveSoundChips;
+    [SerializeField] private EventReference serveSoundDrink;
+
     [SerializeField] private Animator attendent;
 
 
@@ -28,7 +31,26 @@ public class EventSounds : MonoBehaviour
 
     public void Serve() //serving food
     {
-            PlaySound(serveSound);
+        int serving;
+        serving = Random.Range(0, 1);
+        switch ( serving )
+        {
+            case 1:
+                PlaySound(serveSoundDrink);
+                Debug.Log("Serving drinks");
+                break;
+            case 2:
+                PlaySound(serveSoundChips);
+                Debug.Log("Serving chips");
+                break;
+
+            default:
+                Debug.Log("not Serving");
+                break;
+        }
+        
+        
+            
     }
 
     private void PlaySound(EventReference soundEvent) //plays the sound that is meant to be playing at the transform position of the gameobject with this script on it.
