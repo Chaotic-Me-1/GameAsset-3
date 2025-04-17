@@ -498,7 +498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6d57a5b89384f8648ac1ad4690a72657, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ddf258006e592e44988c09f6573e6ba9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -789,16 +789,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361906118}
-  m_LocalRotation: {x: -0.70564777, y: 0.04540039, z: -0.045400385, w: 0.7056478}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 0.40208337, y: 0.40208337, z: 0.40208337}
+  m_LocalRotation: {x: -0.70710677, y: 0, z: 0, w: 0.70710677}
+  m_LocalPosition: {x: 0, y: 0, z: 2.486979}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 415406001}
-  m_LocalEulerAnglesHint: {x: -82.638, y: 90, z: -90}
+  m_Father: {fileID: 919086828}
+  m_LocalEulerAnglesHint: {x: -90, y: 90, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 177, y: -218}
+  m_AnchoredPosition: {x: -109, y: -722}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!199 &361906120
@@ -958,8 +958,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 45
-      minScalar: 15
+      scalar: 15
+      minScalar: 5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1064,8 +1064,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.74875396, g: 0.812177, b: 0.8867924, a: 0.21176471}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.21176471}
+      minColor: {r: 0.9960785, g: 0.9607844, b: 0.8000001, a: 0.105882354}
+      maxColor: {r: 1, g: 0.97647065, b: 0.854902, a: 0.19215687}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1130,7 +1130,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 150
-      minScalar: 50
+      minScalar: 70
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3527,7 +3527,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 1
+    enabled: 0
     strength:
       serializedVersion: 2
       minMaxState: 0
@@ -5628,7 +5628,6 @@ Transform:
   m_LocalScale: {x: 2.4870465, y: 2.4870465, z: 2.4870465}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 361906119}
   - {fileID: 1666231856}
   - {fileID: 1279302351}
   - {fileID: 448119984}
@@ -6080,7 +6079,7 @@ RectTransform:
   m_GameObject: {fileID: 577480494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1104565, y: 1.1104565, z: 1.1104565}
+  m_LocalScale: {x: -1.110456, y: 1.1104565, z: 1.1104565}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 919086828}
@@ -6803,6 +6802,7 @@ RectTransform:
   m_Children:
   - {fileID: 112815195}
   - {fileID: 577480495}
+  - {fileID: 361906119}
   - {fileID: 1579977873}
   - {fileID: 415406001}
   - {fileID: 421399707}

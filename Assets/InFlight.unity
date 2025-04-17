@@ -50920,7 +50920,7 @@ MonoBehaviour:
   animatedChildWithAnimator: {fileID: 919132147606521264}
   postAnimationObject: {fileID: 1821962242}
   postAnimDelay: 10
-  triggerOnLoop: 0
+  triggerOnLoop: 4
 --- !u!1 &919132148432151785
 GameObject:
   m_ObjectHideFlags: 0
