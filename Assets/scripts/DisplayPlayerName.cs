@@ -11,7 +11,7 @@ public class DisplayPlayerName : MonoBehaviour
         if (PlayerNameManager.instance != null)
         {
             string playerName = PlayerNameManager.instance.GetPlayerName();
-            string finalText = "Captain " + playerName;
+            string finalText = playerName;
 
             if (uiText != null)
                 uiText.text = finalText;
