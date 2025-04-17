@@ -16340,18 +16340,18 @@ MonoBehaviour:
     Path: 
   serveSoundChips:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1892791692
+      Data2: 1156501571
+      Data3: -776841542
+      Data4: -1935450262
+    Path: event:/Chips
   serveSoundDrink:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 872811322
+      Data2: 1120828765
+      Data3: 931811774
+      Data4: 1095941037
+    Path: event:/Short pouring
   attendent: {fileID: 982087465}
 --- !u!114 &982087468
 MonoBehaviour:
@@ -19122,10 +19122,10 @@ MonoBehaviour:
   leafletPanel: {fileID: 309367584}
   openLeafletEvent:
     Guid:
-      Data1: 758192713
-      Data2: 1299885882
-      Data3: 967399298
-      Data4: 102484606
+      Data1: 1014371369
+      Data2: 1080340171
+      Data3: -95436401
+      Data4: 247795282
     Path: event:/Flight manual
 --- !u!114 &1143294791
 MonoBehaviour:
@@ -46079,6 +46079,8 @@ GameObject:
   - component: {fileID: 318288170212225784}
   - component: {fileID: 318288170212225783}
   - component: {fileID: 318288170212225782}
+  - component: {fileID: 318288170212225789}
+  - component: {fileID: 318288170212225786}
   m_Layer: 0
   m_Name: SM_Passanger_Seat
   m_TagString: Untagged
@@ -46086,6 +46088,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
+--- !u!114 &318288170212225786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318288170212225785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688a4cfc7027164458b5b658851c3f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 0
 --- !u!4 &318288170212225787
 Transform:
   m_ObjectHideFlags: 0
@@ -46118,6 +46133,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
+--- !u!114 &318288170212225789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318288170212225785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f76c2c85df3b946aab096d99aafdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numbergen: 0
+  timer: 0
+  trigger: 0
+  SoundCooldown: {fileID: 318288170212225786}
+  Punch:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Slap:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &340382384551834225
 GameObject:
   m_ObjectHideFlags: 0
@@ -68009,39 +68054,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   softSnoring:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -65985097
+      Data2: 1201479988
+      Data3: -360921177
+      Data4: 149311613
+    Path: event:/Snoring 1
   mediumSnoring:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 743835757
+      Data2: 1273023332
+      Data3: -290640500
+      Data4: 1951820462
+    Path: event:/Snoring 2
   hardSnoring:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1726321314
+      Data2: 1311214446
+      Data3: 2116355463
+      Data4: -800405922
+    Path: event:/Snoring 3
   deathSnoring:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -855939927
+      Data2: 1303182675
+      Data3: -32927094
+      Data4: -667440867
+    Path: event:/Snoring 5
   wakeSnoring:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -685099425
+      Data2: 1280090502
+      Data3: -651010651
+      Data4: -318515801
+    Path: event:/Snoring 4
 --- !u!33 &5066001304244743767
 MeshFilter:
   m_ObjectHideFlags: 0

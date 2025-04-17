@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +10,8 @@ public class Phsound : MonoBehaviour
     public int timer;
     public int trigger;
     public SoundCooldown SoundCooldown;
+    [SerializeField] private EventReference Punch;
+    [SerializeField] private EventReference Slap;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +29,27 @@ public class Phsound : MonoBehaviour
         yield return new WaitForSeconds(timer);
 
         trigger = Random.Range(0, numbergen);
-        if (numbergen == 0 && SoundCooldown.count == false)
+       
+        if ((numbergen == 0 || numbergen == 50) && SoundCooldown.count == false   )
         {
-            //playsound
+            switch (trigger)
+            { 
+            case 0:
+
+               RuntimeManager.CreateInstance(Punch);
+                    break;
+
+            case 50:
+
+                    RuntimeManager.CreateInstance(Slap);
+                    break;
+
+            default:
+                    Debug.Log("");
+                        break;
+            }
+                
+            
             SoundCooldown.Cooldown();
             StopCoroutine(Phevent());
         }

@@ -32,14 +32,15 @@ public class EventSounds : MonoBehaviour
     public void Serve() //serving food
     {
         int serving;
-        serving = Random.Range(0, 1);
+        serving = Random.Range(0, 2);
+        Debug.Log(serving);
         switch ( serving )
         {
-            case 1:
+            case 0:
                 PlaySound(serveSoundDrink);
                 Debug.Log("Serving drinks");
                 break;
-            case 2:
+            case 1:
                 PlaySound(serveSoundChips);
                 Debug.Log("Serving chips");
                 break;
