@@ -15,6 +15,7 @@ public class Snoring : MonoBehaviour
     public EventReference wakeSnoring;
     private int randomsnoreNb;
     int Ssnore;
+    public SoundCooldown SoundCooldown;
     // Start is called before the first frame update
 
     void Start()
@@ -39,11 +40,12 @@ public class Snoring : MonoBehaviour
                     Debug.Log("Snoring 0");
                 break;
             case 1:
-
-                    Debug.Log("Snoring 0");
+                PlaySound(mediumSnoring);
+                Debug.Log("Snoring 0");
                 break;
             case 2:
-                    Debug.Log("Snoring 0");
+                PlaySound(hardSnoring);
+                Debug.Log("Snoring 0");
                 break;
             default:
                     Debug.Log("not snoring");
@@ -63,13 +65,15 @@ public class Snoring : MonoBehaviour
     }
     IEnumerator Spesialsnore() // after 3 normal snoring sounds there will be kinda of a Special sound that happends and that can be random as well 
     {
-        int randomSsnoreNb = Random.Range(0, 1);
+        int randomSsnoreNb = Random.Range(0, 2);
         switch (randomSsnoreNb)
         {
             case 0:
+                PlaySound(wakeSnoring);
                 Debug.Log("Snoring 0");
                 break;
             case 1:
+                PlaySound(deathSnoring);
                 Debug.Log("Snoring 1");
                 break;
             default :
@@ -81,7 +85,11 @@ public class Snoring : MonoBehaviour
     }
     private void snore()
     { 
-        StartCoroutine(snoring());
+        if (SoundCooldown == false)
+        {
+            StartCoroutine(snoring());
+        }
+        
     }
     private void PlaySound(EventReference soundEvent) //plays the sound that is meant to be playing at the transform position of the gameobject with this script on it.
     {
