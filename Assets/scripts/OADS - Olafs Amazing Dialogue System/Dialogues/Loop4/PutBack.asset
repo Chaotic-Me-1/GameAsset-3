@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
+  m_Name: PutBack
+  m_EditorClassIdentifier: 
+  promptText: "You can\u2019t bring yourself to open it, but leaving it on the floor\u2014or
+    the seat\u2014doesn\u2019t feel right either. With a deep breath, you tuck it
+    back where it came from."
+  promptVoiceLine:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  options:
+  - optionText: Close compartment
+    karmaImpact: 0
+    reactionText: 
+    playerVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    followUpDialogue: {fileID: 0}
+    objectIDsToEnable:
+    - Memory3
+  requiredLoop: -1
