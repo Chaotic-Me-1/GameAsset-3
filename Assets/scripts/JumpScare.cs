@@ -1,5 +1,4 @@
 using UnityEngine;
-using TMPro;
 using FMODUnity;
 
 public class JumpScare : MonoBehaviour
@@ -21,27 +20,23 @@ public class JumpScare : MonoBehaviour
     [Header("Sound (optional)")]
     public EventReference scareSound;
 
-    [Header("After‑scare Animation")]
-    public Animator afterScareAnimator;
-    public string   triggerName = "Play";
-
     Transform targetTf;
     Vector3   baseScale;
 
     void OnEnable()
     {
-        if (uiImage != null)  targetTf = uiImage.rectTransform;
+        // decide which renderer we’re using
+        if (uiImage != null)      targetTf = uiImage.rectTransform;
         else if (worldSprite != null) targetTf = worldSprite.transform;
         else
         {
-            Debug.LogWarning($"{name}: No Image / SpriteRenderer assigned!");
+            Debug.LogWarning($"{name}: No Image or SpriteRenderer assigned!");
             enabled = false;
             return;
         }
 
         baseScale = targetTf.localScale;
         SetVisible(false);
-
         StartCoroutine(ScareRoutine());
     }
 
@@ -65,25 +60,18 @@ public class JumpScare : MonoBehaviour
 
         targetTf.localScale = baseScale;
         SetVisible(false);
-
-        if (afterScareAnimator != null)
-        {
-            if (!string.IsNullOrEmpty(triggerName))
-                afterScareAnimator.SetTrigger(triggerName);
-            else
-                afterScareAnimator.Play(0);
-        }
     }
 
+    /* helpers */
     void SetVisible(bool v)
     {
-        if (uiImage != null)   uiImage.enabled   = v;
-        if (worldSprite != null) worldSprite.enabled = v;
+        if (uiImage      != null) uiImage.enabled        = v;
+        if (worldSprite  != null) worldSprite.enabled    = v;
     }
 
     void PlayScareSound()
     {
         if (!scareSound.IsNull)
-            RuntimeManager.PlayOneShot(scareSound); 
+            RuntimeManager.PlayOneShot(scareSound);
     }
 }
