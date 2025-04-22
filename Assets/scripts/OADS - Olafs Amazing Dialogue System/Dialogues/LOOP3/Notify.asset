@@ -25,7 +25,7 @@ MonoBehaviour:
   options:
   - optionText: Nod at the attendant
     karmaImpact: 0
-    reactionText: She smiles back at you, although not so eearily this time.
+    reactionText: She smiles back at you, although not so eerily this time.
     playerVoiceLine:
       Guid:
         Data1: 0
