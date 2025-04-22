@@ -24,7 +24,8 @@ MonoBehaviour:
   options:
   - optionText: Yes
     karmaImpact: 0
-    reactionText: 
+    reactionText: '"Great!" Her gaze is fixated on you. She doesn''t say anything,
+      just gives you a nod and smiles.'
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -40,10 +41,12 @@ MonoBehaviour:
         Data4: 0
       Path: 
     followUpDialogue: {fileID: 0}
-    objectIDsToEnable: []
+    objectIDsToEnable:
+    - Crash
   - optionText: No
     karmaImpact: 0
-    reactionText: '"Very well sir, ENJOY!" she grins at you.'
+    reactionText: Her gaze is fixated on you. She doesn't say anything, just gives
+      you a nod.
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -59,5 +62,6 @@ MonoBehaviour:
         Data4: 0
       Path: 
     followUpDialogue: {fileID: 0}
-    objectIDsToEnable: []
-  requiredLoop: 2
+    objectIDsToEnable:
+    - Crash
+  requiredLoop: 3

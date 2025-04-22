@@ -1020,52 +1020,6 @@ Transform:
   - {fileID: 64953734}
   m_Father: {fileID: 815353626}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &39275643
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 39275645}
-  - component: {fileID: 39275644}
-  m_Layer: 0
-  m_Name: EndingTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &39275644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39275643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1d33f4227f93fb49a9cda22934b614c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scriptToEnable: {fileID: 0}
-  selfDestruct: 1
---- !u!4 &39275645
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39275643}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.75991696, y: 5034.395, z: -2.2393615}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &40355685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3389,6 +3343,79 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &105626988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 105626990}
+  - component: {fileID: 105626989}
+  m_Layer: 0
+  m_Name: Memory3-Baby
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &105626989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105626988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33cb8ba57e4e2e9439aa3b91f2cce9d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerDelay: 15
+  fadeImage: {fileID: 1025247313}
+  hintText: {fileID: 178488778}
+  wakeUpText: {fileID: 1942255008}
+  memoryStartSound:
+    Guid:
+      Data1: -977810401
+      Data2: 1107270942
+      Data3: 1740336013
+      Data4: -750192649
+    Path: event:/WorkingHard
+  memoryDeepSound:
+    Guid:
+      Data1: -1129093819
+      Data2: 1288048909
+      Data3: 747810212
+      Data4: 1813172823
+    Path: event:/GranCanaria
+  memoryImage: {fileID: 1090342279}
+  memorySprite1: {fileID: 21300000, guid: 941c7511caa7ae94ca864a32b64d00e1, type: 3}
+  memorySprite2: {fileID: 21300000, guid: f57578be9e98cbc4782027539272224b, type: 3}
+  imageFadeDuration: 1.2
+  wakeUpDelayAfterSecondMemory: 13
+  skipKey: 32
+  wakeUpKey: 101
+  pressesToSkip: 5
+  hintFlashSpeed: 1
+  hintMinAlpha: 0.1
+  hintMaxAlpha: 0.7
+--- !u!4 &105626990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105626988}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.916, y: 5034.142, z: -4.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &107681672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38520,7 +38547,7 @@ MonoBehaviour:
   - ID: Memory2
     targetObject: {fileID: 1419408580}
   - ID: Memory3
-    targetObject: {fileID: 1240817575}
+    targetObject: {fileID: 105626988}
   - ID: HelpMan
     targetObject: {fileID: 2022046323}
   - ID: OldMan
@@ -38533,8 +38560,8 @@ MonoBehaviour:
     targetObject: {fileID: 1272369375}
   - ID: BabyCry
     targetObject: {fileID: 135577289}
-  - ID: Ending
-    targetObject: {fileID: 39275643}
+  - ID: Crash
+    targetObject: {fileID: 1240817575}
 --- !u!114 &1143294795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40798,7 +40825,7 @@ GameObject:
   - component: {fileID: 1213599929}
   - component: {fileID: 1213599925}
   m_Layer: 0
-  m_Name: Memory1
+  m_Name: Memory1-Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41280,57 +41307,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1240817577}
-  - component: {fileID: 1240817576}
+  - component: {fileID: 1240817580}
   - component: {fileID: 1240817579}
   - component: {fileID: 1240817578}
   m_Layer: 0
-  m_Name: Memory3
+  m_Name: Memory4-Crash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1240817576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240817575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33cb8ba57e4e2e9439aa3b91f2cce9d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerDelay: 35
-  fadeImage: {fileID: 1025247313}
-  hintText: {fileID: 178488778}
-  wakeUpText: {fileID: 1942255008}
-  memoryStartSound:
-    Guid:
-      Data1: -977810401
-      Data2: 1107270942
-      Data3: 1740336013
-      Data4: -750192649
-    Path: event:/WorkingHard
-  memoryDeepSound:
-    Guid:
-      Data1: -1129093819
-      Data2: 1288048909
-      Data3: 747810212
-      Data4: 1813172823
-    Path: event:/GranCanaria
-  memoryImage: {fileID: 1090342279}
-  memorySprite1: {fileID: 21300000, guid: 941c7511caa7ae94ca864a32b64d00e1, type: 3}
-  memorySprite2: {fileID: 21300000, guid: f57578be9e98cbc4782027539272224b, type: 3}
-  imageFadeDuration: 1.2
-  wakeUpDelayAfterSecondMemory: 13
-  skipKey: 32
-  wakeUpKey: 101
-  pressesToSkip: 5
-  hintFlashSpeed: 1
-  hintMinAlpha: 0.1
-  hintMaxAlpha: 0.7
 --- !u!4 &1240817577
 Transform:
   m_ObjectHideFlags: 0
@@ -41463,6 +41449,46 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1240817580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240817575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d9ddab432ca3245807fb77b1db5c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerDelay: 35
+  wakeUpDelayAfterSecond: 13
+  fadeImage: {fileID: 0}
+  memoryImage: {fileID: 1025247313}
+  memorySprite1: {fileID: 0}
+  memorySprite2: {fileID: 0}
+  imageFadeDuration: 1
+  hintText: {fileID: 178488778}
+  wakeUpText: {fileID: 1942255008}
+  memoryStartSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  memoryDeepSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  skipKey: 32
+  wakeKey: 101
+  pressesToSkip: 5
+  screenFadeDuration: 5
+  creditsSceneName: Credits
 --- !u!1 &1244133262
 GameObject:
   m_ObjectHideFlags: 0
@@ -46548,7 +46574,7 @@ GameObject:
   - component: {fileID: 1419408582}
   - component: {fileID: 1419408581}
   m_Layer: 0
-  m_Name: Memory2
+  m_Name: Memory2-Packed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71796,7 +71822,7 @@ MonoBehaviour:
   animatedChildWithAnimator: {fileID: 919132147606521264}
   postAnimationObject: {fileID: 1821962242}
   postAnimDelay: 10
-  triggerOnLoop: 2
+  triggerOnLoop: 3
 --- !u!1 &919132148432151785
 GameObject:
   m_ObjectHideFlags: 0
@@ -102273,7 +102299,7 @@ Transform:
   m_GameObject: {fileID: 6632936311786409719}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.78200066, y: 0.21972656, z: -4.958084}
+  m_LocalPosition: {x: 0.78200066, y: 0.21972656, z: -4.9580956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -119374,6 +119400,6 @@ SceneRoots:
   - {fileID: 2022046325}
   - {fileID: 414104656}
   - {fileID: 1419408582}
+  - {fileID: 105626990}
   - {fileID: 1240817577}
   - {fileID: 1552617307}
-  - {fileID: 39275645}
