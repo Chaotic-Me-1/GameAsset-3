@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Open
   m_EditorClassIdentifier: 
   promptText: "As you look closer, your breath catches\u2014it's a death certificate.
-    \"This is to acknowledge the death of {NAME} Born August 12. 1975, dead May 10.
-    2025. "
+    \"This is to acknowledge the death of {NAME}. Died {DATE}.\""
   promptVoiceLine:
     Guid:
       Data1: 0

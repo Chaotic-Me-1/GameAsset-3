@@ -151,6 +151,7 @@ public class MemoryToCredits : MonoBehaviour
     void FinishMemory()
     {
         memoryActive = false;
+        RuntimeManager.StudioSystem.release();
         StartCoroutine(FadeToCredits());
     }
 

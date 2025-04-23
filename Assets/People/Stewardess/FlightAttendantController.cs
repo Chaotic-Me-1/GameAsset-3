@@ -80,51 +80,37 @@ public class FlightAttendantController : MonoBehaviour
     {
         while (true)
         {
-            // Calculate direction
-            Vector3 direction = (endPoint.position - startPoint.position).normalized;
-
-            // Distance between start and end
-            float totalDistance = Vector3.Distance(startPoint.position, endPoint.position);
-
-            // Track how far we've moved along the path
-            float distanceMoved = 0f;
-
-            // Set animation to pushing
             animator.SetBool("IsPushing", true);
 
-            while (distanceMoved < totalDistance)
+            // keep going until we are very close to endPoint
+            while (Vector3.Distance(transform.position, endPoint.position) > 0.05f)
             {
-                // Move by small increments
-                Vector3 nextStop = transform.position + direction * stopDistance;
+                // change direction every frame as to follow changes in pitch on the plane
+                Vector3 dir = (endPoint.position - transform.position).normalized;
 
-                // Clamp so we don’t overshoot endPoint
-                if (Vector3.Distance(nextStop, startPoint.position) > totalDistance)
-                {
-                    nextStop = endPoint.position;
-                }
-
-                while (Vector3.Distance(transform.position, nextStop) > 0.05f)
+                // walk a small chunk then stop to serve
+                float travelled = 0f;
+                while (travelled < stopDistance &&
+                    Vector3.Distance(transform.position, endPoint.position) > 0.05f)
                 {
                     if (!waitingForPlayerChoice)
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, nextStop, moveSpeed * Time.deltaTime);
+                        float step = moveSpeed * Time.deltaTime;
+                        transform.position += dir * step;
+                        travelled           += step;
                     }
                     yield return null;
                 }
 
-                distanceMoved += stopDistance;
-
-                // Stop and serve passengers
+                // serve the row reached
                 animator.SetBool("IsPushing", false);
                 yield return ServePassengers();
                 animator.SetBool("IsPushing", true);
             }
 
-            // Reached end, reset to start after short pause
+            /* reached end – pause, then teleport back to start */
             animator.SetBool("IsPushing", false);
-            Debug.Log("Reached end, resetting...");
             yield return new WaitForSeconds(1f);
-
             transform.position = startPoint.position;
         }
     }

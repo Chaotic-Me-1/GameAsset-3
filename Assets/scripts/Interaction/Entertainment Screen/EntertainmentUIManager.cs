@@ -408,4 +408,11 @@ public class EntertainmentUIManager : MonoBehaviour
             videoAudioSource.Play();
         }
     }
+    
+    public void ForceStopAllMedia()
+    {
+        StopCurrentMedia();
+        trackNameText.text = "";
+        currentTrack = null;
+    }
 }

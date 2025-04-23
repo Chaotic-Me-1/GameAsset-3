@@ -41,7 +41,8 @@ MonoBehaviour:
         Data4: 0
       Path: 
     followUpDialogue: {fileID: 11400000, guid: 84413443b6228e645a697579f749812d, type: 2}
-    objectIDsToEnable: []
+    objectIDsToEnable:
+    - Blood
   - optionText: '"Poison?!"'
     karmaImpact: 0
     reactionText: '"Very well sir, ENJOY!" she grins at you.'
@@ -60,7 +61,8 @@ MonoBehaviour:
         Data4: 0
       Path: 
     followUpDialogue: {fileID: 11400000, guid: 4995c7b6a1abb1a489faefc7d648ebcf, type: 2}
-    objectIDsToEnable: []
+    objectIDsToEnable:
+    - PoisonAcid
   - optionText: '"Acid?!"'
     karmaImpact: 0
     reactionText: '"Very well sir, ENJOY!" she grins at you.'
@@ -79,5 +81,6 @@ MonoBehaviour:
         Data4: 0
       Path: 
     followUpDialogue: {fileID: 11400000, guid: df45ae64c1e485f44b4a97fe74d4665a, type: 2}
-    objectIDsToEnable: []
+    objectIDsToEnable:
+    - PoisonAcid
   requiredLoop: 2

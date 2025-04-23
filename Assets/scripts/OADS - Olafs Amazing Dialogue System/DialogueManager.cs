@@ -42,7 +42,7 @@ public class DialogueManager : MonoBehaviour // script for managing all the dial
         // Clear previously selected UI
         EventSystem.current.SetSelectedGameObject(null);
 
-        promptText.text = data.promptText;
+        promptText.text = ParseTokens(data.promptText);
 
         // Play prompt voice line
         if (!currentDialogue.promptVoiceLine.IsNull)
@@ -81,7 +81,7 @@ public class DialogueManager : MonoBehaviour // script for managing all the dial
         }
 
         promptText.gameObject.SetActive(false);
-        reactionText.text = choice.reactionText;
+        reactionText.text = ParseTokens(choice.reactionText);
         reactionText.gameObject.SetActive(true);
 
         // player voice line
@@ -174,4 +174,20 @@ public class DialogueManager : MonoBehaviour // script for managing all the dial
         StartDialogue(nextDialogue); // Start follow-up dialogue
     }
 
+    string ParseTokens(string raw)
+    {
+        if (string.IsNullOrEmpty(raw)) return raw;
+
+        // Name
+        string playerName = PlayerNameManager.instance != null
+                        ? PlayerNameManager.instance.GetPlayerName()
+                        : "Passenger";
+        raw = raw.Replace("{NAME}", playerName);
+
+        // Date
+        string today = System.DateTime.Now.ToString("dd/MM/yyyy");
+        raw = raw.Replace("{DATE}", today);
+
+        return raw;
+    }
 }
