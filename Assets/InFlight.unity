@@ -3121,7 +3121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   karmaThreshold: 65
-  requiredLoop: 3
+  requiredLoop: 4
   objectToActivate: {fileID: 548937166}
   objectToDisable: {fileID: 619549517}
   planeRoot: {fileID: 2985485244038040480}
@@ -49893,7 +49893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   karmaThreshold: 35
-  requiredLoop: 3
+  requiredLoop: 4
   objectToActivate: {fileID: 2097386442}
   planeRoot: {fileID: 2985485244038040480}
   descendDuration: 8
@@ -102299,7 +102299,7 @@ Transform:
   m_GameObject: {fileID: 6632936311786409719}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.78200066, y: 0.21972656, z: -4.9580965}
+  m_LocalPosition: {x: 0.78200066, y: 0.21972656, z: -4.9580984}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

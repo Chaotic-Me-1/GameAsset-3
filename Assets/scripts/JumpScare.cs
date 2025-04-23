@@ -3,7 +3,7 @@ using FMODUnity;
 
 public class JumpScare : MonoBehaviour
 {
-    [Header("Target to flash (pick ONE)")]
+    [Header("UI Image or Sprite Renderer, only one at a time pls")]
     public UnityEngine.UI.Image uiImage;
     public SpriteRenderer       worldSprite;
 
@@ -14,10 +14,10 @@ public class JumpScare : MonoBehaviour
     public float flashOffTime = 0.5f;
 
     [Header("Scale growth")]
-    [Tooltip("How much to add to scale for EVERY flash (1 = +100 %).")]
+    [Tooltip("How much thats added to scale EVERY flash")]
     public float sizeIncrementPerFlash = 0.5f;
 
-    [Header("Sound (optional)")]
+    [Header("Sound")]
     public EventReference scareSound;
 
     Transform targetTf;
@@ -30,7 +30,7 @@ public class JumpScare : MonoBehaviour
         else if (worldSprite != null) targetTf = worldSprite.transform;
         else
         {
-            Debug.LogWarning($"{name}: No Image or SpriteRenderer assigned!");
+            Debug.LogWarning($"{name}: No UI Image or SpriteRenderer!");
             enabled = false;
             return;
         }
@@ -62,7 +62,6 @@ public class JumpScare : MonoBehaviour
         SetVisible(false);
     }
 
-    /* helpers */
     void SetVisible(bool v)
     {
         if (uiImage      != null) uiImage.enabled        = v;

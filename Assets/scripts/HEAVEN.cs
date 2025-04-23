@@ -76,7 +76,7 @@ public class HEAVEN : MonoBehaviour
             if (hdLight != null)
                 hdLight.flareSize = initialFlareSize;
             else
-                Debug.LogWarning($"{name}: Sun light is missing HDAdditionalLightData.");
+                Debug.LogWarning($"{name}: Sun light has no HDAdditionalLightData");
         }
     }
 

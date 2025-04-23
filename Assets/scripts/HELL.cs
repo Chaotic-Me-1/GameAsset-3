@@ -6,28 +6,26 @@ using UnityEngine.Rendering.HighDefinition;
 
 public class HELL : MonoBehaviour
 {
-    [Header("Logic")]
+    [Header("Karma")]
     [Tooltip("Karma must be <= this to trigger.")]
     public int karmaThreshold = -35;
-    [Tooltip("Zero‑based index (3 == 4th loop).")]
+    [Tooltip("Loop")]
     public int requiredLoop = 3;
 
-    [Header("Objects to toggle / animate")]
+    [Header("Objects")]
     public GameObject objectToActivate;
-    public Transform planeRoot;                 // parent of the whole aircraft
-    public float descendDuration = 8f;          // seconds to reach –45° pitch
+    public Transform planeRoot;
+    public float descendDuration = 8f;
 
-    [Header("Volumes (HDRP)")]
-    public Volume skyFogVolume;                 // Physically‑Based‑Sky + Volumetric Clouds
-    public Volume globalVolume;                 // Global post‑process (Vignette)
+    [Header("Volume")]
+    public Volume skyFogVolume;
+    public Volume globalVolume;
 
     [Header("Vignette animation")]
     [Range(0f,1f)] public float vignetteMin = 0.40f;
     [Range(0f,1f)] public float vignetteMax = 0.50f;
-    public float vignettePeriod = 1f;           // seconds for a full ping‑pong
+    public float vignettePeriod = 1f;
 
-    // ───────────────────────────────────────────────
-    // internal state
     PhysicallyBasedSky sky;
     VolumetricClouds   clouds;
     Vignette           vignette;
@@ -46,7 +44,6 @@ public class HELL : MonoBehaviour
             StartCoroutine(PitchPlaneRoutine());
     }
 
-    // ───────────────────────────────────────────────
     bool ConditionsMet()
     {
         int karma = KarmaManager.instance   != null ? KarmaManager.instance.karmaPoints : 0;
@@ -54,7 +51,6 @@ public class HELL : MonoBehaviour
         return karma <= karmaThreshold && loop == requiredLoop;
     }
 
-    // ───────────────────────────────────────────────
     void ApplySkyChanges()
     {
         if (skyFogVolume == null) return;
@@ -85,7 +81,6 @@ public class HELL : MonoBehaviour
         }
     }
 
-    // ───────────────────────────────────────────────
     void Update()
     {
         if (animateVignette && vignette != null)
@@ -95,7 +90,6 @@ public class HELL : MonoBehaviour
         }
     }
 
-    // ───────────────────────────────────────────────
     System.Collections.IEnumerator PitchPlaneRoutine()
     {
         Quaternion startRot = planeRoot.localRotation;
@@ -109,6 +103,6 @@ public class HELL : MonoBehaviour
             planeRoot.localRotation = Quaternion.Slerp(startRot, targetRot, k);
             yield return null;
         }
-        planeRoot.localRotation = targetRot; // snap to exact final value
+        planeRoot.localRotation = targetRot;
     }
 }

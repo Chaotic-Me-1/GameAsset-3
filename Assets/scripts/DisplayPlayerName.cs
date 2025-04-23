@@ -21,7 +21,7 @@ public class DisplayPlayerName : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("PlayerNameManager instance not found.");
+            Debug.LogWarning("PlayerNameManager instance doesnt exist!!!.");
         }
     }
 }
