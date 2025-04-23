@@ -14299,11 +14299,11 @@ MonoBehaviour:
     Path: event:/CaptainBroadcast
   loop1Announcement:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1818457524
+      Data2: 1317649032
+      Data3: -1656354123
+      Data4: -440948946
+    Path: event:/CaptainBroadcast
   loop2Announcement:
     Guid:
       Data1: -1818457524
@@ -114938,7 +114938,7 @@ Transform:
   m_GameObject: {fileID: 6632936311786409719}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.78200066, y: 0.21972656, z: -4.95813}
+  m_LocalPosition: {x: 0.78200066, y: 0.21972656, z: -4.958132}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
