@@ -12397,9 +12397,9 @@ RectTransform:
   - {fileID: 431508210}
   - {fileID: 2022010423}
   - {fileID: 959120874}
+  - {fileID: 2067035635}
   - {fileID: 1025247312}
   - {fileID: 357020668}
-  - {fileID: 2067035635}
   - {fileID: 917496539}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48585,7 +48585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cb8ba57e4e2e9439aa3b91f2cce9d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerDelay: 35
+  triggerDelay: 20
   fadeImage: {fileID: 1025247313}
   hintText: {fileID: 178488778}
   wakeUpText: {fileID: 1942255008}
@@ -77940,9 +77940,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d9ddab432ca3245807fb77b1db5c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerDelay: 25
+  triggerDelay: 10
   wakeUpDelayAfterSecond: 13
-  fadeImage: {fileID: 1025247313}
+  fadeImage: {fileID: 2067035636}
   memoryImage: {fileID: 1090342279}
   memorySprite1: {fileID: 0}
   memorySprite2: {fileID: 0}
@@ -114938,7 +114938,7 @@ Transform:
   m_GameObject: {fileID: 6632936311786409719}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.78200066, y: 0.21972656, z: -4.958129}
+  m_LocalPosition: {x: 0.78200066, y: 0.21972656, z: -4.95813}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

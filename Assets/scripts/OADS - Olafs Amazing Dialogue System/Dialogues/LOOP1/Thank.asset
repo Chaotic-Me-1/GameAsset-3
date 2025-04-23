@@ -22,7 +22,7 @@ MonoBehaviour:
     Path: 
   options:
   - optionText: Thank her
-    karmaImpact: 0
+    karmaImpact: 1
     reactionText: '"Thank you." - ""You''re welcome sir, enjoy."'
     playerVoiceLine:
       Guid:
@@ -62,7 +62,7 @@ MonoBehaviour:
     objectIDsToEnable:
     - Memory1
   - optionText: Tell her off for being slow
-    karmaImpact: 0
+    karmaImpact: -1
     reactionText: "\u201CThis service is terrible. Slow and this is all the choices
       you have? Pathetic\u201D. She looks a bit sad, but replies \"I am sorry sir
       for the inconvinience. it won't happen again\"."

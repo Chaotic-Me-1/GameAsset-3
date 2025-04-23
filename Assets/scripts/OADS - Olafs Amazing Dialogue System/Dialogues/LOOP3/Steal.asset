@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
   m_Name: Steal
   m_EditorClassIdentifier: 
-  promptText: '"Psst..." The passenger looks at you.'
+  promptText: The passenger looks at you.
   promptVoiceLine:
     Guid:
       Data1: 0
