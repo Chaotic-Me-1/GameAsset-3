@@ -220,6 +220,11 @@ public class MemoryTrigger : MonoBehaviour
 
     private void ResetLoop()
     {
+        EntertainmentUIManager musicManager = FindObjectOfType<EntertainmentUIManager>();
+        if (musicManager != null)
+        {
+            musicManager.ForceStopAllMedia();
+        }
         if (memoryImage != null)
             StartCoroutine(FadeImage(memoryImage, 1f, 0f, imageFadeDuration));
         isMemoryActive = false;

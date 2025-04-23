@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
-  m_Name: LOOP4_FlightAttendantDialogue
+  m_Name: End_FlightAttendantDialogue
   m_EditorClassIdentifier: 
   promptText: The flight attendant approaches you, never breaking eye contact. "Are
     you ready?"
@@ -42,7 +42,7 @@ MonoBehaviour:
       Path: 
     followUpDialogue: {fileID: 0}
     objectIDsToEnable:
-    - Crash
+    - Credits
   - optionText: No
     karmaImpact: 0
     reactionText: Her gaze is fixated on you. She doesn't say anything, just gives
@@ -63,5 +63,5 @@ MonoBehaviour:
       Path: 
     followUpDialogue: {fileID: 0}
     objectIDsToEnable:
-    - Crash
-  requiredLoop: 3
+    - Credits
+  requiredLoop: 4
