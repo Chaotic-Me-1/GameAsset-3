@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
   m_Name: KarmaLetter
   m_EditorClassIdentifier: 
-  promptText: An strange letter just flew by itself over to you tray table. Do you
+  promptText: A strange letter just flew by itself over to you tray table. Do you
     open it?
   promptVoiceLine:
     Guid:

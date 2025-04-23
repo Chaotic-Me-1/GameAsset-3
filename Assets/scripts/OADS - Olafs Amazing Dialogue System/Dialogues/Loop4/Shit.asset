@@ -41,5 +41,5 @@ MonoBehaviour:
       Path: 
     followUpDialogue: {fileID: 0}
     objectIDsToEnable:
-    - Memory3
+    - Crash
   requiredLoop: -1
