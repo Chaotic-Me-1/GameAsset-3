@@ -27,11 +27,11 @@ MonoBehaviour:
       won\u2019t say anything\""
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1826034464
+        Data2: 1160312723
+        Data3: -1219661930
+        Data4: -1178099294
+      Path: event:/Dialog/Main character/Sly_Whisper
     npcReactionVoiceLine:
       Guid:
         Data1: 0

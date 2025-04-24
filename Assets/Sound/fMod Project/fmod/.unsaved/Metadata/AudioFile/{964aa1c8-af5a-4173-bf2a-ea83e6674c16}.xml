@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{964aa1c8-af5a-4173-bf2a-ea83e6674c16}">
+		<property name="assetPath">
+			<value>Goddamn_Scaredycat.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>5.8362585034013605</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5d119a6c-b98b-482c-87b4-d041f895b4f3}</destination>
+		</relationship>
+	</object>
+</objects>

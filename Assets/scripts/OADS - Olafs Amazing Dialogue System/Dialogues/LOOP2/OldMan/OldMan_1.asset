@@ -27,18 +27,18 @@ MonoBehaviour:
     reactionText: You reach out to help him with his seatbelt.
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 276085480
+        Data2: 1328326943
+        Data3: 1021757872
+        Data4: -1047253036
+      Path: event:/Dialog/Main character/Let_me_help_you_out
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 658874025
+        Data2: 1073787917
+        Data3: 509619609
+        Data4: 610890190
+      Path: event:/Dialog/Oldman/OldMan_SoNiceOfYou
     followUpDialogue: {fileID: 11400000, guid: abe120aff81264247afd3838e27a3ccb, type: 2}
     objectIDsToEnable: []
   - optionText: Ignore him
@@ -53,11 +53,11 @@ MonoBehaviour:
       Path: 
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1010517841
+        Data2: 1229687399
+        Data3: 1155441841
+        Data4: -147412055
+      Path: event:/Dialog/Oldman/OldMan_MissesWife
     followUpDialogue: {fileID: 0}
     objectIDsToEnable:
     - Memory2
@@ -66,18 +66,18 @@ MonoBehaviour:
     reactionText: '"Hahaha! Old fart can''t do shit!"'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1243400119
+        Data2: 1278751223
+        Data3: -1872699484
+        Data4: 868349889
+      Path: event:/Dialog/Main character/Old_fart_cant_do_shit
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1043905874
+        Data2: 1334051921
+        Data3: 2022486964
+        Data4: -1982628973
+      Path: event:/Dialog/Oldman/OldMan_HowDareYou
     followUpDialogue: {fileID: 11400000, guid: bf7042078dbb1764889582b81665dbc4, type: 2}
     objectIDsToEnable: []
   requiredLoop: 1

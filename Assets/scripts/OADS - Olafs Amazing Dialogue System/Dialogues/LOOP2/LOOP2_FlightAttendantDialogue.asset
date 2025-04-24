@@ -17,11 +17,11 @@ MonoBehaviour:
     sir?"
   promptVoiceLine:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 191704285
+      Data2: 1323732985
+      Data3: 2114429322
+      Data4: -42082161
+    Path: event:/Dialog/Flight attendent/What do you choice sir
   options:
   - optionText: Wait... Didn't you already ask me that?
     karmaImpact: 0
@@ -36,11 +36,11 @@ MonoBehaviour:
       Path: 
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 2095350367
+        Data2: 1135473161
+        Data3: 714141623
+        Data4: -1350505558
+      Path: event:/Dialog/Flight attendent/The first time coming with snacks
     followUpDialogue: {fileID: 11400000, guid: 8ebae0dc927dcb2499cf95eeff754a83, type: 2}
     objectIDsToEnable: []
   requiredLoop: 1

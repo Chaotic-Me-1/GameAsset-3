@@ -47,11 +47,11 @@ MonoBehaviour:
     reactionText: 'You yell at the baby and its parents. '
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -593938701
+        Data2: 1118061349
+        Data3: 1621806469
+        Data4: 920380915
+      Path: event:/Dialog/Main character/Waa_Waa_Waa
     npcReactionVoiceLine:
       Guid:
         Data1: 0

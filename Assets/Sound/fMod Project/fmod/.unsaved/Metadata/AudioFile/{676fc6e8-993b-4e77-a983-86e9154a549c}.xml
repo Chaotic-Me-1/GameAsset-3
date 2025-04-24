@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{676fc6e8-993b-4e77-a983-86e9154a549c}">
+		<property name="assetPath">
+			<value>OldMan_SoNiceOfYou.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>11.415510204081633</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5d119a6c-b98b-482c-87b4-d041f895b4f3}</destination>
+		</relationship>
+	</object>
+</objects>

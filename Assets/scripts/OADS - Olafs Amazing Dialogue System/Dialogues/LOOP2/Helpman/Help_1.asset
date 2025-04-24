@@ -48,18 +48,18 @@ MonoBehaviour:
       pussy\u2014it\u2019s just a plane.\""
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1257949319
+        Data2: 1162679414
+        Data3: 828532402
+        Data4: 817112799
+      Path: event:/Dialog/Main character/Get_your_shit_together
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -49599711
+        Data2: 1161573575
+        Data3: 298849209
+        Data4: -513154586
+      Path: event:/Dialog/Helpman/TerrifiedOfPlanes
     followUpDialogue: {fileID: 11400000, guid: 5312a3b6a85dfb141800b9d56629a1db, type: 2}
     objectIDsToEnable: []
   - optionText: Check on him
@@ -67,18 +67,18 @@ MonoBehaviour:
     reactionText: '"Hey, sorry, but are you okay?"'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 928843279
+        Data2: 1102701389
+        Data3: -406098501
+        Data4: -1020786822
+      Path: event:/Dialog/Main character/Are_you_okay
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1959238036
+        Data2: 1259861818
+        Data3: -862212214
+        Data4: -1155921976
+      Path: event:/Dialog/Helpman/ScaredOfFlying
     followUpDialogue: {fileID: 11400000, guid: c0fdfd7101b678b468f81a8fc23ba1e6, type: 2}
     objectIDsToEnable: []
   requiredLoop: 1

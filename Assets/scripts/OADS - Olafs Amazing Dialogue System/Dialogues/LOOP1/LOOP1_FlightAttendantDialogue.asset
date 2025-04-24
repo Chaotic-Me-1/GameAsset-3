@@ -16,29 +16,29 @@ MonoBehaviour:
     to drink, sir? Coffee? Tea?? Alcohol? What do you choose, sir?"
   promptVoiceLine:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 191704285
+      Data2: 1323732985
+      Data3: 2114429322
+      Data4: -42082161
+    Path: event:/Dialog/Flight attendent/What do you choice sir
   options:
   - optionText: Smile and ask politely for coffee.
     karmaImpact: 5
     reactionText: '"Coffee? Alright!"'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -766698655
+        Data2: 1090151344
+        Data3: -1795345003
+        Data4: 1899305373
+      Path: event:/Dialog/Main character/Thanks
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 11400000, guid: 99bef42a34f29af48b4f425c2e8d2eb6, type: 2}
     objectIDsToEnable: []
   - optionText: Tea. please.
@@ -46,18 +46,18 @@ MonoBehaviour:
     reactionText: '"Aha, tea, sure!"'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -766698655
+        Data2: 1090151344
+        Data3: -1795345003
+        Data4: 1899305373
+      Path: event:/Dialog/Main character/Thanks
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 11400000, guid: 939094c27b332014faf65dcb89732493, type: 2}
     objectIDsToEnable: []
   - optionText: Alcohol.
@@ -65,18 +65,18 @@ MonoBehaviour:
     reactionText: '"Alcohol, huh?"'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -766698655
+        Data2: 1090151344
+        Data3: -1795345003
+        Data4: 1899305373
+      Path: event:/Dialog/Main character/Thanks
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 11400000, guid: 5640fea9ec50e984eb9bc04ba885b27e, type: 2}
     objectIDsToEnable: []
   requiredLoop: 0

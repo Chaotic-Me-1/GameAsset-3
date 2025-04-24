@@ -26,18 +26,18 @@ MonoBehaviour:
     reactionText: '"Thank you." - ""You''re welcome sir, enjoy."'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -766698655
+        Data2: 1090151344
+        Data3: -1795345003
+        Data4: 1899305373
+      Path: event:/Dialog/Main character/Thanks
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 0}
     objectIDsToEnable:
     - Memory1
@@ -68,11 +68,11 @@ MonoBehaviour:
       for the inconvinience. it won't happen again\"."
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -2080356046
+        Data2: 1080233516
+        Data3: -1228508783
+        Data4: 333054691
+      Path: event:/Dialog/Main character/Pathetic
     npcReactionVoiceLine:
       Guid:
         Data1: 0

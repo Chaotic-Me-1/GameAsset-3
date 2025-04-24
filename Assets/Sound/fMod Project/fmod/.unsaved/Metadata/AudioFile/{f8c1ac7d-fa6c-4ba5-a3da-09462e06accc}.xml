@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{f8c1ac7d-fa6c-4ba5-a3da-09462e06accc}">
+		<property name="assetPath">
+			<value>A_choice_with_flight_attendant.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>2.8401133786848072</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5d119a6c-b98b-482c-87b4-d041f895b4f3}</destination>
+		</relationship>
+	</object>
+</objects>

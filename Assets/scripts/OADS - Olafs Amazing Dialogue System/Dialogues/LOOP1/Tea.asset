@@ -27,18 +27,18 @@ MonoBehaviour:
     reactionText: 
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 750964139
+        Data2: 1197401151
+        Data3: -158778225
+        Data4: -202505141
+      Path: event:/Dialog/Main character/Say_no_to_snacks
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -559907420
+        Data2: 1340056901
+        Data3: 904891275
+        Data4: -1535941550
+      Path: event:/Dialog/Flight attendent/Very well sir
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Tea

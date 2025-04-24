@@ -27,18 +27,18 @@ MonoBehaviour:
     reactionText: "\"Yeah, I know, right? Doesn\u2019t seem logical, does it?\""
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1142097828
+        Data2: 1153327884
+        Data3: 1345465002
+        Data4: 1805460514
+      Path: event:/Dialog/Main character/Doesnt_seem_logical
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 941898929
+        Data2: 1205221216
+        Data3: 2079627666
+        Data4: 590305344
+      Path: event:/Dialog/Helpman/ThankYou
     followUpDialogue: {fileID: 11400000, guid: 038bb710539867149bd46d520f49ae84, type: 2}
     objectIDsToEnable: []
   requiredLoop: -1

@@ -28,18 +28,18 @@ MonoBehaviour:
     reactionText: '"Not a problem. I know my wife has the same issue."'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -415072213
+        Data2: 1254191698
+        Data3: 968280450
+        Data4: -1011131228
+      Path: event:/Dialog/Main character/Not_a_problem
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1972661493
+        Data2: 1246803785
+        Data3: -1228585325
+        Data4: -1536579474
+      Path: event:/Dialog/Oldman/OldMan_RemindOfWife
     followUpDialogue: {fileID: 11400000, guid: 317f238aa0904d74fa677d5097546399, type: 2}
     objectIDsToEnable: []
   requiredLoop: -1

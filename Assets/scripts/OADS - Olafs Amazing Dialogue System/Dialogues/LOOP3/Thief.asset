@@ -34,11 +34,11 @@ MonoBehaviour:
       Path: 
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1220399067
+        Data2: 1339795327
+        Data3: -682006093
+        Data4: -61372361
+      Path: event:/Dialog/Flight attendent/hmm
     followUpDialogue: {fileID: 11400000, guid: e2320ebdd42fbb54ea88137f977232ab, type: 2}
     objectIDsToEnable: []
   - optionText: Get the thief's attention

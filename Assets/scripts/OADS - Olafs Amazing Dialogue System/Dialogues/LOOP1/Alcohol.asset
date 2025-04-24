@@ -15,11 +15,11 @@ MonoBehaviour:
   promptText: '"Oh, alright. What kind of alcohol do you want, sir?"'
   promptVoiceLine:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -559907420
+      Data2: 1340056901
+      Data3: 904891275
+      Data4: -1535941550
+    Path: event:/Dialog/Flight attendent/Very well sir
   options:
   - optionText: I'll take whiskey, darling.
     karmaImpact: -5

@@ -26,18 +26,18 @@ MonoBehaviour:
     reactionText: '"Pffft, right. At least I can put on my seatbelt, unlike you."'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -384062873
+        Data2: 1218426224
+        Data3: -39601787
+        Data4: 569177605
+      Path: event:/Dialog/Main character/Pfft_right
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1910414178
+        Data2: 1159193470
+        Data3: 1392459165
+        Data4: 1742244875
+      Path: event:/Dialog/Oldman/OldMan_NeverFindWife
     followUpDialogue: {fileID: 11400000, guid: 59a48407c078c5248967e82387a2b4e9, type: 2}
     objectIDsToEnable: []
   requiredLoop: -1
