@@ -1907,3 +1907,12 @@
 [LOG] SoundI::release                          :     Uhm_Rettana (0000023771CF3758)
 [LOG] SoundI::release                          :  (000002376CF53AA8)
 [LOG] SoundI::release                          :     Sly_Whisper (0000023771CF3158)
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::closeInternal                   : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
