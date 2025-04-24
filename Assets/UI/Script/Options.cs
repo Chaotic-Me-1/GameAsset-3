@@ -1,0 +1,63 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
+
+public class Options : MonoBehaviour
+{
+    public Slider Mastersound;
+    public AudioMixer audioMixer;
+    [SerializeField] private GameObject OptionMenu;
+
+   private void Start()
+    {
+        if (PlayerPrefs.HasKey("soundVolume"))
+            LoadVolume();
+
+        else
+        {
+            PlayerPrefs.SetFloat("soundVolume", 1);
+            LoadVolume();
+        }
+    }
+    
+    public void OpenOptionsMenu()
+    {
+        OptionMenu.SetActive(true);
+    }
+
+    public void OpenOptionsMenuClose()
+    {
+        OptionMenu.SetActive(false);
+    }
+
+
+    public void SetVolume(float volume)
+    {
+        AudioListener.volume = Mastersound.value;
+    }
+
+    public void SaveVolume()
+    {
+        PlayerPrefs.SetFloat("soundVolume", Mastersound.value);
+    }
+
+    public void LoadVolume()
+    {
+        Mastersound.value = PlayerPrefs.GetFloat("soundVolume");
+    }
+
+    //using an int to let it go from 0 to 2 to go between low, mid and high
+    public void SetQuality (int qualityIndex)
+    {
+        //using the index that corrosonds to the project setting quality to change the quality of the game
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
+
+    public void SetToFullscreen(bool isFullscreen)
+    {
+        Screen.fullScreen = isFullscreen;
+        Debug.Log("Fullscreen button clicked");
+    }
+}
