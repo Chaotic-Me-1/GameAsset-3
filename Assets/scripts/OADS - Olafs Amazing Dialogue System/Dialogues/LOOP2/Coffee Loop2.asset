@@ -26,18 +26,19 @@ MonoBehaviour:
     reactionText: '"Here you go, sir."'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1006576180
+        Data2: 1232011911
+        Data3: 1477922689
+        Data4: 1541846389
+      Path: "event:/Dialog/Main character/New Mc VC/I\u2019d like some cream, but
+        no sugar"
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 11400000, guid: d6dfd278f03486d4a998f5ab39cdd942, type: 2}
     objectIDsToEnable:
     - Coffee2
@@ -46,18 +47,19 @@ MonoBehaviour:
     reactionText: '"Here you go, sir."'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1435165505
+        Data2: 1099459004
+        Data3: 1316785839
+        Data4: 913508766
+      Path: "event:/Dialog/Main character/New Mc VC/I\u2019ll have both cream and
+        sugar. What could go wrong"
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 11400000, guid: d6dfd278f03486d4a998f5ab39cdd942, type: 2}
     objectIDsToEnable:
     - Coffee2
@@ -66,18 +68,19 @@ MonoBehaviour:
     reactionText: '"I''m so sorry to hear that. Here you go, sir."'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1853442038
+        Data2: 1140430438
+        Data3: 780889783
+        Data4: -1999523825
+      Path: "event:/Dialog/Main character/New Mc VC/I\u2019ll take it black, like
+        my soul right now."
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 11400000, guid: d6dfd278f03486d4a998f5ab39cdd942, type: 2}
     objectIDsToEnable:
     - Coffee2

@@ -27,18 +27,18 @@ MonoBehaviour:
       of whiskey*'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1243197216
+        Data2: 1298025312
+        Data3: 45365156
+        Data4: 939507151
+      Path: "event:/Dialog/Main character/New Mc VC/I\u2019ll take whiskey darling"
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Whiskey
@@ -47,18 +47,18 @@ MonoBehaviour:
     reactionText: '"Sure. I have a 100 year old bottle that someone left behind..."'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1681277483
+        Data2: 1282296444
+        Data3: 164288413
+        Data4: 1328672381
+      Path: event:/Dialog/Main character/New Mc VC/A red wine please
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Wine
@@ -68,18 +68,18 @@ MonoBehaviour:
       knows where into a glass and puts it on your tray table. '
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 243060705
+        Data2: 1291132210
+        Data3: -1379709555
+        Data4: -1035992927
+      Path: event:/Dialog/Main character/New Mc VC/YOur strongest moonshine
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Moonshine

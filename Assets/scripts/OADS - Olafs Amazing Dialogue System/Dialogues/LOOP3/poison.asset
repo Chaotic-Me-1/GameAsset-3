@@ -27,11 +27,12 @@ MonoBehaviour:
     reactionText: She just smiles at you and starts walking away.
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1733375247
+        Data2: 1082502741
+        Data3: -967863928
+        Data4: 1288567413
+      Path: "event:/Dialog/Main character/New Mc VC/It\u2019s i good thing i can\u2019t
+        smell it"
     npcReactionVoiceLine:
       Guid:
         Data1: 0

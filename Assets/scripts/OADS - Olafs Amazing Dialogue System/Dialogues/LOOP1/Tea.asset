@@ -47,18 +47,18 @@ MonoBehaviour:
     reactionText: 
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -353056794
+        Data2: 1232843919
+        Data3: 341287573
+        Data4: 968151900
+      Path: "event:/Dialog/Main character/New Mc VC/I\u2019ll have some sugar"
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Tea
@@ -67,18 +67,19 @@ MonoBehaviour:
     reactionText: 
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 2106732666
+        Data2: 1211929957
+        Data3: -727584114
+        Data4: -853833433
+      Path: "event:/Dialog/Main character/New Mc VC/I\u2019ll take some milk and
+        sugar"
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Tea

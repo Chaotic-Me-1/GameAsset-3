@@ -27,11 +27,11 @@ MonoBehaviour:
     reactionText: '"Coffee? Alright!"'
     playerVoiceLine:
       Guid:
-        Data1: -766698655
-        Data2: 1090151344
-        Data3: -1795345003
-        Data4: 1899305373
-      Path: event:/Dialog/Main character/Thanks
+        Data1: 1250586888
+        Data2: 1261105685
+        Data3: 1025366200
+        Data4: -1663064750
+      Path: event:/Dialog/Main character/New Mc VC/Coffee Please!
     npcReactionVoiceLine:
       Guid:
         Data1: 1710364974
@@ -46,11 +46,11 @@ MonoBehaviour:
     reactionText: '"Aha, tea, sure!"'
     playerVoiceLine:
       Guid:
-        Data1: -766698655
-        Data2: 1090151344
-        Data3: -1795345003
-        Data4: 1899305373
-      Path: event:/Dialog/Main character/Thanks
+        Data1: -2024333360
+        Data2: 1259725775
+        Data3: -1116882764
+        Data4: -80795397
+      Path: event:/Dialog/Main character/New Mc VC/Tea Please
     npcReactionVoiceLine:
       Guid:
         Data1: 1710364974
@@ -65,11 +65,11 @@ MonoBehaviour:
     reactionText: '"Alcohol, huh?"'
     playerVoiceLine:
       Guid:
-        Data1: -766698655
-        Data2: 1090151344
-        Data3: -1795345003
-        Data4: 1899305373
-      Path: event:/Dialog/Main character/Thanks
+        Data1: 566682402
+        Data2: 1240856126
+        Data3: 491198617
+        Data4: -273212144
+      Path: event:/Dialog/Main character/New Mc VC/Alcohol
     npcReactionVoiceLine:
       Guid:
         Data1: 1710364974

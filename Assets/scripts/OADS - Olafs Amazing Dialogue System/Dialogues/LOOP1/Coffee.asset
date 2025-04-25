@@ -26,18 +26,18 @@ MonoBehaviour:
     reactionText: '"Here you go, sir."'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -289557515
+        Data2: 1088675032
+        Data3: 796207242
+        Data4: 663362348
+      Path: event:/Dialog/Main character/New Mc VC/Cream but no sugar, thanks!
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Coffee
@@ -46,18 +46,18 @@ MonoBehaviour:
     reactionText: '"Here you go, sir."'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1515074379
+        Data2: 1180127386
+        Data3: 784378008
+        Data4: -493674549
+      Path: event:/Dialog/Main character/New Mc VC/Both cream and sugar
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Coffee
@@ -66,18 +66,18 @@ MonoBehaviour:
     reactionText: '"Here you go, sir."'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 2010354136
+        Data2: 1299119580
+        Data3: -1050847056
+        Data4: -786764911
+      Path: "event:/Dialog/Main character/New Mc VC/I\u2019ll take it black"
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1710364974
+        Data2: 1287111395
+        Data3: -42375527
+        Data4: -1661037363
+      Path: event:/Dialog/Flight attendent/Your Welcome sir
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Coffee

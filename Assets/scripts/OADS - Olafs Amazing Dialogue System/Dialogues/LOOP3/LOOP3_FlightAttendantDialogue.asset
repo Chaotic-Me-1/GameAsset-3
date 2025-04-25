@@ -28,11 +28,11 @@ MonoBehaviour:
     reactionText: '"Very well sir, ENJOY!" she grins at you.'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1081532684
+        Data2: 1283320708
+        Data3: 1856049082
+        Data4: -1508827356
+      Path: event:/Dialog/Main character/New Mc VC/Blood_!!_!
     npcReactionVoiceLine:
       Guid:
         Data1: 0
@@ -48,11 +48,11 @@ MonoBehaviour:
     reactionText: '"Very well sir, ENJOY!" she grins at you.'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1749642647
+        Data2: 1316585757
+        Data3: -1206469754
+        Data4: 1056421970
+      Path: event:/Dialog/Main character/New Mc VC/Poison_
     npcReactionVoiceLine:
       Guid:
         Data1: 0
@@ -68,11 +68,11 @@ MonoBehaviour:
     reactionText: '"Very well sir, ENJOY!" she grins at you.'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1254457911
+        Data2: 1242113482
+        Data3: -112624201
+        Data4: -1212824462
+      Path: event:/Dialog/Main character/New Mc VC/Acid_
     npcReactionVoiceLine:
       Guid:
         Data1: 0
