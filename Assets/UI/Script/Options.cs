@@ -9,8 +9,9 @@ public class Options : MonoBehaviour
     public Slider Mastersound;
     public AudioMixer audioMixer;
     [SerializeField] private GameObject OptionMenu;
+    [SerializeField] private GameObject MainMenu;
 
-   private void Start()
+    private void Start()
     {
         if (PlayerPrefs.HasKey("soundVolume"))
             LoadVolume();
@@ -25,11 +26,13 @@ public class Options : MonoBehaviour
     public void OpenOptionsMenu()
     {
         OptionMenu.SetActive(true);
+        MainMenu.SetActive(false);
     }
 
     public void OpenOptionsMenuClose()
     {
         OptionMenu.SetActive(false);
+        MainMenu.SetActive(true);
     }
 
 
