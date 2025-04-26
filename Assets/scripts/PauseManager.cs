@@ -16,15 +16,14 @@ public class PauseManager : MonoBehaviour
     public GameObject magazineUI;
     public GameObject entertainmentUI;
     public GameObject leafletUI;
+    public GameObject extraUI;
 
     private bool isPaused = false;
     private List<AudioSource> allAudioSources = new List<AudioSource>();
     private ParticleSystem[] allParticleSystems;
     private VideoPlayer[] allVideoPlayers;
-
     private Dictionary<VideoPlayer, bool> videoPlayerPlayStates = new Dictionary<VideoPlayer, bool>();
 
-    // FMOD audio bus for global pause
     private Bus masterBus;
 
     void Start()
@@ -39,7 +38,6 @@ public class PauseManager : MonoBehaviour
         foreach (var videoPlayer in allVideoPlayers)
             videoPlayerPlayStates[videoPlayer] = false;
 
-        // Assign FMOD Master Bus
         masterBus = RuntimeManager.GetBus("bus:/");
     }
 
@@ -47,10 +45,11 @@ public class PauseManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // Don't pause if any special UI is open
+            // Don't pause if any of these UIs are open
             if ((magazineUI != null && magazineUI.activeSelf) ||
                 (entertainmentUI != null && entertainmentUI.activeSelf) ||
-                (leafletUI != null && leafletUI.activeSelf))
+                (leafletUI != null && leafletUI.activeSelf) ||
+                (extraUI != null && extraUI.activeSelf))
             {
                 return;
             }
@@ -75,7 +74,6 @@ public class PauseManager : MonoBehaviour
         PauseOrResumeParticles(isPaused);
         PauseOrResumeVideos(isPaused);
 
-        // ✅ Pause FMOD
         masterBus.setPaused(isPaused);
 
         if (pauseMenuCanvas != null)
@@ -141,4 +139,3 @@ public class PauseManager : MonoBehaviour
         }
     }
 }
-

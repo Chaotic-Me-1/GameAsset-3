@@ -88,7 +88,7 @@ public class EntertainmentUIManager : MonoBehaviour
             CloseMediaPlayer();
     }
 
-    // ---------------- UI CONTROL ----------------
+    // UI CONTROL
 
     public void ShowEntertainmentUI()
     {
@@ -145,7 +145,7 @@ public class EntertainmentUIManager : MonoBehaviour
         handImage.sprite = normalHandSprite;
     }
 
-    // ---------------- MUSIC ----------------
+    // MUSIC
 
     public void PlayMusic(MusicTrackData track)
     {
@@ -170,7 +170,7 @@ public class EntertainmentUIManager : MonoBehaviour
 
     public void PlayMusicFromButton(MusicTrackData track)
     {
-        // Only start the music if it’s not already playing this one
+        // Only start music if it’s not already playing this one
         if (currentTrack == track && musicInstance.isValid())
         {
             mediaPlayerPanel.SetActive(true); // Just reopen player for control
@@ -198,7 +198,7 @@ public class EntertainmentUIManager : MonoBehaviour
         UpdatePlayPauseIcon();
     }
 
-    // ---------------- VIDEO ----------------
+    // VIDEO
 
     public void PlayMovie(VideoClip clip)
     {
@@ -217,7 +217,7 @@ public class EntertainmentUIManager : MonoBehaviour
         UpdatePlayPauseIcon();
     }
 
-    // ---------------- SHARED CONTROLS ----------------
+    // SHARED CONTROLS
 
     public void TogglePlayPause()
     {
@@ -309,7 +309,7 @@ public class EntertainmentUIManager : MonoBehaviour
         albumArtDisplay.gameObject.SetActive(!isVideo);
         videoDisplay.gameObject.SetActive(isVideo);
 
-        // Optional: update the play/pause icon when reopening
+        // update the play/pause icon when reopening
         UpdatePlayPauseIcon();
     }
 
@@ -360,7 +360,7 @@ public class EntertainmentUIManager : MonoBehaviour
         videoDisplay.texture = videoPlayer.targetTexture;
         videoPlayer.Stop();
 
-        // URL-based video playback
+        // URL video playback
         if (!string.IsNullOrEmpty(track.videoURL))
         {
             videoPlayer.source = VideoSource.Url;

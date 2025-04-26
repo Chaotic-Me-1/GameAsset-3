@@ -8,6 +8,7 @@ using FMOD.Studio;
 public class MagazineUI : MonoBehaviour
 {
     public GameObject magazinePanel;
+    public GameObject extraPanelToClose;
 
     [Header("Audio")]
     public EventReference openMagazineEvent;
@@ -15,15 +16,36 @@ public class MagazineUI : MonoBehaviour
     void Start()
     {
         magazinePanel.SetActive(false);
+        if (extraPanelToClose != null)
+            extraPanelToClose.SetActive(false);
     }
 
     void Update()
     {
-        if (magazinePanel.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            HideMagazine();
+            bool anyClosed = false;
+
+            if (magazinePanel.activeSelf)
+            {
+                HideMagazine();
+                anyClosed = true;
+            }
+
+            if (extraPanelToClose != null && extraPanelToClose.activeSelf)
+            {
+                extraPanelToClose.SetActive(false);
+                anyClosed = true;
+            }
+
+            if (anyClosed)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
         }
     }
+
     public void ResumeMagazine()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -48,9 +70,6 @@ public class MagazineUI : MonoBehaviour
     public void HideMagazine()
     {
         magazinePanel.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
         GameState.CloseMagazine();
     }
 }

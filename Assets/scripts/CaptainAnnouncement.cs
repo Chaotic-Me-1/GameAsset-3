@@ -13,6 +13,7 @@ public class CaptainAnnouncement : MonoBehaviour
     public EventReference loop1Announcement;
     public EventReference loop2Announcement;
     public EventReference loop3Announcement;
+    public EventReference loop4Announcement;
     public EventReference fallbackAnnouncement;
 
     void Start()
@@ -37,6 +38,7 @@ public class CaptainAnnouncement : MonoBehaviour
             case 1: return loop1Announcement;
             case 2: return loop2Announcement;
             case 3: return loop3Announcement;
+            case 4: return loop4Announcement;
             default: return fallbackAnnouncement;
         }
     }
