@@ -29,18 +29,18 @@ MonoBehaviour:
       day! He's fussy! Yelling won\u2019t help!\""
     playerVoiceLine:
       Guid:
-        Data1: -576273864
-        Data2: 1236266433
-        Data3: -23328869
-        Data4: 982754703
-      Path: event:/Dialog/Main character/Just_make_it_stop
+        Data1: -2084705077
+        Data2: 1205509177
+        Data3: 1609313951
+        Data4: 208143820
+      Path: event:/Dialog/Main character/What_is_wrong
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -738563440
+        Data2: 1112228853
+        Data3: -1951366998
+        Data4: -960039394
+      Path: event:/Dialog/Father/Father yelling won't help
     followUpDialogue: {fileID: 11400000, guid: bb11b82ac6653af4f984968627644dab, type: 2}
     objectIDsToEnable: []
   requiredLoop: -1

@@ -28,18 +28,18 @@ MonoBehaviour:
       he just keeps crying.
     playerVoiceLine:
       Guid:
-        Data1: -2084705077
-        Data2: 1205509177
-        Data3: 1609313951
-        Data4: 208143820
-      Path: event:/Dialog/Main character/What_is_wrong
+        Data1: -576273864
+        Data2: 1236266433
+        Data3: -23328869
+        Data4: 982754703
+      Path: event:/Dialog/Main character/Just_make_it_stop
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1228420839
+        Data2: 1155620037
+        Data3: 1097498037
+        Data4: 1587454058
+      Path: event:/Dialog/Father/Father you better shut it
     followUpDialogue: {fileID: 0}
     objectIDsToEnable:
     - Memory3
