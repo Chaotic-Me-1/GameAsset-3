@@ -3,13 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using FMODUnity;
+using FMOD.Studio;
 
 public class Options : MonoBehaviour
 {
+    //Unity
     public Slider Mastersound;
     public AudioMixer audioMixer;
     [SerializeField] private GameObject OptionMenu;
     [SerializeField] private GameObject MainMenu;
+
+    //Fmod
+  //  public Slider MusicSlider;
+  //  public Slider SFXSlider;
+  //  private bus musicBus;
+  //  private bus sfxBus;
 
     private void Start()
     {
@@ -63,4 +72,10 @@ public class Options : MonoBehaviour
         Screen.fullScreen = isFullscreen;
         Debug.Log("Fullscreen button clicked");
     }
+
+    //public void SetMusicVolume (float volume)
+   // {
+        //musicBus.setVolume(volume);
+        //PlayerPrefs.SetFloat("MusicVolume,")
+   // }
 }
