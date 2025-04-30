@@ -5,7 +5,7 @@
 			<value>OldMan_SoNiceOfYou</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{6e7742aa-2f57-4555-ab4c-4e9762a93443}</destination>
@@ -53,7 +53,7 @@
 			<destination>{7641d736-3e04-4beb-bcb3-db113584026f}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{c4c58fb7-8efa-4c4b-90c6-40d87ded9156}</destination>
+			<destination>{c53383a1-0d40-40d3-ab75-76f84f1b3af2}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{873766cb-573f-4fd3-8a54-44e845d0f1fb}" />
@@ -113,7 +113,6 @@
 	<object class="MixerBusEffectChain" id="{41aaa0d4-8c2f-4113-aa46-f2d9bd0d5adf}">
 		<relationship name="effects">
 			<destination>{cc7a6637-6988-4f3e-ab47-df1e44507f5e}</destination>
-			<destination>{ee2814e6-6fd4-45fa-a1d8-748b7daa8f2b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d2888f59-1e78-4bf3-ae5d-cb984485d4ac}" />
@@ -125,6 +124,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{bb4f8800-ccba-401d-9e65-840455f7e4c8}" />
 	<object class="MixerBusFader" id="{cc7a6637-6988-4f3e-ab47-df1e44507f5e}" />
-	<object class="SpatialiserEffect" id="{ee2814e6-6fd4-45fa-a1d8-748b7daa8f2b}" />
 	<object class="MixerBusFader" id="{938eb8a6-152c-47c2-b742-d427c5222fea}" />
 </objects>

@@ -5,7 +5,7 @@
 			<value>AfraidOfBoats</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{bab0e33a-5e12-429e-84d0-139348bf8821}</destination>
@@ -53,7 +53,7 @@
 			<destination>{0562e7a5-4fd2-4da0-9013-f0c23ded5305}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{c4c58fb7-8efa-4c4b-90c6-40d87ded9156}</destination>
+			<destination>{c53383a1-0d40-40d3-ab75-76f84f1b3af2}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{6524e572-72cb-40fe-b7f0-0ec680bdef1c}" />
@@ -113,7 +113,6 @@
 	<object class="MixerBusEffectChain" id="{069d14d7-1737-4a8b-b1c9-751692d062a2}">
 		<relationship name="effects">
 			<destination>{96e02d10-5069-47d0-8180-971a3acf476e}</destination>
-			<destination>{31975049-84a3-40d1-903c-aed326655144}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b897a73b-7258-4768-b485-186dba21d1c0}" />
@@ -125,6 +124,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{e84be3c6-8661-4a4b-b6b3-6b7ae0dfb2f1}" />
 	<object class="MixerBusFader" id="{96e02d10-5069-47d0-8180-971a3acf476e}" />
-	<object class="SpatialiserEffect" id="{31975049-84a3-40d1-903c-aed326655144}" />
 	<object class="MixerBusFader" id="{4a974b16-7911-4a72-8291-69f00b9b0d9c}" />
 </objects>

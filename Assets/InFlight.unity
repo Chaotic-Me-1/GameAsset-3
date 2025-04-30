@@ -1441,8 +1441,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 122, y: -56}
-  m_SizeDelta: {x: 1150, y: 740}
+  m_AnchoredPosition: {x: 203, y: -89}
+  m_SizeDelta: {x: 1014.6, y: 740}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &49404664
 MonoBehaviour:
@@ -1503,7 +1503,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 300, y: 250}
-  m_Spacing: {x: 40, y: 50}
+  m_Spacing: {x: 10, y: 64}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1001 &50510588
@@ -1780,12 +1780,12 @@ PrefabInstance:
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 570
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -465
+      value: -479
       objectReference: {fileID: 0}
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
@@ -2442,6 +2442,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: -441821696
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &57624370
 GameObject:
   m_ObjectHideFlags: 0
@@ -3754,27 +3777,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cb8ba57e4e2e9439aa3b91f2cce9d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerDelay: 15
+  triggerDelay: 5
   fadeImage: {fileID: 1025247313}
   hintText: {fileID: 178488778}
   wakeUpText: {fileID: 1942255008}
   memoryStartSound:
     Guid:
-      Data1: -977810401
-      Data2: 1107270942
-      Data3: 1740336013
-      Data4: -750192649
-    Path: event:/WorkingHard
+      Data1: 632149591
+      Data2: 1078501348
+      Data3: 1888294838
+      Data4: -596026211
+    Path: event:/Memory3_1
   memoryDeepSound:
     Guid:
-      Data1: -1129093819
-      Data2: 1288048909
-      Data3: 747810212
-      Data4: 1813172823
-    Path: event:/GranCanaria
+      Data1: -1032869744
+      Data2: 1099721391
+      Data3: -549584756
+      Data4: -1851779413
+    Path: event:/Memory3_2
   memoryImage: {fileID: 1090342279}
-  memorySprite1: {fileID: 21300000, guid: 941c7511caa7ae94ca864a32b64d00e1, type: 3}
-  memorySprite2: {fileID: 21300000, guid: f57578be9e98cbc4782027539272224b, type: 3}
+  memorySprite1: {fileID: 21300000, guid: bfd26f66f5f0f8747b1f6527f37ab1b2, type: 3}
+  memorySprite2: {fileID: 21300000, guid: bfd26f66f5f0f8747b1f6527f37ab1b2, type: 3}
   imageFadeDuration: 1.2
   wakeUpDelayAfterSecondMemory: 13
   skipKey: 32
@@ -4590,6 +4613,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: 2054017212
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &126073637
 GameObject:
   m_ObjectHideFlags: 0
@@ -5501,7 +5547,7 @@ PrefabInstance:
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 570
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
@@ -5842,6 +5888,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74ce2158ae608549902afb4112fd042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.01
+  samples: 16
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskDenoise: 0
+  indirectIntensity: 1
+  cloudShadow: {fileID: 0}
+  cloudShadowTilingX: 0.01
+  cloudShadowTilingY: 0.01
+  cloudShadowOffsetX: 0
+  cloudShadowOffsetY: 0
+  supersample: 0
+  UID: 0
 --- !u!1 &157845223
 GameObject:
   m_ObjectHideFlags: 0
@@ -8767,7 +8829,7 @@ PrefabInstance:
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -465
+      value: -479
       objectReference: {fileID: 0}
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
@@ -9945,6 +10007,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: -1812553236
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &262674691
 GameObject:
   m_ObjectHideFlags: 0
@@ -12879,7 +12964,7 @@ PrefabInstance:
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 910
+      value: 850
       objectReference: {fileID: 0}
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
@@ -15626,12 +15711,12 @@ PrefabInstance:
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 910
+      value: 850
       objectReference: {fileID: 0}
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -465
+      value: -479
       objectReference: {fileID: 0}
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
@@ -21438,6 +21523,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: -1312495437
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &638304735
 GameObject:
   m_ObjectHideFlags: 0
@@ -22365,6 +22473,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: 1635346808
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1001 &658254134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24190,12 +24321,12 @@ PrefabInstance:
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 570
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -465
+      value: -479
       objectReference: {fileID: 0}
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
@@ -24976,6 +25107,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: -1825035415
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &719369140
 GameObject:
   m_ObjectHideFlags: 0
@@ -25206,6 +25360,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: 1189214995
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1001 &722483091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33630,6 +33807,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: 2051044684
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &811459027
 GameObject:
   m_ObjectHideFlags: 0
@@ -43570,6 +43770,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: 645726133
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &1064335799
 GameObject:
   m_ObjectHideFlags: 0
@@ -44142,7 +44365,7 @@ PrefabInstance:
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 570
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
@@ -45916,12 +46139,12 @@ PrefabInstance:
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 910
+      value: 850
       objectReference: {fileID: 0}
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -465
+      value: -479
       objectReference: {fileID: 0}
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
@@ -46145,8 +46368,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 825, y: -466}
-  m_SizeDelta: {x: 300, y: 250}
+  m_AnchoredPosition: {x: 934, y: -533}
+  m_SizeDelta: {x: 269, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1123433622
 GameObject:
@@ -47977,7 +48200,7 @@ PrefabInstance:
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 910
+      value: 850
       objectReference: {fileID: 0}
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
@@ -49336,6 +49559,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: 76437564
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &1193788975
 GameObject:
   m_ObjectHideFlags: 0
@@ -49692,21 +49938,21 @@ MonoBehaviour:
   wakeUpText: {fileID: 1942255008}
   memoryStartSound:
     Guid:
-      Data1: -977810401
-      Data2: 1107270942
-      Data3: 1740336013
-      Data4: -750192649
-    Path: event:/WorkingHard
+      Data1: 1890846785
+      Data2: 1090977562
+      Data3: -509876313
+      Data4: -94797401
+    Path: event:/Memory1_1
   memoryDeepSound:
     Guid:
       Data1: -1129093819
       Data2: 1288048909
       Data3: 747810212
       Data4: 1813172823
-    Path: event:/GranCanaria
+    Path: event:/Memory1_2
   memoryImage: {fileID: 1090342279}
-  memorySprite1: {fileID: 21300000, guid: 2b16a0d05fad2e54cac0624d771a8d40, type: 3}
-  memorySprite2: {fileID: 21300000, guid: 51ae05c5391be2e49b7c1207654d0c9f, type: 3}
+  memorySprite1: {fileID: 21300000, guid: bfd26f66f5f0f8747b1f6527f37ab1b2, type: 3}
+  memorySprite2: {fileID: 21300000, guid: bfd26f66f5f0f8747b1f6527f37ab1b2, type: 3}
   imageFadeDuration: 1.2
   wakeUpDelayAfterSecondMemory: 13
   skipKey: 32
@@ -49951,8 +50197,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 121.99993, y: -56.000023}
-  m_SizeDelta: {x: 1150, y: 740}
+  m_AnchoredPosition: {x: 203, y: -89.000046}
+  m_SizeDelta: {x: 1014.6, y: 740}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1228555672
 MonoBehaviour:
@@ -50013,7 +50259,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 300, y: 250}
-  m_Spacing: {x: 40, y: 50}
+  m_Spacing: {x: 10, y: 64}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1001 &1229550283
@@ -50423,27 +50669,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerDelay: 35
   wakeUpDelayAfterSecond: 13
-  fadeImage: {fileID: 0}
-  memoryImage: {fileID: 1025247313}
-  memorySprite1: {fileID: 0}
-  memorySprite2: {fileID: 0}
+  fadeImage: {fileID: 1025247313}
+  memoryImage: {fileID: 1090342279}
+  memorySprite1: {fileID: 21300000, guid: bfd26f66f5f0f8747b1f6527f37ab1b2, type: 3}
+  memorySprite2: {fileID: 21300000, guid: bfd26f66f5f0f8747b1f6527f37ab1b2, type: 3}
   imageFadeDuration: 1
   hintText: {fileID: 178488778}
   wakeUpText: {fileID: 1942255008}
   memoryStartSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1463013377
+      Data2: 1132288068
+      Data3: 1216768137
+      Data4: 1075264122
+    Path: event:/Memory4_1
   memoryDeepSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 632149591
+      Data2: 1078501348
+      Data3: 1888294838
+      Data4: -596026211
+    Path: event:/Memory3_1
   skipKey: 32
   wakeKey: 101
   pressesToSkip: 5
@@ -51693,6 +51939,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: 924789303
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &1272369375
 GameObject:
   m_ObjectHideFlags: 0
@@ -53678,6 +53947,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: 1386992265
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &1330448278
 GameObject:
   m_ObjectHideFlags: 0
@@ -54082,8 +54374,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 121.99993, y: -56.000023}
-  m_SizeDelta: {x: 1150, y: 740}
+  m_AnchoredPosition: {x: 203, y: -89.000046}
+  m_SizeDelta: {x: 1014.6, y: 740}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1338597534
 MonoBehaviour:
@@ -54144,7 +54436,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 300, y: 250}
-  m_Spacing: {x: 40, y: 50}
+  m_Spacing: {x: 10, y: 64}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &1338872737
@@ -56842,21 +57134,21 @@ MonoBehaviour:
   wakeUpText: {fileID: 1942255008}
   memoryStartSound:
     Guid:
-      Data1: -977810401
-      Data2: 1107270942
-      Data3: 1740336013
-      Data4: -750192649
-    Path: event:/WorkingHard
+      Data1: 1345174553
+      Data2: 1083041686
+      Data3: -1138284612
+      Data4: -1281681091
+    Path: event:/Memory2_1
   memoryDeepSound:
     Guid:
-      Data1: -1129093819
-      Data2: 1288048909
-      Data3: 747810212
-      Data4: 1813172823
-    Path: event:/GranCanaria
+      Data1: -1484550647
+      Data2: 1292485937
+      Data3: 808398488
+      Data4: 1665630071
+    Path: event:/Memory2_2
   memoryImage: {fileID: 1090342279}
-  memorySprite1: {fileID: 21300000, guid: 941c7511caa7ae94ca864a32b64d00e1, type: 3}
-  memorySprite2: {fileID: 21300000, guid: f57578be9e98cbc4782027539272224b, type: 3}
+  memorySprite1: {fileID: 21300000, guid: bfd26f66f5f0f8747b1f6527f37ab1b2, type: 3}
+  memorySprite2: {fileID: 21300000, guid: bfd26f66f5f0f8747b1f6527f37ab1b2, type: 3}
   imageFadeDuration: 1.2
   wakeUpDelayAfterSecondMemory: 13
   skipKey: 32
@@ -59270,6 +59562,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: -1282512890
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &1485164577
 GameObject:
   m_ObjectHideFlags: 0
@@ -62126,6 +62441,139 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fa80e7116296f4eb4f49ec1544ee22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  renderSettingsBounces: 5
+  renderSettingsGISamples: 16
+  renderSettingsGIBackFaceWeight: 0
+  renderSettingsTileSize: 512
+  renderSettingsPriority: 2
+  renderSettingsTexelsPerUnit: 20
+  renderSettingsForceRefresh: 1
+  renderSettingsForceRebuildGeometry: 1
+  renderSettingsPerformRendering: 1
+  renderSettingsUserRenderMode: 0
+  renderSettingsDistanceShadowmask: 0
+  renderSettingsSettingsMode: 0
+  renderSettingsFixSeams: 1
+  renderSettingsDenoise: 1
+  renderSettingsDenoise2x: 0
+  renderSettingsEncode: 1
+  renderSettingsEncodeMode: 0
+  renderSettingsOverwriteWarning: 0
+  renderSettingsAutoAtlas: 1
+  renderSettingsUnwrapUVs: 1
+  renderSettingsForceDisableUnwrapUVs: 0
+  renderSettingsMaxAutoResolution: 4096
+  renderSettingsMinAutoResolution: 16
+  renderSettingsUnloadScenes: 1
+  renderSettingsAdjustSamples: 1
+  renderSettingsGILODMode: 2
+  renderSettingsGILODModeEnabled: 0
+  renderSettingsCheckOverlaps: 0
+  renderSettingsSkipOutOfBoundsUVs: 1
+  renderSettingsHackEmissiveBoost: 1
+  renderSettingsHackIndirectBoost: 1
+  renderSettingsTempPath: 
+  renderSettingsOutPath: 
+  renderSettingsUseScenePath: 0
+  renderSettingsHackAOIntensity: 0
+  renderSettingsHackAOSamples: 16
+  renderSettingsHackAORadius: 1
+  renderSettingsShowAOSettings: 0
+  renderSettingsShowTasks: 1
+  renderSettingsShowTasks2: 0
+  renderSettingsShowPaths: 1
+  renderSettingsShowNet: 1
+  renderSettingsOcclusionProbes: 0
+  renderSettingsTexelsPerMap: 0
+  renderSettingsTexelsColor: 1
+  renderSettingsTexelsMask: 1
+  renderSettingsTexelsDir: 1
+  renderSettingsShowDirWarning: 1
+  renderSettingsRenderDirMode: 0
+  renderSettingsShowCheckerSettings: 0
+  renderSettingsSamplesWarning: 1
+  renderSettingsSuppressPopups: 0
+  renderSettingsPrefabWarning: 1
+  renderSettingsSplitByScene: 0
+  renderSettingsSplitByTag: 0
+  renderSettingsUVPaddingMax: 0
+  renderSettingsPostPacking: 1
+  renderSettingsHoleFilling: 0
+  renderSettingsBeepOnFinish: 0
+  renderSettingsExportTerrainAsHeightmap: 1
+  renderSettingsRTXMode: 0
+  renderSettingsLightProbeMode: 1
+  renderSettingsClientMode: 0
+  renderSettingsServerAddress: 127.0.0.1
+  renderSettingsUnwrapper: 0
+  renderSettingsDenoiserType: 100
+  renderSettingsExportTerrainTrees: 0
+  renderSettingsShowPerf: 1
+  renderSettingsSampleDiv: 1
+  renderSettingsAtlasPacker: 1
+  renderSettingsBatchPoints: 1
+  renderSettingsCompressVolumes: 0
+  renderSettingsBatchAreaLightSampleLimit: 0
+  renderSettingsSector: {fileID: 0}
+  renderSettingsRTPVExport: 1
+  renderSettingsRTPVSceneView: 0
+  renderSettingsRTPVHDR: 0
+  renderSettingsRTPVWidth: 640
+  renderSettingsRTPVHeight: 360
+  lastBakeTime: 0
+  enlightenWarningShown: 0
+  enlightenWarningShown2: 0
+  uniqueLights: []
+  lights: []
+  implicitGroups: []
+  implicitGroupedObjects: []
+  bounds: []
+  hasEmissive: 
+  uvBuffOffsets: 
+  uvBuffLengths: 
+  uvSrcBuff: []
+  uvDestBuff: []
+  lmrIndicesOffsets: 
+  lmrIndicesLengths: 
+  lmrIndicesBuff: 
+  lmGroupLODResFlags: 
+  lmGroupMinLOD: 
+  lmGroupLODMatrix: 
+  serverGetFileList: []
+  lightmapHasColor: 
+  lightmapHasMask: 
+  lightmapHasDir: 
+  lightmapHasRNM: 
+  modifiedAssetPathList: []
+  modifiedAssets: []
+  maps: []
+  masks: []
+  dirMaps: []
+  rnmMaps0: []
+  rnmMaps1: []
+  rnmMaps2: []
+  mapsMode: 
+  bakedRenderers: []
+  bakedIDs: 
+  bakedScaleOffset: []
+  bakedVertexOffset: 
+  bakedVertexColorMesh: []
+  nonBakedRenderers: []
+  bakedLights: []
+  bakedLightChannels: 
+  bakedRenderersTerrain: []
+  bakedIDsTerrain: 
+  bakedScaleOffsetTerrain: []
+  assetList: []
+  uvOverlapAssetList: 
+  idremap: 
+  usesRealtimeGI: 0
+  emptyDirectionTex: {fileID: 0}
+  anyVolumes: 0
+  compressedVolumes: 0
+  sectors: []
+  prevBakedProbes: []
+  prevBakedProbePos: []
 --- !u!4 &1552617307
 Transform:
   m_ObjectHideFlags: 1
@@ -63004,7 +63452,7 @@ PrefabInstance:
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -465
+      value: -479
       objectReference: {fileID: 0}
     - target: {fileID: 2761324439621173761, guid: 285d54d68613b7a4391a2a7b59143e51,
         type: 3}
@@ -63564,6 +64012,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: -631072817
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &1595390946
 GameObject:
   m_ObjectHideFlags: 0
@@ -70303,6 +70774,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: -911912371
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &1794348193
 GameObject:
   m_ObjectHideFlags: 0
@@ -75704,6 +76198,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: -1043587016
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1001 &1953325466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76668,6 +77185,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: -753101276
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &1982930762
 GameObject:
   m_ObjectHideFlags: 0
@@ -81016,6 +81556,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f24a4aaa0761b45ba25e7e5108e2c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UID: 221682848
+  color: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 1
+  shadowSpread: 0.05
+  cutoff: 10
+  realisticFalloff: 0
+  legacySampling: 1
+  samples: 8
+  projMode: 0
+  cookie: {fileID: 0}
+  angle: 30
+  innerAngle: 0
+  cubemap: {fileID: 0}
+  iesFile: {fileID: 0}
+  bitmask: 1
+  bakeToIndirect: 0
+  shadowmask: 0
+  shadowmaskFalloff: 0
+  indirectIntensity: 1
+  falloffMinRadius: 1
+  shadowmaskGroupID: 0
+  directionMode: 0
+  maskChannel: 0
 --- !u!1 &2110346599
 GameObject:
   m_ObjectHideFlags: 0
@@ -117738,7 +118301,7 @@ Transform:
   m_GameObject: {fileID: 6632936311786409719}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.78200066, y: 0.21972656, z: -4.9581556}
+  m_LocalPosition: {x: 0.78200066, y: 0.21972656, z: -4.958165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -119166,7 +119729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 354362674}
   BookPanel: {fileID: 6630922031144606338}
-  background: {fileID: 21300000, guid: 3c47abcf3fb3d12408efe3073b2e379f, type: 3}
+  background: {fileID: 21300000, guid: 6f49d80d6070eb149baaed4947c7c45a, type: 3}
   bookPages:
   - {fileID: 21300000, guid: 5b691ddeaacda3d45b698d2179b3acdc, type: 3}
   - {fileID: 21300000, guid: 898b551230fce824ea020175b034fef4, type: 3}

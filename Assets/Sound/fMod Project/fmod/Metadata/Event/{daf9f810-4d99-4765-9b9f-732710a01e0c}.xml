@@ -5,7 +5,7 @@
 			<value>You have a good soul</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{82930ffc-f63e-40e2-9050-d88e3da80f15}</destination>
@@ -53,7 +53,7 @@
 			<destination>{f84f2327-f993-4271-9fc7-73cf390b03af}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{c4c58fb7-8efa-4c4b-90c6-40d87ded9156}</destination>
+			<destination>{c53383a1-0d40-40d3-ab75-76f84f1b3af2}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{92913380-0161-4dea-850f-b0d8a4b34d96}" />
@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{c175e631-8f14-4af9-aa11-3be10ea9208e}">
+		<property name="volume">
+			<value>7</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{d0ecf0a8-dc32-4798-9ecc-ed68526faa29}</destination>
 		</relationship>
@@ -97,6 +100,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{79320ddc-b2a4-4e78-a5b1-2ca0fb82b092}">
+		<property name="volume">
+			<value>8</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -113,7 +119,6 @@
 	<object class="MixerBusEffectChain" id="{d0ecf0a8-dc32-4798-9ecc-ed68526faa29}">
 		<relationship name="effects">
 			<destination>{ba68a112-b5de-44ed-9d04-aae3a9d65011}</destination>
-			<destination>{3081b3aa-125d-42de-bc91-635f807d0c2d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{bdc4a5f9-e168-4446-841a-a6826d9051d4}" />
@@ -125,6 +130,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{576e6e49-db1f-46ac-bc77-3b7cf643c71a}" />
 	<object class="MixerBusFader" id="{ba68a112-b5de-44ed-9d04-aae3a9d65011}" />
-	<object class="SpatialiserEffect" id="{3081b3aa-125d-42de-bc91-635f807d0c2d}" />
 	<object class="MixerBusFader" id="{ab5c2c52-ab1f-449c-a498-dfcf41cdcbed}" />
 </objects>

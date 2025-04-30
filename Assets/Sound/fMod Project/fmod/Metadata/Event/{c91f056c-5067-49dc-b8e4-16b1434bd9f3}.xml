@@ -5,7 +5,7 @@
 			<value>Only the Russians dare to drink</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{89d54111-64cf-413d-bec5-6b03521df6ac}</destination>
@@ -53,14 +53,14 @@
 			<destination>{097dd191-eabd-4776-a83c-3d4a8f8c5685}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{c4c58fb7-8efa-4c4b-90c6-40d87ded9156}</destination>
+			<destination>{c53383a1-0d40-40d3-ab75-76f84f1b3af2}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{9cc42298-c5b6-470d-b7eb-6a2f7b4ad62a}" />
 	<object class="MarkerTrack" id="{1ed680a1-4aee-4f46-97c0-c18521bd60a3}" />
 	<object class="GroupTrack" id="{6467ff14-d12d-4d67-99d3-1698eb9f0c68}">
 		<relationship name="modules">
-			<destination>{73a7ee02-5182-440d-822b-c6b67c0a7a57}</destination>
+			<destination>{61948f8b-0226-44b8-ae0c-d056398f4050}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{0dafe82c-13e6-4b20-aeb8-645da0f2b8c9}</destination>
@@ -68,10 +68,13 @@
 	</object>
 	<object class="Timeline" id="{e2da4536-f97e-447f-b57b-3c8e417de6f0}">
 		<relationship name="modules">
-			<destination>{73a7ee02-5182-440d-822b-c6b67c0a7a57}</destination>
+			<destination>{61948f8b-0226-44b8-ae0c-d056398f4050}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{b4b9644e-5177-4820-ba77-bc46c8e6abf1}">
+		<property name="volume">
+			<value>6.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{4cf14636-d21b-42ff-91e0-979e0f69ae54}</destination>
 		</relationship>
@@ -88,9 +91,12 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{097dd191-eabd-4776-a83c-3d4a8f8c5685}" />
-	<object class="SingleSound" id="{73a7ee02-5182-440d-822b-c6b67c0a7a57}">
+	<object class="SingleSound" id="{61948f8b-0226-44b8-ae0c-d056398f4050}">
 		<property name="length">
-			<value>3.8530612244897959</value>
+			<value>3.203061224489796</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>0.65000000000000002</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{983409c9-a2e3-4460-b15b-fd79462853eb}</destination>
@@ -113,7 +119,6 @@
 	<object class="MixerBusEffectChain" id="{4cf14636-d21b-42ff-91e0-979e0f69ae54}">
 		<relationship name="effects">
 			<destination>{3bfedddb-35c1-4399-84ce-4e520c3fae5c}</destination>
-			<destination>{607237fe-5bf5-4a7b-9452-22cbe718a5c1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d7ee94d8-ffe7-489e-90f3-46aa3924a0ad}" />
@@ -125,6 +130,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{27d3a10b-9c90-4e7c-a801-c93139629720}" />
 	<object class="MixerBusFader" id="{3bfedddb-35c1-4399-84ce-4e520c3fae5c}" />
-	<object class="SpatialiserEffect" id="{607237fe-5bf5-4a7b-9452-22cbe718a5c1}" />
 	<object class="MixerBusFader" id="{1addd030-dff4-46a7-abe6-734231691990}" />
 </objects>

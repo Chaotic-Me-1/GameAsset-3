@@ -5,7 +5,7 @@
 			<value>Wake_up_snoring_man</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{c3893539-75d6-4148-b129-207cf5d14576}</destination>
@@ -53,7 +53,7 @@
 			<destination>{c8c21308-2ff1-44a7-b245-1849d93b2cd4}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{c4c58fb7-8efa-4c4b-90c6-40d87ded9156}</destination>
+			<destination>{c53383a1-0d40-40d3-ab75-76f84f1b3af2}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{fdff0d87-5553-4d97-93e8-5fcaeaabb385}" />
@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{f38d1535-a65b-40ba-8a89-b323c9146aae}">
+		<property name="volume">
+			<value>7</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{b543a859-ea27-412d-9251-295349a4ba8b}</destination>
 		</relationship>
@@ -113,7 +116,6 @@
 	<object class="MixerBusEffectChain" id="{b543a859-ea27-412d-9251-295349a4ba8b}">
 		<relationship name="effects">
 			<destination>{d60271c8-2e8c-49f7-ae28-bc1fcfc132ac}</destination>
-			<destination>{713e14aa-f4c6-4934-b6a9-4c4353a2b7f2}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{8c2ed936-91e0-4bd4-9817-7f8d204d9922}" />
@@ -125,6 +127,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{ab2a0a5d-5a93-4fa8-b9c8-df88d5c65760}" />
 	<object class="MixerBusFader" id="{d60271c8-2e8c-49f7-ae28-bc1fcfc132ac}" />
-	<object class="SpatialiserEffect" id="{713e14aa-f4c6-4934-b6a9-4c4353a2b7f2}" />
 	<object class="MixerBusFader" id="{d7dcd795-fbcf-4b78-bc91-4a319f5f3d3b}" />
 </objects>

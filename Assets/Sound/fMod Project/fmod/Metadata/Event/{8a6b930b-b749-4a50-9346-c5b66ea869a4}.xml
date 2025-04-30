@@ -5,7 +5,7 @@
 			<value>OldMan_RemindOfWife</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{6e7742aa-2f57-4555-ab4c-4e9762a93443}</destination>
@@ -53,7 +53,7 @@
 			<destination>{44663b51-0979-4ac3-8c37-faa5ec8aa7c9}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{c4c58fb7-8efa-4c4b-90c6-40d87ded9156}</destination>
+			<destination>{c53383a1-0d40-40d3-ab75-76f84f1b3af2}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{c69cf5c0-5b57-47d0-8030-007ffce65f99}" />
@@ -113,7 +113,6 @@
 	<object class="MixerBusEffectChain" id="{9ea5ebea-7cc6-4373-b970-f546b4931ab3}">
 		<relationship name="effects">
 			<destination>{7fdfcebb-ed1a-45da-9432-0d71eaa33e5e}</destination>
-			<destination>{2fc9c9c0-5160-4718-af65-9e64a0038ac2}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{14bdd067-132c-4311-b839-acc19b64c297}" />
@@ -125,6 +124,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{c21f333e-0401-418d-b67a-46d1f7bed1a4}" />
 	<object class="MixerBusFader" id="{7fdfcebb-ed1a-45da-9432-0d71eaa33e5e}" />
-	<object class="SpatialiserEffect" id="{2fc9c9c0-5160-4718-af65-9e64a0038ac2}" />
 	<object class="MixerBusFader" id="{93fb8e69-72f0-4ed3-8e4e-d2d205620115}" />
 </objects>
