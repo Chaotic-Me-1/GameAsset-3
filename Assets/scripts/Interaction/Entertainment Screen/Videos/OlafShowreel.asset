@@ -15,10 +15,11 @@ MonoBehaviour:
   title: Olaf's Showreel
   thumbnail: {fileID: 21300000, guid: 77b7deebfb6903542bcd5d66fadcc5f6, type: 3}
   clip: {fileID: 32900000, guid: 65f6e5502cf62cd41a8b7f9d734228f3, type: 3}
+  videoURL: 
   fmodAudio:
     Guid:
       Data1: -1193130346
       Data2: 1215832692
       Data3: -2009487699
       Data4: -141552149
-    Path: event:/ShowReelOlaf
+    Path: event:/Sounds Events/ShowReelOlaf

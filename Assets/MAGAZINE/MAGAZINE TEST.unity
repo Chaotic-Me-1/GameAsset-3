@@ -252,7 +252,7 @@ MonoBehaviour:
       Data2: 1197586643
       Data3: 1325218484
       Data4: 663902072
-    Path: event:/Background noise
+    Path: event:/Sounds Events/Background noise
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -5696,7 +5696,7 @@ MonoBehaviour:
       Data2: 1142779293
       Data3: -426696538
       Data4: -976643330
-    Path: event:/CabinChimes
+    Path: event:/Sounds Events/CabinChimes
   minInterval: 180
   maxInterval: 600
 --- !u!65 &429197825
@@ -5804,7 +5804,7 @@ MonoBehaviour:
       Data2: 1317649032
       Data3: -1656354123
       Data4: -440948946
-    Path: event:/CaptainBroadcast
+    Path: event:/Sounds Events/CaptainBroadcast
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -7382,18 +7382,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 905324943}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &602704254 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100,
-    type: 3}
-  m_PrefabInstance: {fileID: 905324943}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602704252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4446b7192d8bf914ebaf797b64fe8b86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &602704256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7407,6 +7395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magazineUI: {fileID: 1143294798}
+  glowRenderer: {fileID: 0}
   emissionColor: {r: 0.45882353, g: 0.73333335, b: 1, a: 1}
   emissionNitsIntensity: 60
   openMagazineEvent:
@@ -7415,7 +7404,14 @@ MonoBehaviour:
       Data2: 1080340171
       Data3: -95436401
       Data4: 247795282
-    Path: event:/Flight manual
+    Path: event:/Sounds Events/Flight manual
+  openMagazineSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!4 &612402020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d9197d23cedad0c4c92128a44fad77d2,
@@ -11035,7 +11031,7 @@ MonoBehaviour:
       Data2: 1080340171
       Data3: -95436401
       Data4: 247795282
-    Path: event:/Flight manual
+    Path: event:/Sounds Events/Flight manual
 --- !u!1001 &841037283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12763,7 +12759,7 @@ MonoBehaviour:
       Data2: 1178944227
       Data3: -211125856
       Data4: 1870914689
-    Path: event:/Walk
+    Path: event:/Sounds Events/Walk
   talkSound:
     Guid:
       Data1: 0
@@ -12771,7 +12767,14 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  serveSound:
+  serveSoundChips:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  serveSoundDrink:
     Guid:
       Data1: 0
       Data2: 0
@@ -14831,9 +14834,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magazineUI: {fileID: 1143294798}
+  glowRenderer: {fileID: 0}
   emissionColor: {r: 0.45882353, g: 0.73333335, b: 1, a: 1}
   emissionNitsIntensity: 60
   openMagazineEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  openMagazineSound:
     Guid:
       Data1: 0
       Data2: 0
@@ -15265,6 +15276,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuCanvas: {fileID: 917496538}
   mainMenuSceneName: 
+  magazineUI: {fileID: 0}
+  entertainmentUI: {fileID: 0}
+  leafletUI: {fileID: 0}
+  extraUI: {fileID: 0}
 --- !u!114 &1143294792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15384,14 +15399,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magazinePanel: {fileID: 75408869}
-  magazineBook: {fileID: 602704254}
+  extraPanelToClose: {fileID: 0}
   openMagazineEvent:
     Guid:
       Data1: 1014371369
       Data2: 1080340171
       Data3: -95436401
       Data4: 247795282
-    Path: event:/Flight manual
+    Path: event:/Sounds Events/Flight manual
 --- !u!1001 &1149299835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15605,7 +15620,7 @@ MonoBehaviour:
       Data2: 1172956213
       Data3: 2057916085
       Data4: 1810912193
-    Path: event:/Airplane sounds
+    Path: event:/Sounds Events/Airplane sounds
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -20584,6 +20599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleDialogues: []
+  triggerDelay: 1
 --- !u!114 &1183297550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20634,7 +20650,7 @@ MonoBehaviour:
       Data2: 1254482441
       Data3: -1945030217
       Data4: 1044929840
-    Path: event:/BabyCrying
+    Path: event:/Sounds Events/BabyCrying
   delayBeforeCry: 10
   cryDuration: 45
   cryingBabyDialogue: {fileID: 11400000, guid: 81cbbc755c7969947b0a9f5575f71d72, type: 2}
@@ -21268,16 +21284,17 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  wakeUpSound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+  memoryImage: {fileID: 0}
+  memorySprite1: {fileID: 0}
+  memorySprite2: {fileID: 0}
+  imageFadeDuration: 1
+  wakeUpDelayAfterSecondMemory: 13
   skipKey: 32
   wakeUpKey: 101
   pressesToSkip: 5
+  hintFlashSpeed: 2
+  hintMinAlpha: 0.2
+  hintMaxAlpha: 1
 --- !u!4 &1213599929
 Transform:
   m_ObjectHideFlags: 0
@@ -32943,7 +32960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magazinePanel: {fileID: 75408869}
-  magazineBook: {fileID: 602704254}
+  extraPanelToClose: {fileID: 0}
   openMagazineEvent:
     Guid:
       Data1: 0
@@ -35967,6 +35984,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorial: {fileID: 1143294797}
+  detectionRadius: 0.05
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!135 &2064130498
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -60430,6 +60451,7 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  SoundCooldown: {fileID: 0}
 --- !u!33 &5066001304244743767
 MeshFilter:
   m_ObjectHideFlags: 0

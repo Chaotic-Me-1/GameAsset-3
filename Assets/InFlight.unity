@@ -317,7 +317,7 @@ MonoBehaviour:
       Data2: 1197586643
       Data3: 1325218484
       Data4: 663902072
-    Path: event:/Background noise
+    Path: event:/Sounds Events/Background noise
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -5246,7 +5246,7 @@ MonoBehaviour:
       Data2: 1254482441
       Data3: -1945030217
       Data4: 1044929840
-    Path: event:/BabyCrying
+    Path: event:/Sounds Events/BabyCrying
   delayBeforeCry: 25
   cryDuration: 45
   cryingBabyDialogue: {fileID: 11400000, guid: 81cbbc755c7969947b0a9f5575f71d72, type: 2}
@@ -6134,7 +6134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8897d783d792890438166448d8e5e499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loopCount: 0
+  loopCount: 3
 --- !u!114 &161384021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15134,7 +15134,7 @@ MonoBehaviour:
       Data2: 1142779293
       Data3: -426696538
       Data4: -976643330
-    Path: event:/CabinChimes
+    Path: event:/Sounds Events/CabinChimes
   minInterval: 180
   maxInterval: 600
 --- !u!4 &429197828
@@ -15205,7 +15205,7 @@ MonoBehaviour:
       Data2: 1317649032
       Data3: -1656354123
       Data4: -440948946
-    Path: event:/CaptainBroadcast
+    Path: event:/Sounds Events/CaptainBroadcast
 --- !u!1 &431508209
 GameObject:
   m_ObjectHideFlags: 0
@@ -35812,7 +35812,7 @@ MonoBehaviour:
       Data2: 1080340171
       Data3: -95436401
       Data4: 247795282
-    Path: event:/Flight manual
+    Path: event:/Sounds Events/Flight manual
 --- !u!1001 &841037283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40476,7 +40476,7 @@ MonoBehaviour:
       Data2: 1178944227
       Data3: -211125856
       Data4: 1870914689
-    Path: event:/Walk
+    Path: event:/Sounds Events/Walk
   talkSound:
     Guid:
       Data1: 0
@@ -40490,14 +40490,14 @@ MonoBehaviour:
       Data2: 1156501571
       Data3: -776841542
       Data4: -1935450262
-    Path: event:/Chips
+    Path: event:/Sounds Events/Chips
   serveSoundDrink:
     Guid:
       Data1: 872811322
       Data2: 1120828765
       Data3: 931811774
       Data4: 1095941037
-    Path: event:/Short pouring
+    Path: event:/Sounds Events/Short pouring
   attendent: {fileID: 982087465}
 --- !u!114 &982087468
 MonoBehaviour:
@@ -48387,7 +48387,7 @@ MonoBehaviour:
       Data2: 1172956213
       Data3: 2057916085
       Data4: 1810912193
-    Path: event:/Airplane sounds
+    Path: event:/Sounds Events/Airplane sounds
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -50685,11 +50685,11 @@ MonoBehaviour:
     Path: event:/Memory4_1
   memoryDeepSound:
     Guid:
-      Data1: 632149591
-      Data2: 1078501348
-      Data3: 1888294838
-      Data4: -596026211
-    Path: event:/Memory3_1
+      Data1: 699728042
+      Data2: 1242516247
+      Data3: -2042355546
+      Data4: -945958451
+    Path: event:/Memory4_2
   skipKey: 32
   wakeKey: 101
   pressesToSkip: 5
@@ -60080,7 +60080,7 @@ MonoBehaviour:
       Data2: 1178944227
       Data3: -211125856
       Data4: 1870914689
-    Path: event:/Walk
+    Path: event:/Sounds Events/Walk
   talkSound:
     Guid:
       Data1: 0
@@ -60094,14 +60094,14 @@ MonoBehaviour:
       Data2: 1156501571
       Data3: -776841542
       Data4: -1935450262
-    Path: event:/Chips
+    Path: event:/Sounds Events/Chips
   serveSoundDrink:
     Guid:
       Data1: 872811322
       Data2: 1120828765
       Data3: 931811774
       Data4: 1095941037
-    Path: event:/Short pouring
+    Path: event:/Sounds Events/Short pouring
   attendent: {fileID: 1493067634}
 --- !u!1 &1493505956
 GameObject:
@@ -62118,7 +62118,7 @@ MonoBehaviour:
       Data2: 1178944227
       Data3: -211125856
       Data4: 1870914689
-    Path: event:/Walk
+    Path: event:/Sounds Events/Walk
   talkSound:
     Guid:
       Data1: 0
@@ -62132,14 +62132,14 @@ MonoBehaviour:
       Data2: 1156501571
       Data3: -776841542
       Data4: -1935450262
-    Path: event:/Chips
+    Path: event:/Sounds Events/Chips
   serveSoundDrink:
     Guid:
       Data1: 872811322
       Data2: 1120828765
       Data3: 931811774
       Data4: 1095941037
-    Path: event:/Short pouring
+    Path: event:/Sounds Events/Short pouring
   attendent: {fileID: 1548157296}
 --- !u!4 &1548966743 stripped
 Transform:
@@ -72586,7 +72586,7 @@ MonoBehaviour:
       Data2: 1178944227
       Data3: -211125856
       Data4: 1870914689
-    Path: event:/Walk
+    Path: event:/Sounds Events/Walk
   talkSound:
     Guid:
       Data1: 0
@@ -72600,14 +72600,14 @@ MonoBehaviour:
       Data2: 1156501571
       Data3: -776841542
       Data4: -1935450262
-    Path: event:/Chips
+    Path: event:/Sounds Events/Chips
   serveSoundDrink:
     Guid:
       Data1: 872811322
       Data2: 1120828765
       Data3: 931811774
       Data4: 1095941037
-    Path: event:/Short pouring
+    Path: event:/Sounds Events/Short pouring
   attendent: {fileID: 1841178376}
 --- !u!4 &1844120213 stripped
 Transform:
@@ -79457,7 +79457,7 @@ MonoBehaviour:
       Data2: 1178944227
       Data3: -211125856
       Data4: 1870914689
-    Path: event:/Walk
+    Path: event:/Sounds Events/Walk
   talkSound:
     Guid:
       Data1: 0
@@ -79471,14 +79471,14 @@ MonoBehaviour:
       Data2: 1156501571
       Data3: -776841542
       Data4: -1935450262
-    Path: event:/Chips
+    Path: event:/Sounds Events/Chips
   serveSoundDrink:
     Guid:
       Data1: 872811322
       Data2: 1120828765
       Data3: 931811774
       Data4: 1095941037
-    Path: event:/Short pouring
+    Path: event:/Sounds Events/Short pouring
   attendent: {fileID: 2063071415}
 --- !u!1 &2064130495
 GameObject:
@@ -80578,7 +80578,7 @@ MonoBehaviour:
       Data2: 1198446073
       Data3: -1752941405
       Data4: 1726867647
-    Path: event:/DemonGrowl
+    Path: event:/Sounds Events/DemonGrowl
 --- !u!1 &2098452866
 GameObject:
   m_ObjectHideFlags: 0
@@ -110446,35 +110446,35 @@ MonoBehaviour:
       Data2: 1201479988
       Data3: -360921177
       Data4: 149311613
-    Path: event:/Snoring 1
+    Path: event:/Sounds Events/Snoring 1
   mediumSnoring:
     Guid:
       Data1: 743835757
       Data2: 1273023332
       Data3: -290640500
       Data4: 1951820462
-    Path: event:/Snoring 2
+    Path: event:/Sounds Events/Snoring 2
   hardSnoring:
     Guid:
       Data1: 1726321314
       Data2: 1311214446
       Data3: 2116355463
       Data4: -800405922
-    Path: event:/Snoring 3
+    Path: event:/Sounds Events/Snoring 3
   deathSnoring:
     Guid:
       Data1: -855939927
       Data2: 1303182675
       Data3: -32927094
       Data4: -667440867
-    Path: event:/Snoring 5
+    Path: event:/Sounds Events/Snoring 5
   wakeSnoring:
     Guid:
       Data1: -685099425
       Data2: 1280090502
       Data3: -651010651
       Data4: -318515801
-    Path: event:/Snoring 4
+    Path: event:/Sounds Events/Snoring 4
   SoundCooldown: {fileID: 318288170212225786}
 --- !u!33 &5066001304244743767
 MeshFilter:
@@ -118301,7 +118301,7 @@ Transform:
   m_GameObject: {fileID: 6632936311786409719}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.78200066, y: 0.21972656, z: -4.958165}
+  m_LocalPosition: {x: 0.78200066, y: 0.21972656, z: -4.958168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
