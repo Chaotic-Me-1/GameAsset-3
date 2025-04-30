@@ -94,7 +94,7 @@ public class DialogueManager : MonoBehaviour // script for managing all the dial
         }
 
         // NPC reaction line
-        StartCoroutine(PlayReactionVoiceLine(choice.npcReactionVoiceLine, 0.5f));
+        StartCoroutine(PlayPlayerThenReactionVoice(choice));
 
         // Enable objects by ID
         if (choice.objectIDsToEnable != null)
@@ -109,16 +109,6 @@ public class DialogueManager : MonoBehaviour // script for managing all the dial
             }
         }
 
-        // Branch or close
-        if (choice.followUpDialogue != null)
-        {
-            StartCoroutine(ContinueDialogueAfterDelay(choice.followUpDialogue, 3f));
-        }
-        else
-        {
-            StartCoroutine(CloseDialogueAfterDelay(3f));
-        }
-
         if (currentBabyCry != null)
         {
             currentBabyCry.OnPlayerMadeChoice(optionIndex);
@@ -126,16 +116,60 @@ public class DialogueManager : MonoBehaviour // script for managing all the dial
         }
     }
 
-    private IEnumerator PlayReactionVoiceLine(EventReference voiceLine, float delay)
+    private IEnumerator PlayPlayerThenReactionVoice(DialogueOption choice)
     {
-        yield return new WaitForSeconds(delay);
+        bool playedAnything = false;
 
-        if (!voiceLine.IsNull)
+        // --- Player voice line ---
+        if (!choice.playerVoiceLine.IsNull)
         {
-            EventInstance reaction = RuntimeManager.CreateInstance(voiceLine);
+            playedAnything = true;
+            EventInstance playerLine = RuntimeManager.CreateInstance(choice.playerVoiceLine);
+            RuntimeManager.AttachInstanceToGameObject(playerLine, transform);
+            playerLine.start();
+
+            PLAYBACK_STATE playerState;
+            do {
+                yield return null;
+                playerLine.getPlaybackState(out playerState);
+            } while (playerState == PLAYBACK_STATE.PLAYING);
+
+            playerLine.release();
+        }
+
+        // --- Small gap before NPC response ---
+        if (!choice.npcReactionVoiceLine.IsNull)
+        {
+            playedAnything = true;
+            yield return new WaitForSeconds(0.2f); // Pause before NPC line
+
+            EventInstance reaction = RuntimeManager.CreateInstance(choice.npcReactionVoiceLine);
             RuntimeManager.AttachInstanceToGameObject(reaction, transform);
             reaction.start();
+
+            PLAYBACK_STATE reactionState;
+            do {
+                yield return null;
+                reaction.getPlaybackState(out reactionState);
+            } while (reactionState == PLAYBACK_STATE.PLAYING);
+
             reaction.release();
+        }
+
+        // --- Fallback delay if nothing was played ---
+        if (!playedAnything)
+        {
+            yield return new WaitForSeconds(3.5f); // enough time to read the reaction text
+        }
+
+        // --- Then continue or close ---
+        if (choice.followUpDialogue != null)
+        {
+            StartCoroutine(ContinueDialogueAfterDelay(choice.followUpDialogue, 0f));
+        }
+        else
+        {
+            StartCoroutine(CloseDialogueAfterDelay(0f));
         }
     }
 
