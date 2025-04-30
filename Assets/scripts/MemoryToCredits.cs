@@ -37,6 +37,7 @@ public class MemoryToCredits : MonoBehaviour
 
     bool memoryActive, skipTriggered, canWakeUp;
     int  skipCount;
+    AudioSource localAudioSource;
 
     VCA masterVCA, memoryVCA;
 
@@ -44,8 +45,9 @@ public class MemoryToCredits : MonoBehaviour
     {
         masterVCA = RuntimeManager.GetVCA("vca:/Master");
         memoryVCA = RuntimeManager.GetVCA("vca:/Memory");
-    }
 
+        localAudioSource = GetComponent<AudioSource>();
+    }
     void OnEnable() => StartCoroutine(BeginMemoryAfterDelay());
 
     IEnumerator BeginMemoryAfterDelay()
@@ -65,6 +67,9 @@ public class MemoryToCredits : MonoBehaviour
         if (wakeUpText){ wakeUpText.gameObject.SetActive(false); }
 
         StartCoroutine(FadeVCA(masterVCA, 1, 0, 2));
+
+        if (localAudioSource != null)
+        StartCoroutine(FadeAudioSource(localAudioSource, localAudioSource.volume, 0f, 2f));
 
         EventInstance startEvt = default;
         if (!memoryStartSound.IsNull)
@@ -192,5 +197,19 @@ public class MemoryToCredits : MonoBehaviour
         Color c=txt.color; float t=0;
         while(t<dur){ t+=Time.deltaTime; c.a=Mathf.Lerp(fromA,toA,t/dur); txt.color=c; yield return null; }
         c.a=toA; txt.color=c;
+    }
+
+    IEnumerator FadeAudioSource(AudioSource source, float from, float to, float duration)
+    {
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            if (source != null)
+                source.volume = Mathf.Lerp(from, to, elapsed / duration);
+            yield return null;
+        }
+        if (source != null)
+            source.volume = to;
     }
 }
