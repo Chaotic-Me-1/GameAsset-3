@@ -14,32 +14,27 @@ public class Options : MonoBehaviour
     [SerializeField] private GameObject OptionMenu;
     [SerializeField] private GameObject MainMenu;
 
-    //Fmod
-  //  public Slider MusicSlider;
-  //  public Slider SFXSlider;
-  //  private bus musicBus;
-  //  private bus sfxBus;
+    //Fmod Bus
+    public Bus masterBus;
 
     private void Start()
     {
-        if (PlayerPrefs.HasKey("soundVolume"))
-            LoadVolume();
+        //Get the main Fmod bus
+        masterBus = RuntimeManager.GetBus("bus:/");
 
-        else
-        {
-            PlayerPrefs.SetFloat("soundVolume", 1);
-            LoadVolume();
-        }
+        LoadVolume();
     }
     
     public void OpenOptionsMenu()
     {
+        ///Hides the main menu design and shows the option
         OptionMenu.SetActive(true);
         MainMenu.SetActive(false);
     }
 
     public void OpenOptionsMenuClose()
     {
+        //hides the option designs and return to the main menu
         OptionMenu.SetActive(false);
         MainMenu.SetActive(true);
     }
@@ -47,17 +42,24 @@ public class Options : MonoBehaviour
 
     public void SetVolume(float volume)
     {
-        AudioListener.volume = Mastersound.value;
+        float currentVolume = Mastersound.value;
+
+        AudioListener.volume = currentVolume; //Unity's Master volume
+        masterBus.setVolume(currentVolume); //Fmod Master Bus
     }
 
     public void SaveVolume()
     {
+        //Saves the sound value
         PlayerPrefs.SetFloat("soundVolume", Mastersound.value);
     }
 
     public void LoadVolume()
     {
-        Mastersound.value = PlayerPrefs.GetFloat("soundVolume");
+        //Load saved volume, or use default 1 that is full volume
+        float savedVolume = PlayerPrefs.GetFloat("soundVolume", 1);
+        Mastersound.value = savedVolume;
+        SetVolume(Mastersound.value);//Making sure that both volume gets updates 
     }
 
     //using an int to let it go from 0 to 2 to go between low, mid and high
@@ -67,15 +69,11 @@ public class Options : MonoBehaviour
         QualitySettings.SetQualityLevel(qualityIndex);
     }
 
+    //Set the game to fullscreen or windowed mode based on the value of the 'isFullscreen' boolean
     public void SetToFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
-        Debug.Log("Fullscreen button clicked");
+        Debug.Log("Fullscreen button clicked"); //Sending a debut to see if the check boxs have been clicked 
     }
 
-    //public void SetMusicVolume (float volume)
-   // {
-        //musicBus.setVolume(volume);
-        //PlayerPrefs.SetFloat("MusicVolume,")
-   // }
 }
