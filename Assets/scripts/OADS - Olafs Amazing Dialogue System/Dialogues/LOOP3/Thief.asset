@@ -24,14 +24,14 @@ MonoBehaviour:
   options:
   - optionText: Notify the attendant
     karmaImpact: 5
-    reactionText: '"Miss!" - "Hmm?"'
+    reactionText: '"Uhm, hey - Rettana?!" - "Hmm?"'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1049531900
+        Data2: 1117809150
+        Data3: -506749794
+        Data4: 1538557385
+      Path: event:/Dialog/Main character/Uhm_Rettana
     npcReactionVoiceLine:
       Guid:
         Data1: -1220399067
@@ -46,11 +46,11 @@ MonoBehaviour:
     reactionText: '"Psst... Hey!" '
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -374213155
+        Data2: 1294010058
+        Data3: -1608252488
+        Data4: 1089410893
+      Path: event:/Dialog/Main character/Psst
     npcReactionVoiceLine:
       Guid:
         Data1: 0

@@ -34,10 +34,10 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/Let_me_help_you_out
     npcReactionVoiceLine:
       Guid:
-        Data1: 658874025
-        Data2: 1073787917
-        Data3: 509619609
-        Data4: 610890190
+        Data1: -1285353104
+        Data2: 1077575319
+        Data3: 757089701
+        Data4: -1469651292
       Path: event:/Dialog/Oldman/OldMan_SoNiceOfYou
     followUpDialogue: {fileID: 11400000, guid: abe120aff81264247afd3838e27a3ccb, type: 2}
     objectIDsToEnable: []
@@ -53,10 +53,10 @@ MonoBehaviour:
       Path: 
     npcReactionVoiceLine:
       Guid:
-        Data1: -1010517841
-        Data2: 1229687399
-        Data3: 1155441841
-        Data4: -147412055
+        Data1: -1456043834
+        Data2: 1297715897
+        Data3: -1653752427
+        Data4: 180330646
       Path: event:/Dialog/Oldman/OldMan_MissesWife
     followUpDialogue: {fileID: 0}
     objectIDsToEnable:
@@ -73,11 +73,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/Old_fart_cant_do_shit
     npcReactionVoiceLine:
       Guid:
-        Data1: -1043905874
-        Data2: 1334051921
-        Data3: 2022486964
-        Data4: -1982628973
-      Path: event:/Dialog/Oldman/OldMan_HowDareYou
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: bf7042078dbb1764889582b81665dbc4, type: 2}
     objectIDsToEnable: []
   requiredLoop: 1

@@ -25,7 +25,7 @@ MonoBehaviour:
   options:
   - optionText: Make funny faces
     karmaImpact: 5
-    reactionText: The baby turns toward you, and you start making funny faces.
+    reactionText: The baby turns toward you as you start making funny faces.
     playerVoiceLine:
       Guid:
         Data1: 0
@@ -63,8 +63,8 @@ MonoBehaviour:
     objectIDsToEnable: []
   - optionText: Say nothing
     karmaImpact: 0
-    reactionText: You stay quiet as this is a problem for the parents not you, but
-      there is something about that crying that reminds you of something.
+    reactionText: You stay quiet as this is a problem for the parents - not you.
+      The crying reminds you of something...
     playerVoiceLine:
       Guid:
         Data1: 0

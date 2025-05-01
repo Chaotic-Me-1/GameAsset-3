@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: acid
   m_EditorClassIdentifier: 
   promptText: You see the attendant present a bottle labeled with danger and death
-    symbols, and she pours you a glass of the green liquid.
+    symbols. She pours you a glass of the green liquid.
   promptVoiceLine:
     Guid:
       Data1: 0

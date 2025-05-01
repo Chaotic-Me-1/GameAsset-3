@@ -5,7 +5,7 @@
 			<value>Just_make_it_stop</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{c3893539-75d6-4148-b129-207cf5d14576}</destination>
@@ -61,6 +61,7 @@
 	<object class="GroupTrack" id="{a536456a-e64d-40a2-a813-a5adf3b527c4}">
 		<relationship name="modules">
 			<destination>{2a42b861-93a9-4007-a1b4-7fc9fa9972c7}</destination>
+			<destination>{113cf2ff-c153-4ef6-84b5-ba34dd79808a}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{d189fd5b-80d2-4458-ac48-1df3b01adff6}</destination>
@@ -69,6 +70,7 @@
 	<object class="Timeline" id="{758dd048-8496-4ed8-949b-ae2f51bf184e}">
 		<relationship name="modules">
 			<destination>{2a42b861-93a9-4007-a1b4-7fc9fa9972c7}</destination>
+			<destination>{113cf2ff-c153-4ef6-84b5-ba34dd79808a}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{1bc6d967-f45d-4d2c-85ff-5fa8dad08231}">
@@ -97,6 +99,17 @@
 		</property>
 		<relationship name="audioFile">
 			<destination>{7db0e0e4-961f-41fb-aab1-3de71facfd18}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{113cf2ff-c153-4ef6-84b5-ba34dd79808a}">
+		<property name="start">
+			<value>3.2000000000000002</value>
+		</property>
+		<property name="length">
+			<value>4.1100000000000003</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{f7623348-a895-41f1-ac85-851cd0fe1081}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{d189fd5b-80d2-4458-ac48-1df3b01adff6}">

@@ -16,11 +16,11 @@ MonoBehaviour:
     that?!"'
   promptVoiceLine:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1912155397
+      Data2: 1170925950
+      Data3: -1295791444
+      Data4: -440732352
+    Path: event:/Dialog/Oldman/OldMan_NeverFindWife
   options:
   - optionText: Love?
     karmaImpact: 0
@@ -34,11 +34,11 @@ MonoBehaviour:
       Path: 
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1456043834
+        Data2: 1297715897
+        Data3: -1653752427
+        Data4: 180330646
+      Path: event:/Dialog/Oldman/OldMan_MissesWife
     followUpDialogue: {fileID: 0}
     objectIDsToEnable:
     - Memory2

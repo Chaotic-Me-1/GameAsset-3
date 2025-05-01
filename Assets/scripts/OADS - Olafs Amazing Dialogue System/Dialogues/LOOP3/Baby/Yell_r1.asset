@@ -16,11 +16,11 @@ MonoBehaviour:
     father has clearly had enough of you. "You better shut it. You're the worst!"
   promptVoiceLine:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -576273864
+      Data2: 1236266433
+      Data3: -23328869
+      Data4: 982754703
+    Path: event:/Dialog/Main character/Just_make_it_stop
   options:
   - optionText: Let the baby AND it's parents suffer.
     karmaImpact: -5
@@ -28,18 +28,18 @@ MonoBehaviour:
       he just keeps crying.
     playerVoiceLine:
       Guid:
-        Data1: -576273864
-        Data2: 1236266433
-        Data3: -23328869
-        Data4: 982754703
-      Path: event:/Dialog/Main character/Just_make_it_stop
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     npcReactionVoiceLine:
       Guid:
-        Data1: -1228420839
-        Data2: 1155620037
-        Data3: 1097498037
-        Data4: 1587454058
-      Path: event:/Dialog/Father/Father you better shut it
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 0}
     objectIDsToEnable:
     - Memory3

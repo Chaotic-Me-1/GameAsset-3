@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
   m_Name: LOOP3_FlightAttendantDialogue
   m_EditorClassIdentifier: 
-  promptText: The flight attendant stops next to you and smiles... Too much.... "Would
-    you like something to drink, sir?" Her smile drives shivvers down your spine.
-    She holds out three options...
+  promptText: The flight attendant stops next to you and smiles... Too much.... "What
+    do you choose, sir?" Her smile drives shivvers down your spine. She holds out
+    three options...
   promptVoiceLine:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 191704285
+      Data2: 1323732985
+      Data3: 2114429322
+      Data4: -42082161
+    Path: event:/Dialog/Flight attendent/What do you choice sir
   options:
   - optionText: '"Blood?!"'
     karmaImpact: 0
@@ -35,11 +35,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/Blood_!!_!
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -559907420
+        Data2: 1340056901
+        Data3: 904891275
+        Data4: -1535941550
+      Path: event:/Dialog/Flight attendent/Very well sir
     followUpDialogue: {fileID: 11400000, guid: 84413443b6228e645a697579f749812d, type: 2}
     objectIDsToEnable:
     - Blood
@@ -55,11 +55,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/Poison_
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -559907420
+        Data2: 1340056901
+        Data3: 904891275
+        Data4: -1535941550
+      Path: event:/Dialog/Flight attendent/Very well sir
     followUpDialogue: {fileID: 11400000, guid: 4995c7b6a1abb1a489faefc7d648ebcf, type: 2}
     objectIDsToEnable:
     - PoisonAcid
@@ -75,11 +75,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/Acid_
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -559907420
+        Data2: 1340056901
+        Data3: 904891275
+        Data4: -1535941550
+      Path: event:/Dialog/Flight attendent/Very well sir
     followUpDialogue: {fileID: 11400000, guid: df45ae64c1e485f44b4a97fe74d4665a, type: 2}
     objectIDsToEnable:
     - PoisonAcid

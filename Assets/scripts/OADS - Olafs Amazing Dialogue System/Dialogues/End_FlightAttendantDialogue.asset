@@ -16,30 +16,30 @@ MonoBehaviour:
     you ready?"
   promptVoiceLine:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 686693394
+      Data2: 1332821252
+      Data3: 1338646678
+      Data4: 51565086
+    Path: event:/Dialog/Flight attendent/are you ready
   options:
   - optionText: Yes
     karmaImpact: 0
-    reactionText: '"Great!" Her gaze is fixated on you. She doesn''t say anything,
-      just gives you a nod and smiles.'
+    reactionText: '"Very well, sir." Her gaze is fixated on you. She gives you a
+      nod and smiles.'
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 785267325
+        Data2: 1339413778
+        Data3: 908758459
+        Data4: -1272722391
+      Path: event:/Dialog/Main character/Yeah_Im_ready
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -559907420
+        Data2: 1340056901
+        Data3: 904891275
+        Data4: -1535941550
+      Path: event:/Dialog/Flight attendent/Very well sir
     followUpDialogue: {fileID: 0}
     objectIDsToEnable:
     - Credits
@@ -49,11 +49,11 @@ MonoBehaviour:
       you a nod.
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -816757060
+        Data2: 1222360121
+        Data3: -1031583312
+        Data4: -1266900005
+      Path: event:/Dialog/Main character/UhmNo
     npcReactionVoiceLine:
       Guid:
         Data1: 0

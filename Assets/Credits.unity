@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -402, y: -2586}
+  m_AnchoredPosition: {x: -402, y: -4425}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &13484324
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 67108863
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -920,7 +920,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 67108863
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1315,10 +1315,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuCanvas: {fileID: 0}
-  mainMenuSceneName: MainMenu
+  mainMenuSceneName: Main Menu
   magazineUI: {fileID: 0}
   entertainmentUI: {fileID: 0}
   leafletUI: {fileID: 0}
+  extraUI: {fileID: 0}
 --- !u!4 &1288543601
 Transform:
   m_ObjectHideFlags: 0
@@ -1753,6 +1754,36 @@ MonoBehaviour:
     - Ragnar
 
 
+    - Voices -
+
+
+    Captain Herja - Maria
+
+
+    Flight attendant
+    Rettana - Veronica
+
+
+    Player Character - Ragnar
+
+
+    Thief - Odin
+
+
+    Old
+    man - Olaf
+
+
+    Player''s wife - Veronica
+
+
+    Scared passenger - Olaf
+
+
+    Boss
+    - Olaf
+
+
 
 
 
@@ -2025,7 +2056,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 396, y: -2586}
+  m_AnchoredPosition: {x: 396, y: -4425}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1990621259

@@ -17,11 +17,11 @@ MonoBehaviour:
     to drift back to sleep.
   promptVoiceLine:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 690868404
+      Data2: 1082439179
+      Data3: 48031122
+      Data4: -1289805941
+    Path: event:/Sounds Events/BabyLaughing
   options:
   - optionText: Lean back
     karmaImpact: 0

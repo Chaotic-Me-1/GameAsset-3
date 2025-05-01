@@ -75,11 +75,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/Pathetic
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1982053564
+        Data2: 1258482943
+        Data3: -1821211490
+        Data4: 120399633
+      Path: event:/Dialog/Flight attendent/Im sorry sir
     followUpDialogue: {fileID: 0}
     objectIDsToEnable:
     - Memory1

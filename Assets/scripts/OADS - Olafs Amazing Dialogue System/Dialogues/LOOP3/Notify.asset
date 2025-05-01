@@ -35,11 +35,11 @@ MonoBehaviour:
       Path: 
     npcReactionVoiceLine:
       Guid:
-        Data1: 1502747338
-        Data2: 1165465542
-        Data3: 1030791814
-        Data4: -1102050929
-      Path: event:/Dialog/Thief/Thief Ehh no
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 0}
     objectIDsToEnable:
     - BabyCry
