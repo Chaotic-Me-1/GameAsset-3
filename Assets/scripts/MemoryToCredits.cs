@@ -19,6 +19,10 @@ public class MemoryToCredits : MonoBehaviour
     public Sprite memorySprite2;
     public float imageFadeDuration = 1f;
 
+    [Header("Animated Memory (optional)")]
+    public GameObject animatedMemory1;
+    public GameObject animatedMemory2;
+
     public TextMeshProUGUI hintText;
     public TextMeshProUGUI wakeUpText;
 
@@ -78,12 +82,16 @@ public class MemoryToCredits : MonoBehaviour
             RuntimeManager.AttachInstanceToGameObject(startEvt, transform);
             startEvt.start();
         }
-        if (memoryImage && memorySprite1)
+        if (animatedMemory1 != null)
+        {
+            animatedMemory1.SetActive(true);
+        }
+        else if (memoryImage != null && memorySprite1 != null)
         {
             memoryImage.sprite = memorySprite1;
-            memoryImage.color  = new Color(1,1,1,0);
+            memoryImage.color = new Color(1, 1, 1, 0);
             memoryImage.gameObject.SetActive(true);
-            yield return FadeImage(memoryImage, 0, .6f, imageFadeDuration);
+            StartCoroutine(FadeImage(memoryImage, 0f, 0.6f, imageFadeDuration));
         }
 
         yield return FadeScreen(new Color(.5f,.5f,.5f,1), 3);
@@ -108,12 +116,21 @@ public class MemoryToCredits : MonoBehaviour
             RuntimeManager.AttachInstanceToGameObject(deep, transform);
             deep.start(); deep.release();
 
-            if (memoryImage && memorySprite2)
+            if (animatedMemory1 != null)
+            {
+                animatedMemory1.SetActive(false);
+            }
+
+            if (animatedMemory2 != null)
+            {
+                animatedMemory2.SetActive(true);
+            }
+            else if (memoryImage != null && memorySprite2 != null)
             {
                 memoryImage.sprite = memorySprite2;
-                memoryImage.color  = new Color(1,1,1,0);
+                memoryImage.color = new Color(1, 1, 1, 0);
                 memoryImage.gameObject.SetActive(true);
-                yield return FadeImage(memoryImage, 0, .6f, imageFadeDuration);
+                yield return StartCoroutine(FadeImage(memoryImage, 0f, 0.6f, imageFadeDuration));
             }
         }
 
@@ -163,7 +180,8 @@ public class MemoryToCredits : MonoBehaviour
     IEnumerator FadeToCredits()
     {
         StartCoroutine(FadeVCA(masterVCA, 0, 1, 2));
-
+        if (animatedMemory1 != null) animatedMemory1.SetActive(false);
+        if (animatedMemory2 != null) animatedMemory2.SetActive(false);
         if (fadeImage) yield return FadeScreen(Color.black, screenFadeDuration);
         SceneManager.LoadScene(creditsSceneName);
     }

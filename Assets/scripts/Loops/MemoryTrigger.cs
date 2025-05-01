@@ -23,8 +23,12 @@ public class MemoryTrigger : MonoBehaviour
     public Sprite memorySprite2;
     public float imageFadeDuration = 1f;
 
+    [Header("Animated Memory (optional)")]
+    public GameObject animatedMemory1;
+    public GameObject animatedMemory2;
+
     [Header("Wake Up Timing")]
-    public float wakeUpDelayAfterSecondMemory = 13f; // Default for this memory, set per memory object
+    public float wakeUpDelayAfterSecondMemory = 13f;
 
     public KeyCode skipKey = KeyCode.Space;
     public KeyCode wakeUpKey = KeyCode.E;
@@ -100,7 +104,11 @@ public class MemoryTrigger : MonoBehaviour
             RuntimeManager.AttachInstanceToGameObject(memoryStart, transform);
             memoryStart.start();
 
-            if (memoryImage != null && memorySprite1 != null)
+            if (animatedMemory1 != null)
+            {
+                animatedMemory1.SetActive(true);
+            }
+            else if (memoryImage != null && memorySprite1 != null)
             {
                 memoryImage.sprite = memorySprite1;
                 memoryImage.color = new Color(1, 1, 1, 0);
@@ -141,7 +149,16 @@ public class MemoryTrigger : MonoBehaviour
             deep.start();
             deep.release();
 
-            if (memoryImage != null && memorySprite2 != null)
+            if (animatedMemory1 != null)
+            {
+                animatedMemory1.SetActive(false);
+            }
+
+            if (animatedMemory2 != null)
+            {
+                animatedMemory2.SetActive(true);
+            }
+            else if (memoryImage != null && memorySprite2 != null)
             {
                 memoryImage.sprite = memorySprite2;
                 memoryImage.color = new Color(1, 1, 1, 0);
@@ -225,6 +242,8 @@ public class MemoryTrigger : MonoBehaviour
         {
             musicManager.ForceStopAllMedia();
         }
+        if (animatedMemory1 != null) animatedMemory1.SetActive(false);
+        if (animatedMemory2 != null) animatedMemory2.SetActive(false);
         if (memoryImage != null)
             StartCoroutine(FadeImage(memoryImage, 1f, 0f, imageFadeDuration));
         isMemoryActive = false;
