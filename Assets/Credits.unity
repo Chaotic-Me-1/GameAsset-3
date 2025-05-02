@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -402, y: -4425}
+  m_AnchoredPosition: {x: -402, y: -4611}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &13484324
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 301989887
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -920,7 +920,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 301989887
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1754,44 +1754,48 @@ MonoBehaviour:
     - Ragnar
 
 
+    Memory Illustrations - Veronica
+
+
     - Voices -
 
 
-    Captain Herja - Maria
+    Captain
+    Herja - Maria
 
 
-    Flight attendant
-    Rettana - Veronica
+    Flight attendant Rettana - Veronica
 
 
-    Player Character - Ragnar
+    Player Character
+    - Ragnar
 
 
     Thief - Odin
 
 
-    Old
-    man - Olaf
+    Old man - Olaf
 
 
     Player''s wife - Veronica
 
 
-    Scared passenger - Olaf
+    Scared
+    passenger - Olaf
 
 
-    Boss
-    - Olaf
-
-
-
+    Boss - Olaf
 
 
 
 
 
-    We hope you enjoyed the experience. Remember to treat everyone
-    with love and respect, and let''s enjoy our time here together.'
+
+
+
+    We hope you enjoyed the experience.
+    Remember to treat everyone with love and respect, and let''s enjoy our time here
+    together.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 282f2b761b94b1d4f818275c42c1464a, type: 2}
   m_sharedMaterial: {fileID: 6102730022672118104, guid: 282f2b761b94b1d4f818275c42c1464a,
@@ -2056,7 +2060,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 396, y: -4425}
+  m_AnchoredPosition: {x: 396, y: -4611}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1990621259
