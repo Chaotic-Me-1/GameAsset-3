@@ -3801,7 +3801,7 @@ MonoBehaviour:
   imageFadeDuration: 1.2
   animatedMemory1: {fileID: 1249265533}
   animatedMemory2: {fileID: 1249265533}
-  wakeUpDelayAfterSecondMemory: 13
+  wakeUpDelayAfterSecondMemory: 0.5
   skipKey: 32
   wakeUpKey: 101
   pressesToSkip: 5
@@ -36729,7 +36729,7 @@ MonoBehaviour:
   imageFadeDuration: 1.2
   animatedMemory1: {fileID: 813158533}
   animatedMemory2: {fileID: 1249265533}
-  wakeUpDelayAfterSecondMemory: 1
+  wakeUpDelayAfterSecondMemory: 0.5
   skipKey: 32
   wakeUpKey: 101
   pressesToSkip: 5
@@ -50920,7 +50920,7 @@ MonoBehaviour:
   imageFadeDuration: 1.2
   animatedMemory1: {fileID: 0}
   animatedMemory2: {fileID: 0}
-  wakeUpDelayAfterSecondMemory: 13
+  wakeUpDelayAfterSecondMemory: 0.5
   skipKey: 32
   wakeUpKey: 101
   pressesToSkip: 5
@@ -51515,7 +51515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerDelay: 2
-  wakeUpDelayAfterSecond: 13
+  wakeUpDelayAfterSecond: 0.5
   fadeImage: {fileID: 1025247313}
   memoryImage: {fileID: 1090342279}
   memorySprite1: {fileID: 0}
@@ -58014,7 +58014,7 @@ MonoBehaviour:
   imageFadeDuration: 1.2
   animatedMemory1: {fileID: 0}
   animatedMemory2: {fileID: 0}
-  wakeUpDelayAfterSecondMemory: 13
+  wakeUpDelayAfterSecondMemory: 0.5
   skipKey: 32
   wakeUpKey: 101
   pressesToSkip: 5
@@ -119409,7 +119409,7 @@ Transform:
   m_GameObject: {fileID: 6632936311786409719}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.78200066, y: 0.21972656, z: -4.9582443}
+  m_LocalPosition: {x: 0.78200066, y: 0.21972656, z: -4.9582453}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
