@@ -114,16 +114,24 @@ public class MemoryToCredits : MonoBehaviour
         {
             var deep = RuntimeManager.CreateInstance(memoryDeepSound);
             RuntimeManager.AttachInstanceToGameObject(deep, transform);
-            deep.start(); deep.release();
+            deep.start();
 
             if (animatedMemory1 != null)
             {
+                CanvasGroup group1 = animatedMemory1.GetComponent<CanvasGroup>();
+                if (group1 != null)
+                    yield return StartCoroutine(FadeCanvasGroup(group1, 1f, 0f, imageFadeDuration));
                 animatedMemory1.SetActive(false);
             }
 
             if (animatedMemory2 != null)
             {
                 animatedMemory2.SetActive(true);
+                Canvas.ForceUpdateCanvases();
+                
+                CanvasGroup group2 = animatedMemory2.GetComponent<CanvasGroup>();
+                if (group2 != null)
+                    yield return StartCoroutine(FadeCanvasGroup(group2, 0f, 1f, imageFadeDuration));
             }
             else if (memoryImage != null && memorySprite2 != null)
             {
@@ -132,6 +140,16 @@ public class MemoryToCredits : MonoBehaviour
                 memoryImage.gameObject.SetActive(true);
                 yield return StartCoroutine(FadeImage(memoryImage, 0f, 0.6f, imageFadeDuration));
             }
+
+            // ✅ Wait for FMOD deep memory sound to finish
+            PLAYBACK_STATE deepState;
+            deep.getPlaybackState(out deepState);
+            while (deepState == PLAYBACK_STATE.PLAYING)
+            {
+                deep.getPlaybackState(out deepState);
+                yield return null;
+            }
+            deep.release();
         }
 
         if (!skipTriggered)
@@ -229,5 +247,20 @@ public class MemoryToCredits : MonoBehaviour
         }
         if (source != null)
             source.volume = to;
+    }
+
+    IEnumerator FadeCanvasGroup(CanvasGroup group, float from, float to, float duration)
+    {
+        float t = 0f;
+        group.alpha = from;
+
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            group.alpha = Mathf.Lerp(from, to, t / duration);
+            yield return null;
+        }
+
+        group.alpha = to;
     }
 }
