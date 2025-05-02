@@ -46,6 +46,6 @@ public class CrosswordHotspot : MonoBehaviour, IPointerClickHandler
             bookReference.interactable = true;
 
         if (magazineUI != null)
-            magazineUI.ResumeMagazine(); // ✅ Restore cursor and panel
+            magazineUI.ResumeMagazine(); 
     }
 }
