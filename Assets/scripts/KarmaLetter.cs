@@ -49,7 +49,7 @@ public class KarmaLetter : MonoBehaviour, IInteractable
         if (col != null)
             col.enabled = false;
 
-        // Optional: also disable glow to show it's no longer active
+        // Disable glow to show it's no longer active
         DisableGlow();
     }
 

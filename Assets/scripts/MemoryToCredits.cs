@@ -128,7 +128,7 @@ public class MemoryToCredits : MonoBehaviour
             {
                 animatedMemory2.SetActive(true);
                 Canvas.ForceUpdateCanvases();
-                
+
                 CanvasGroup group2 = animatedMemory2.GetComponent<CanvasGroup>();
                 if (group2 != null)
                     yield return StartCoroutine(FadeCanvasGroup(group2, 0f, 1f, imageFadeDuration));
@@ -191,7 +191,8 @@ public class MemoryToCredits : MonoBehaviour
     void FinishMemory()
     {
         memoryActive = false;
-        RuntimeManager.StudioSystem.release();
+        StartCoroutine(FadeVCA(masterVCA, 1, 0, 1));
+        StartCoroutine(FadeVCA(memoryVCA, 1, 0, 1));
         StartCoroutine(FadeToCredits());
     }
 
