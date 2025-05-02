@@ -28,11 +28,11 @@ MonoBehaviour:
       as you break the seal, pulling out the letter to see what it contains.
     playerVoiceLine:
       Guid:
-        Data1: -1194940684
-        Data2: 1248816192
-        Data3: 249796286
-        Data4: -1828302486
-      Path: event:/Valkyrie magazin
+        Data1: -350222134
+        Data2: 1202491707
+        Data3: -1002838636
+        Data4: 1586104976
+      Path: event:/Letter
     npcReactionVoiceLine:
       Guid:
         Data1: 0
