@@ -35,11 +35,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/Not_a_problem
     npcReactionVoiceLine:
       Guid:
-        Data1: -1285353104
-        Data2: 1077575319
-        Data3: 757089701
-        Data4: -1469651292
-      Path: event:/Dialog/Oldman/OldMan_SoNiceOfYou
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: 317f238aa0904d74fa677d5097546399, type: 2}
     objectIDsToEnable: []
   requiredLoop: -1

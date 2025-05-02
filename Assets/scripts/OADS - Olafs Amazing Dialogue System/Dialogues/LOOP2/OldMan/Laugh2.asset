@@ -27,18 +27,18 @@ MonoBehaviour:
     reactionText: "One word starts to repeat itself in your head\u2014love."
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    npcReactionVoiceLine:
-      Guid:
         Data1: -1456043834
         Data2: 1297715897
         Data3: -1653752427
         Data4: 180330646
       Path: event:/Dialog/Oldman/OldMan_MissesWife
+    npcReactionVoiceLine:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 0}
     objectIDsToEnable:
     - Memory2

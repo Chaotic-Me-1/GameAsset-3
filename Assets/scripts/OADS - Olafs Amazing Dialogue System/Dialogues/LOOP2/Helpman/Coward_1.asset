@@ -17,11 +17,11 @@ MonoBehaviour:
     away and refuses to talk to you anymore. ."
   promptVoiceLine:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -8032639
+      Data2: 1199217447
+      Data3: 1664342457
+      Data4: 1079718988
+    Path: event:/Dialog/Main character/Goddamn_Scaredycat
   options:
   - optionText: Let him weep.
     karmaImpact: 0

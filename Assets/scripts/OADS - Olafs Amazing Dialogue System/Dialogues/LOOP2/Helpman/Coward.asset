@@ -13,25 +13,26 @@ MonoBehaviour:
   m_Name: Coward
   m_EditorClassIdentifier: 
   promptText: "\"Jesus Christ, get your shit together, man. Stop being such a pussy\u2014it\u2019s
-    just a plane.\" The man turns his head in your direction, staring at you."
+    just a plane.\" The man turns his head in your direction, staring at you... \"I..
+    I'm terrified of... planes!\"."
   promptVoiceLine:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1257949319
+      Data2: 1162679414
+      Data3: 828532402
+      Data4: 817112799
+    Path: event:/Dialog/Main character/Get_your_shit_together
   options:
   - optionText: Interrupt him
     karmaImpact: -5
-    reactionText: "\"Come on, that\u2019s stupid. Goddamn scaredy-cat.\""
+    reactionText: You interrupt him - maybe that will show him!
     playerVoiceLine:
       Guid:
-        Data1: -8032639
-        Data2: 1199217447
-        Data3: 1664342457
-        Data4: 1079718988
-      Path: event:/Dialog/Main character/Goddamn_Scaredycat
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     npcReactionVoiceLine:
       Guid:
         Data1: 0

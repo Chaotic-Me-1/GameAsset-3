@@ -27,18 +27,18 @@ MonoBehaviour:
     reactionText: 
     playerVoiceLine:
       Guid:
-        Data1: 750964139
-        Data2: 1197401151
-        Data3: -158778225
-        Data4: -202505141
-      Path: event:/Dialog/Main character/Say_no_to_snacks
+        Data1: 1445361654
+        Data2: 1264469928
+        Data3: 1776828303
+        Data4: -948386364
+      Path: event:/Dialog/Main character/New Mc VC/No thanks, just keep it plain.
     npcReactionVoiceLine:
       Guid:
-        Data1: -559907420
-        Data2: 1340056901
-        Data3: 904891275
-        Data4: -1535941550
-      Path: event:/Dialog/Flight attendent/Very well sir
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Tea
@@ -54,11 +54,11 @@ MonoBehaviour:
       Path: "event:/Dialog/Main character/New Mc VC/I\u2019ll have some sugar"
     npcReactionVoiceLine:
       Guid:
-        Data1: 1710364974
-        Data2: 1287111395
-        Data3: -42375527
-        Data4: -1661037363
-      Path: event:/Dialog/Flight attendent/Your Welcome sir
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Tea
@@ -75,11 +75,11 @@ MonoBehaviour:
         sugar"
     npcReactionVoiceLine:
       Guid:
-        Data1: 1710364974
-        Data2: 1287111395
-        Data3: -42375527
-        Data4: -1661037363
-      Path: event:/Dialog/Flight attendent/Your Welcome sir
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Tea

@@ -16,11 +16,11 @@ MonoBehaviour:
     of flying.\""
   promptVoiceLine:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1959238036
+      Data2: 1259861818
+      Data3: -862212214
+      Data4: -1155921976
+    Path: event:/Dialog/Helpman/ScaredOfFlying
   options:
   - optionText: It's alright.
     karmaImpact: 5
@@ -35,11 +35,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/Its_okay_to_be_afraid
     npcReactionVoiceLine:
       Guid:
-        Data1: 157497678
-        Data2: 1166774440
-        Data3: -732489310
-        Data4: 571574639
-      Path: event:/Dialog/Helpman/AfraidOfBoats
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: 241bb5f771fbd5247912c7b53bbc8685, type: 2}
     objectIDsToEnable: []
   requiredLoop: -1

@@ -35,11 +35,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/Blood_!!_!
     npcReactionVoiceLine:
       Guid:
-        Data1: -559907420
-        Data2: 1340056901
-        Data3: 904891275
-        Data4: -1535941550
-      Path: event:/Dialog/Flight attendent/Very well sir
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: 84413443b6228e645a697579f749812d, type: 2}
     objectIDsToEnable:
     - Blood
@@ -55,11 +55,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/Poison_
     npcReactionVoiceLine:
       Guid:
-        Data1: -559907420
-        Data2: 1340056901
-        Data3: 904891275
-        Data4: -1535941550
-      Path: event:/Dialog/Flight attendent/Very well sir
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: 4995c7b6a1abb1a489faefc7d648ebcf, type: 2}
     objectIDsToEnable:
     - PoisonAcid
@@ -75,11 +75,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/Acid_
     npcReactionVoiceLine:
       Guid:
-        Data1: -559907420
-        Data2: 1340056901
-        Data3: 904891275
-        Data4: -1535941550
-      Path: event:/Dialog/Flight attendent/Very well sir
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: df45ae64c1e485f44b4a97fe74d4665a, type: 2}
     objectIDsToEnable:
     - PoisonAcid

@@ -34,11 +34,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/No thanks, just keep it plain.
     npcReactionVoiceLine:
       Guid:
-        Data1: 1710364974
-        Data2: 1287111395
-        Data3: -42375527
-        Data4: -1661037363
-      Path: event:/Dialog/Flight attendent/Your Welcome sir
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: d6dfd278f03486d4a998f5ab39cdd942, type: 2}
     objectIDsToEnable:
     - Tea2
@@ -54,11 +54,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/A touch of sugar
     npcReactionVoiceLine:
       Guid:
-        Data1: 1710364974
-        Data2: 1287111395
-        Data3: -42375527
-        Data4: -1661037363
-      Path: event:/Dialog/Flight attendent/Your Welcome sir
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: d6dfd278f03486d4a998f5ab39cdd942, type: 2}
     objectIDsToEnable:
     - Tea2
@@ -75,11 +75,11 @@ MonoBehaviour:
         you
     npcReactionVoiceLine:
       Guid:
-        Data1: 1710364974
-        Data2: 1287111395
-        Data3: -42375527
-        Data4: -1661037363
-      Path: event:/Dialog/Flight attendent/Your Welcome sir
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: d6dfd278f03486d4a998f5ab39cdd942, type: 2}
     objectIDsToEnable:
     - Tea2

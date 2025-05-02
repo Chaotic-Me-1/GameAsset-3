@@ -16,11 +16,11 @@ MonoBehaviour:
     perhaps?"'
   promptVoiceLine:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1788061243
+      Data2: 1095148649
+      Data3: -1329124448
+      Data4: 1751103827
+    Path: event:/Dialog/Flight attendent/You have to make a choice
   options:
   - optionText: I'll have a tea, then.
     karmaImpact: 5

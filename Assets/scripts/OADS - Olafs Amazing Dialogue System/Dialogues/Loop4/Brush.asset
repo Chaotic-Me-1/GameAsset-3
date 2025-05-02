@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
   m_Name: Brush
   m_EditorClassIdentifier: 
-  promptText: "This is not your business, and you don\u2019t want to mix in other
-    business."
+  promptText: "This is too strange for you, and you don\u2019t want to find out what
+    this is either..."
   promptVoiceLine:
     Guid:
       Data1: 0

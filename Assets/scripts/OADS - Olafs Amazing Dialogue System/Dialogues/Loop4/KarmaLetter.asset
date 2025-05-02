@@ -28,11 +28,11 @@ MonoBehaviour:
       as you break the seal, pulling out the letter to see what it contains.
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1194940684
+        Data2: 1248816192
+        Data3: 249796286
+        Data4: -1828302486
+      Path: event:/Valkyrie magazin
     npcReactionVoiceLine:
       Guid:
         Data1: 0
@@ -62,9 +62,9 @@ MonoBehaviour:
       Path: 
     followUpDialogue: {fileID: 11400000, guid: 05da9658e17304f49baca6269a66ed32, type: 2}
     objectIDsToEnable: []
-  - optionText: Put it back
+  - optionText: Leave it alone
     karmaImpact: 0
-    reactionText: 'You pick up the letter, hesitating. Something about it feels wrong. '
+    reactionText: You regret touching it to begin with...
     playerVoiceLine:
       Guid:
         Data1: 0

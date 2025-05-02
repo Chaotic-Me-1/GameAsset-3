@@ -45,11 +45,13 @@ public class MemoryTrigger : MonoBehaviour
 
     public VCA masterVCA;
     public VCA memoryVCA;
+    private AudioSource localAudioSource;
 
     void Awake()
     {
         masterVCA = RuntimeManager.GetVCA("vca:/Master");
         memoryVCA = RuntimeManager.GetVCA("vca:/Memory");
+        localAudioSource = GetComponent<AudioSource>();
     }
 
     void OnEnable()
@@ -95,6 +97,8 @@ public class MemoryTrigger : MonoBehaviour
         }
 
         StartCoroutine(FadeVCAVolume(masterVCA, 1f, 0f, 2f));
+        if (localAudioSource != null)
+        StartCoroutine(FadeAudioSource(localAudioSource, localAudioSource.volume, 0f, 2f));
 
         // 🎧 Memory start sound
         EventInstance memoryStart = default;
@@ -202,7 +206,9 @@ public class MemoryTrigger : MonoBehaviour
             if (wakeUpText != null)
             {
                 wakeUpText.gameObject.SetActive(true);
-                yield return StartCoroutine(FadeText(wakeUpText, 0f, 1f, 1f)); // 1 second fade
+                Canvas.ForceUpdateCanvases();         // Force Unity to redraw UI
+                yield return null;
+                yield return StartCoroutine(FadeText(wakeUpText, 0f, 1f, 1f));
             }
 
             canWakeUp = true;
@@ -333,5 +339,19 @@ public class MemoryTrigger : MonoBehaviour
         }
 
         group.alpha = to;
+    }
+
+    IEnumerator FadeAudioSource(AudioSource source, float from, float to, float duration)
+    {
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            if (source != null)
+                source.volume = Mathf.Lerp(from, to, elapsed / duration);
+            yield return null;
+        }
+        if (source != null)
+            source.volume = to;
     }
 }
