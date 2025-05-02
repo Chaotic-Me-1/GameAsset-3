@@ -22,7 +22,7 @@ MonoBehaviour:
     Path: event:/Dialog/Flight attendent/Very well sir
   options:
   - optionText: I'd like some cream, but no sugar, thanks.
-    karmaImpact: 5
+    karmaImpact: 0
     reactionText: '"Here you go, sir."'
     playerVoiceLine:
       Guid:
@@ -42,7 +42,7 @@ MonoBehaviour:
     objectIDsToEnable:
     - Coffee
   - optionText: I'll have both cream and sugar!
-    karmaImpact: 10
+    karmaImpact: 0
     reactionText: '"Here you go, sir."'
     playerVoiceLine:
       Guid:

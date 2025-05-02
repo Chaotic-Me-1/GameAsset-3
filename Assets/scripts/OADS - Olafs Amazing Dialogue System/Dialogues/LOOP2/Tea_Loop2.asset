@@ -43,7 +43,7 @@ MonoBehaviour:
     objectIDsToEnable:
     - Tea2
   - optionText: I'll have some sugar.
-    karmaImpact: 5
+    karmaImpact: 0
     reactionText: 
     playerVoiceLine:
       Guid:
@@ -63,7 +63,7 @@ MonoBehaviour:
     objectIDsToEnable:
     - Tea2
   - optionText: I'll take some milk and sugar!
-    karmaImpact: 10
+    karmaImpact: 0
     reactionText: 
     playerVoiceLine:
       Guid:

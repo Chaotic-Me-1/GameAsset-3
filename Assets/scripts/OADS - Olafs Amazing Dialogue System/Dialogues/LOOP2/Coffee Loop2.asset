@@ -22,7 +22,7 @@ MonoBehaviour:
     Path: 
   options:
   - optionText: I'd like some cream, but no sugar. Maybe my blood sugar is too high...
-    karmaImpact: 5
+    karmaImpact: 0
     reactionText: '"Here you go, sir."'
     playerVoiceLine:
       Guid:
@@ -43,7 +43,7 @@ MonoBehaviour:
     objectIDsToEnable:
     - Coffee2
   - optionText: I'll have both cream and sugar! What could go wrong?
-    karmaImpact: 10
+    karmaImpact: 0
     reactionText: '"Here you go, sir."'
     playerVoiceLine:
       Guid:
