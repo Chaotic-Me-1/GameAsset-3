@@ -36,7 +36,6 @@ public class KarmaLetter : MonoBehaviour, IInteractable
             return;
         }
 
-        // optional: personalise with the player’s name
         DialogueData runtimeCopy = Instantiate(letterDialogue);
         InjectPlayerName(runtimeCopy);
 
@@ -44,6 +43,14 @@ public class KarmaLetter : MonoBehaviour, IInteractable
 
         if (!openLetterEvent.IsNull)
             RuntimeManager.PlayOneShot(openLetterEvent);
+
+        // Disable interaction after opening
+        Collider col = GetComponent<Collider>();
+        if (col != null)
+            col.enabled = false;
+
+        // Optional: also disable glow to show it's no longer active
+        DisableGlow();
     }
 
 
