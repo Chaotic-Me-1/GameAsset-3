@@ -23,7 +23,7 @@ MonoBehaviour:
     Path: 
   options:
   - optionText: Notify the attendant
-    karmaImpact: 5
+    karmaImpact: 10
     reactionText: '"Uhm, hey - Rettana?!" - "Hmm?"'
     playerVoiceLine:
       Guid:
@@ -42,7 +42,7 @@ MonoBehaviour:
     followUpDialogue: {fileID: 11400000, guid: e2320ebdd42fbb54ea88137f977232ab, type: 2}
     objectIDsToEnable: []
   - optionText: Get the thief's attention
-    karmaImpact: -5
+    karmaImpact: -10
     reactionText: '"Psst... Hey!" '
     playerVoiceLine:
       Guid:

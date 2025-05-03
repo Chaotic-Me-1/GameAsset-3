@@ -34,11 +34,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/YOLO
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1430883456
+        Data2: 1101877331
+        Data3: -1132202834
+        Data4: -1312076557
+      Path: event:/Dialog/Flight attendent/New voicelines/Yes sir you only live once
     followUpDialogue: {fileID: 11400000, guid: 757841ec05462f349b364ebbe89eb3ad, type: 2}
     objectIDsToEnable:
     - PoisonAcid

@@ -34,11 +34,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/Oh god whose blood is that _vomit_
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1533719082
+        Data2: 1339696998
+        Data3: 1341036457
+        Data4: -817177680
+      Path: event:/Dialog/Flight attendent/New voicelines/Bloody merry
     followUpDialogue: {fileID: 11400000, guid: 757841ec05462f349b364ebbe89eb3ad, type: 2}
     objectIDsToEnable: []
   requiredLoop: -1

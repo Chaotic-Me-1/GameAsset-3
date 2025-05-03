@@ -34,11 +34,11 @@ MonoBehaviour:
       Path: "event:/Dialog/Main character/New Mc VC/I\u2019ll have a tea then\u2019"
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 298607410
+        Data2: 1293160441
+        Data3: -1816266364
+        Data4: -1885897651
+      Path: event:/Dialog/Flight attendent/New voicelines/tea, suger cream
     followUpDialogue: {fileID: 11400000, guid: 32a26f805a22e934f87544453babedef, type: 2}
     objectIDsToEnable: []
   - optionText: Coffe, please. Maybe I just need to wake up...
@@ -54,11 +54,11 @@ MonoBehaviour:
         to wake up
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -261691229
+        Data2: 1265710403
+        Data3: 389480101
+        Data4: 353207704
+      Path: event:/Dialog/Flight attendent/New voicelines/Cream or suger
     followUpDialogue: {fileID: 11400000, guid: 95e00afa34209d54b81a72c5313d72f9, type: 2}
     objectIDsToEnable: []
   - optionText: "Screw this! Give me something strong to deal with this d\xE9j\xE0
@@ -74,11 +74,11 @@ MonoBehaviour:
       Path: "event:/Dialog/Main character/New Mc VC/Deal with this D\xE9j\xE0 Vu"
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 278911435
+        Data2: 1076078080
+        Data3: 659643546
+        Data4: 670147524
+      Path: event:/Dialog/Flight attendent/New voicelines/Oh right what alcohold
     followUpDialogue: {fileID: 11400000, guid: ac38d74b8235214408ad6afc4a434fa7, type: 2}
     objectIDsToEnable: []
   requiredLoop: -1

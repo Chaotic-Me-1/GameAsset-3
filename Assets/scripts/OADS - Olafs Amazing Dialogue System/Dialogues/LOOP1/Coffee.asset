@@ -33,11 +33,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/Cream but no sugar, thanks!
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1458069796
+        Data2: 1285029825
+        Data3: -1623520116
+        Data4: 676960429
+      Path: event:/Dialog/Flight attendent/New voicelines/Cream
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Coffee
@@ -53,11 +53,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/Both cream and sugar
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 996857222
+        Data2: 1160728331
+        Data3: 2078635952
+        Data4: -943227748
+      Path: event:/Dialog/Flight attendent/New voicelines/Very well suger and cream
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Coffee
@@ -73,11 +73,11 @@ MonoBehaviour:
       Path: "event:/Dialog/Main character/New Mc VC/I\u2019ll take it black"
     npcReactionVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -535002504
+        Data2: 1254861312
+        Data3: -1712544108
+        Data4: 74652658
+      Path: event:/Dialog/Flight attendent/New voicelines/decaf
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Coffee
