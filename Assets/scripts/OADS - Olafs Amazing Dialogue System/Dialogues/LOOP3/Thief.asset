@@ -27,11 +27,11 @@ MonoBehaviour:
     reactionText: '"Uhm, hey - Rettana?!" - "Hmm?"'
     playerVoiceLine:
       Guid:
-        Data1: -1049531900
-        Data2: 1117809150
-        Data3: -506749794
-        Data4: 1538557385
-      Path: event:/Dialog/Main character/Uhm_Rettana
+        Data1: 2022860515
+        Data2: 1283135196
+        Data3: 859641274
+        Data4: 796380114
+      Path: event:/Dialog/Main character/Missing/Miss!
     npcReactionVoiceLine:
       Guid:
         Data1: -1220399067

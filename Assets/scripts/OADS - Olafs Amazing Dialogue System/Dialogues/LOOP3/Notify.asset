@@ -28,11 +28,11 @@ MonoBehaviour:
     reactionText: She smiles back at you, although not so eerily this time.
     playerVoiceLine:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 2022860515
+        Data2: 1283135196
+        Data3: 859641274
+        Data4: 796380114
+      Path: event:/Dialog/Main character/Missing/Miss!
     npcReactionVoiceLine:
       Guid:
         Data1: 0

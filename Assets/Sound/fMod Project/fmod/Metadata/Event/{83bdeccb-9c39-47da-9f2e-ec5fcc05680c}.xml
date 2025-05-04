@@ -5,7 +5,7 @@
 			<value>What_is_wrong</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{c3893539-75d6-4148-b129-207cf5d14576}</destination>
@@ -41,6 +41,9 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{958f3a86-4261-4132-a3b6-dc47a50ac48b}">
+		<relationship name="modules">
+			<destination>{6fc79938-0409-4b50-bb14-63b304996a62}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{00ed7b9e-846f-4b7a-a223-0f8461a2b7de}</destination>
 		</relationship>
@@ -69,6 +72,7 @@
 	<object class="Timeline" id="{b2c9297d-9e49-49c4-bae3-c99d86a30313}">
 		<relationship name="modules">
 			<destination>{042a4747-c8c5-4b28-b432-70db80978389}</destination>
+			<destination>{6fc79938-0409-4b50-bb14-63b304996a62}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{00ed7b9e-846f-4b7a-a223-0f8461a2b7de}">
@@ -83,6 +87,20 @@
 		</relationship>
 		<relationship name="mixer">
 			<destination>{0ad921b6-07ea-4f15-ac80-97bfd6bef8e4}</destination>
+		</relationship>
+	</object>
+	<object class="EventSound" id="{6fc79938-0409-4b50-bb14-63b304996a62}">
+		<property name="start">
+			<value>4.8000000000000007</value>
+		</property>
+		<property name="length">
+			<value>10.102895833333333</value>
+		</property>
+		<property name="volume">
+			<value>1</value>
+		</property>
+		<relationship name="event">
+			<destination>{c6f5b8a8-5261-472f-8f16-3d2869565541}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{0a683a85-1a25-44ff-a439-28f425d38d78}">

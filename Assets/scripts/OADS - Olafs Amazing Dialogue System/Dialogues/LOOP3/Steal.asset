@@ -33,11 +33,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/Sly_Whisper
     npcReactionVoiceLine:
       Guid:
-        Data1: 114846976
-        Data2: 1303117335
-        Data3: 974527927
-        Data4: -1333373972
-      Path: event:/Dialog/Thief/Thief here you go pal
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: 8d64d39052eaedb4782b96756053a4f2, type: 2}
     objectIDsToEnable: []
   - optionText: Look away, ignore him.

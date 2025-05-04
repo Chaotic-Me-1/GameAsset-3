@@ -34,11 +34,11 @@ MonoBehaviour:
       Path: "event:/Dialog/Main character/New Mc VC/Ma\u2019am, whisky on the rocks"
     npcReactionVoiceLine:
       Guid:
-        Data1: -1577202643
-        Data2: 1136470053
-        Data3: 1980089736
-        Data4: 1430960606
-      Path: event:/Dialog/Flight attendent/New voicelines/its mame to you
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: d6dfd278f03486d4a998f5ab39cdd942, type: 2}
     objectIDsToEnable:
     - Whiskey2
@@ -75,11 +75,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/Only the Russians dare to drink
     npcReactionVoiceLine:
       Guid:
-        Data1: 1685103233
-        Data2: 1105713790
-        Data3: -1538878057
-        Data4: -138347899
-      Path: event:/Dialog/Flight attendent/New voicelines/dont drink to much
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: d6dfd278f03486d4a998f5ab39cdd942, type: 2}
     objectIDsToEnable:
     - Moonshine2

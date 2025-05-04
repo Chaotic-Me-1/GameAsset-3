@@ -34,11 +34,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/No thanks, just keep it plain.
     npcReactionVoiceLine:
       Guid:
-        Data1: -1140309956
-        Data2: 1329126922
-        Data3: -1817094477
-        Data4: -1478366440
-      Path: event:/Dialog/Flight attendent/New voicelines/Very creative
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: d6dfd278f03486d4a998f5ab39cdd942, type: 2}
     objectIDsToEnable:
     - Tea2
@@ -54,11 +54,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/A touch of sugar
     npcReactionVoiceLine:
       Guid:
-        Data1: 1500221967
-        Data2: 1295014958
-        Data3: -22116166
-        Data4: -593910846
-      Path: event:/Dialog/Flight attendent/New voicelines/make tea sweet
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: d6dfd278f03486d4a998f5ab39cdd942, type: 2}
     objectIDsToEnable:
     - Tea2
@@ -75,12 +75,11 @@ MonoBehaviour:
         you
     npcReactionVoiceLine:
       Guid:
-        Data1: -1132044578
-        Data2: 1249741666
-        Data3: 1464639423
-        Data4: -2069404842
-      Path: event:/Dialog/Flight attendent/New voicelines/milk and suger I got it
-        sir
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: e
     followUpDialogue: {fileID: 11400000, guid: d6dfd278f03486d4a998f5ab39cdd942, type: 2}
     objectIDsToEnable:
     - Tea2

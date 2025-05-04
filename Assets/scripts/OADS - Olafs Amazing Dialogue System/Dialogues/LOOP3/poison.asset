@@ -23,7 +23,7 @@ MonoBehaviour:
     Path: 
   options:
   - optionText: What the hell?
-    karmaImpact: 0
+    karmaImpact: 5
     reactionText: She just smiles at you and starts walking away.
     playerVoiceLine:
       Guid:
@@ -35,12 +35,11 @@ MonoBehaviour:
         smell it"
     npcReactionVoiceLine:
       Guid:
-        Data1: -442439261
-        Data2: 1251709949
-        Data3: -859468364
-        Data4: -611607619
-      Path: event:/Dialog/Flight attendent/New voicelines/are you really sure of
-        THAT choice aren't you frightened
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: 757841ec05462f349b364ebbe89eb3ad, type: 2}
     objectIDsToEnable: []
   requiredLoop: -1

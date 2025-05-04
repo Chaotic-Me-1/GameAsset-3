@@ -34,11 +34,11 @@ MonoBehaviour:
       Path: "event:/Dialog/Main character/New Mc VC/I\u2019ll take whiskey darling"
     npcReactionVoiceLine:
       Guid:
-        Data1: -1577202643
-        Data2: 1136470053
-        Data3: 1980089736
-        Data4: 1430960606
-      Path: event:/Dialog/Flight attendent/New voicelines/its mame to you
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Whiskey
@@ -54,11 +54,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/A red wine please
     npcReactionVoiceLine:
       Guid:
-        Data1: 1167376877
-        Data2: 1248946908
-        Data3: -981879636
-        Data4: -1444660254
-      Path: event:/Dialog/Flight attendent/New voicelines/Exelent choice
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Wine
@@ -75,11 +75,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/New Mc VC/YOur strongest moonshine
     npcReactionVoiceLine:
       Guid:
-        Data1: 1685103233
-        Data2: 1105713790
-        Data3: -1538878057
-        Data4: -138347899
-      Path: event:/Dialog/Flight attendent/New voicelines/dont drink to much
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: 209abab2d21662b49944be131dc095b4, type: 2}
     objectIDsToEnable:
     - Moonshine

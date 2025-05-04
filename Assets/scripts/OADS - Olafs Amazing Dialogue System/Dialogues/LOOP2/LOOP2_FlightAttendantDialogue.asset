@@ -36,11 +36,11 @@ MonoBehaviour:
       Path: "event:/Dialog/Main character/Missing/Wait\u2026 you just gave me a snack"
     npcReactionVoiceLine:
       Guid:
-        Data1: 2095350367
-        Data2: 1135473161
-        Data3: 714141623
-        Data4: -1350505558
-      Path: event:/Dialog/Flight attendent/The first time coming with snacks
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: 8ebae0dc927dcb2499cf95eeff754a83, type: 2}
     objectIDsToEnable: []
   requiredLoop: 1
