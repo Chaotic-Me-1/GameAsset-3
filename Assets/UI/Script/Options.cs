@@ -24,6 +24,7 @@ public class Options : MonoBehaviour
         masterBus = RuntimeManager.GetBus("bus:/");
 
         LoadVolume();
+        LoadFullscreen();
     }
     
     public void OpenOptionsMenu()
