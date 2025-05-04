@@ -13,6 +13,7 @@ public class Options : MonoBehaviour
     public AudioMixer audioMixer;
     [SerializeField] private GameObject OptionMenu;
     [SerializeField] private GameObject MainMenu;
+    [SerializeField] private Toggle fullscreenToggle;
 
     //Fmod Bus
     public Bus masterBus;
@@ -73,7 +74,20 @@ public class Options : MonoBehaviour
     public void SetToFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        PlayerPrefs.SetInt("fullscreen", isFullscreen ? 1 : 0); // Use "fullscreen" consistently
+        PlayerPrefs.Save();
         Debug.Log("Fullscreen button clicked"); //Sending a debut to see if the check boxs have been clicked 
     }
 
+    // Load the fullscreen preference
+    public void LoadFullscreen()
+    {
+        // Use the same key "fullscreen" to match the saved value
+        bool savedFullscreen = PlayerPrefs.GetInt("fullscreen", 1) == 1;
+        Screen.fullScreen = savedFullscreen;
+
+        // Sync the toggle if it's assigned
+        if (fullscreenToggle != null)
+            fullscreenToggle.isOn = savedFullscreen;
+    }
 }
