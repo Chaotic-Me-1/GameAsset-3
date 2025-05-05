@@ -22,7 +22,7 @@ MonoBehaviour:
     Path: event:/Dialog/Oldman/OldMan_HowDareYou
   options:
   - optionText: Pfft
-    karmaImpact: 0
+    karmaImpact: -4
     reactionText: '"Pffft, right. At least I can put on my seatbelt, unlike you."'
     playerVoiceLine:
       Guid:

@@ -24,7 +24,7 @@ MonoBehaviour:
     Path: event:/Dialog/Main character/Waa_Waa_Waa
   options:
   - optionText: Answer back, "What's wrong with you?"
-    karmaImpact: 0
+    karmaImpact: -3
     reactionText: "The mans face turns to a look of defeat. \"We've been trying all
       day! He's fussy! Yelling won\u2019t help!\""
     playerVoiceLine:

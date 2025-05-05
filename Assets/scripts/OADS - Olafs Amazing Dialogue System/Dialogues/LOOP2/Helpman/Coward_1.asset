@@ -24,7 +24,7 @@ MonoBehaviour:
     Path: event:/Dialog/Main character/Goddamn_Scaredycat
   options:
   - optionText: Let him weep.
-    karmaImpact: 0
+    karmaImpact: -3
     reactionText: "You\u2019ve clearly made him even more upset than he was before"
     playerVoiceLine:
       Guid:

@@ -23,7 +23,7 @@ MonoBehaviour:
     Path: event:/Dialog/Helpman/AfraidOfBoats
   options:
   - optionText: Right?
-    karmaImpact: 0
+    karmaImpact: 3
     reactionText: "\"Yeah, I know, right? Doesn\u2019t seem logical, does it?\""
     playerVoiceLine:
       Guid:

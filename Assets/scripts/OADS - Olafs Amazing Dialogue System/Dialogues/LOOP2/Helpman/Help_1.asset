@@ -43,7 +43,7 @@ MonoBehaviour:
     objectIDsToEnable:
     - OldMan
   - optionText: Coward
-    karmaImpact: -5
+    karmaImpact: -3
     reactionText: You're about to let him know how you feel about people like him...
     playerVoiceLine:
       Guid:
@@ -62,7 +62,7 @@ MonoBehaviour:
     followUpDialogue: {fileID: 11400000, guid: 5312a3b6a85dfb141800b9d56629a1db, type: 2}
     objectIDsToEnable: []
   - optionText: Check on him
-    karmaImpact: 5
+    karmaImpact: 3
     reactionText: '"Hey, sorry, but are you okay?"'
     playerVoiceLine:
       Guid:

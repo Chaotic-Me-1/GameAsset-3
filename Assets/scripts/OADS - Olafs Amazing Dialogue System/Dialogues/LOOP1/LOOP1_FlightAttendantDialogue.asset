@@ -23,7 +23,7 @@ MonoBehaviour:
     Path: event:/Dialog/Flight attendent/What do you choice sir
   options:
   - optionText: Smile and ask politely for coffee.
-    karmaImpact: 5
+    karmaImpact: 1
     reactionText: '"Coffee? Alright!"'
     playerVoiceLine:
       Guid:
@@ -42,7 +42,7 @@ MonoBehaviour:
     followUpDialogue: {fileID: 11400000, guid: 99bef42a34f29af48b4f425c2e8d2eb6, type: 2}
     objectIDsToEnable: []
   - optionText: Tea. please.
-    karmaImpact: 5
+    karmaImpact: 1
     reactionText: '"Aha, tea, sure!"'
     playerVoiceLine:
       Guid:
@@ -61,7 +61,7 @@ MonoBehaviour:
     followUpDialogue: {fileID: 11400000, guid: 939094c27b332014faf65dcb89732493, type: 2}
     objectIDsToEnable: []
   - optionText: Alcohol.
-    karmaImpact: -5
+    karmaImpact: -1
     reactionText: '"Alcohol, huh?"'
     playerVoiceLine:
       Guid:

@@ -23,7 +23,7 @@ MonoBehaviour:
     Path: 
   options:
   - optionText: Help him
-    karmaImpact: 5
+    karmaImpact: 3
     reactionText: You reach out to help him with his seatbelt.
     playerVoiceLine:
       Guid:
@@ -62,7 +62,7 @@ MonoBehaviour:
     objectIDsToEnable:
     - Memory2
   - optionText: Laugh at him
-    karmaImpact: -5
+    karmaImpact: -3
     reactionText: '"Hahaha! Old fart can''t do shit!"'
     playerVoiceLine:
       Guid:

@@ -22,7 +22,7 @@ MonoBehaviour:
     Path: event:/Dialog/Helpman/ThankYou
   options:
   - optionText: Let him relax in peace.
-    karmaImpact: 0
+    karmaImpact: 3
     reactionText: He sighs in relief and leans back into his seat.
     playerVoiceLine:
       Guid:

@@ -23,7 +23,7 @@ MonoBehaviour:
     Path: event:/Dialog/Oldman/OldMan_NeverFindWife
   options:
   - optionText: Love?
-    karmaImpact: 0
+    karmaImpact: -3
     reactionText: "One word starts to repeat itself in your head\u2014love."
     playerVoiceLine:
       Guid:

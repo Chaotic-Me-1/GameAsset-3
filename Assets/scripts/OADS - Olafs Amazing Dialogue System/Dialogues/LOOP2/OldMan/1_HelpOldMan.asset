@@ -24,7 +24,7 @@ MonoBehaviour:
     Path: event:/Dialog/Main character/Let_me_help_you_out
   options:
   - optionText: No problem.
-    karmaImpact: 0
+    karmaImpact: 4
     reactionText: '"Not a problem. I know my wife has the same issue."'
     playerVoiceLine:
       Guid:

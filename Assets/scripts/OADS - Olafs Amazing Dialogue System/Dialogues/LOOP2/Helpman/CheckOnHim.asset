@@ -23,7 +23,7 @@ MonoBehaviour:
     Path: event:/Dialog/Helpman/ScaredOfFlying
   options:
   - optionText: It's alright.
-    karmaImpact: 5
+    karmaImpact: 4
     reactionText: "\"Hey, it\u2019s okay. It\u2019s okay to be afraid. I\u2019m afraid
       of boats\u2014just take a deep breath in.\""
     playerVoiceLine:

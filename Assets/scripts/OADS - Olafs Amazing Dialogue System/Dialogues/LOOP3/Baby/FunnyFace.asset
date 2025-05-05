@@ -24,7 +24,7 @@ MonoBehaviour:
     Path: event:/Sounds Events/BabyLaughing
   options:
   - optionText: Lean back
-    karmaImpact: 0
+    karmaImpact: 4
     reactionText: "Feeling relieved that you won\u2019t have to hear crying for hours
       to come, something about the sound feels familiar."
     playerVoiceLine:

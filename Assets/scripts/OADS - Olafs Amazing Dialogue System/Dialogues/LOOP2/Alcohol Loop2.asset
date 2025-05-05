@@ -22,7 +22,7 @@ MonoBehaviour:
     Path: 
   options:
   - optionText: I'll take a whiskey.
-    karmaImpact: -1
+    karmaImpact: 1
     reactionText: '"Whiskey? Yes, of course." *she hesitates, but hands you a glass
       of whiskey*'
     playerVoiceLine:
@@ -63,7 +63,7 @@ MonoBehaviour:
     objectIDsToEnable:
     - Wine2
   - optionText: I need something really strong!
-    karmaImpact: -7
+    karmaImpact: -3
     reactionText: '"Aha..." She stares at you while pouring some moonshine from god
       knows where into a glass and puts it on your tray table. '
     playerVoiceLine:

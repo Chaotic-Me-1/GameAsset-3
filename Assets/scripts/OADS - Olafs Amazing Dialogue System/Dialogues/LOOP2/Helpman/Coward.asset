@@ -24,7 +24,7 @@ MonoBehaviour:
     Path: event:/Dialog/Main character/Get_your_shit_together
   options:
   - optionText: Interrupt him
-    karmaImpact: -5
+    karmaImpact: -4
     reactionText: You interrupt him - maybe that will show him!
     playerVoiceLine:
       Guid:

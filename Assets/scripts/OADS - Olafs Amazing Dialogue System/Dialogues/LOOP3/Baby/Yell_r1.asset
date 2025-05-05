@@ -23,7 +23,7 @@ MonoBehaviour:
     Path: event:/Dialog/Main character/Just_make_it_stop
   options:
   - optionText: Let the baby AND it's parents suffer.
-    karmaImpact: -5
+    karmaImpact: -3
     reactionText: You see the parents try their best to comfort the little one, but
       he just keeps crying.
     playerVoiceLine:

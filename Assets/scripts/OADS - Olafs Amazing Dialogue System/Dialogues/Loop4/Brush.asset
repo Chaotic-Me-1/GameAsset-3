@@ -23,7 +23,7 @@ MonoBehaviour:
     Path: 
   options:
   - optionText: Forget about the letter
-    karmaImpact: 0
+    karmaImpact: -3
     reactionText: 
     playerVoiceLine:
       Guid:

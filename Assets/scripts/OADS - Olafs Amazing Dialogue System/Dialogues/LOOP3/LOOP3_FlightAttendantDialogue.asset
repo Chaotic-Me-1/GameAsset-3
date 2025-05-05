@@ -24,7 +24,7 @@ MonoBehaviour:
     Path: event:/Dialog/Flight attendent/What do you choice sir
   options:
   - optionText: '"Blood?!"'
-    karmaImpact: 0
+    karmaImpact: -1
     reactionText: '"Very well sir, ENJOY!" she grins at you.'
     playerVoiceLine:
       Guid:
@@ -44,7 +44,7 @@ MonoBehaviour:
     objectIDsToEnable:
     - Blood
   - optionText: '"Poison?!"'
-    karmaImpact: 0
+    karmaImpact: 1
     reactionText: '"Very well sir, ENJOY!" she grins at you.'
     playerVoiceLine:
       Guid:
@@ -64,7 +64,7 @@ MonoBehaviour:
     objectIDsToEnable:
     - PoisonAcid
   - optionText: '"Acid?!"'
-    karmaImpact: 0
+    karmaImpact: -1
     reactionText: '"Very well sir, ENJOY!" she grins at you.'
     playerVoiceLine:
       Guid:

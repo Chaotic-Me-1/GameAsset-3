@@ -23,7 +23,7 @@ MonoBehaviour:
     Path: 
   options:
   - optionText: Open the letter
-    karmaImpact: -5
+    karmaImpact: 3
     reactionText: You glance around to make sure no one is watching. Curiosity builds
       as you break the seal, pulling out the letter to see what it contains.
     playerVoiceLine:
@@ -43,7 +43,7 @@ MonoBehaviour:
     followUpDialogue: {fileID: 11400000, guid: 2b180391c4071234e841f40d982596ba, type: 2}
     objectIDsToEnable: []
   - optionText: Brush it onto the floor
-    karmaImpact: 5
+    karmaImpact: -3
     reactionText: You brush the letter of your lap ignoring it acting like it never
       happened.
     playerVoiceLine:

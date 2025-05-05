@@ -23,7 +23,7 @@ MonoBehaviour:
     Path: event:/Dialog/Flight attendent/You have to make a choice
   options:
   - optionText: I'll have a tea, then.
-    karmaImpact: 5
+    karmaImpact: 1
     reactionText: '"Aha, tea, sure!"'
     playerVoiceLine:
       Guid:
@@ -42,7 +42,7 @@ MonoBehaviour:
     followUpDialogue: {fileID: 11400000, guid: 32a26f805a22e934f87544453babedef, type: 2}
     objectIDsToEnable: []
   - optionText: Coffe, please. Maybe I just need to wake up...
-    karmaImpact: 5
+    karmaImpact: 1
     reactionText: '"Coffee? Alright!"'
     playerVoiceLine:
       Guid:
@@ -63,7 +63,7 @@ MonoBehaviour:
     objectIDsToEnable: []
   - optionText: "Screw this! Give me something strong to deal with this d\xE9j\xE0
       vu!"
-    karmaImpact: -5
+    karmaImpact: -1
     reactionText: '"I guess that means alcohol, huh?"'
     playerVoiceLine:
       Guid:

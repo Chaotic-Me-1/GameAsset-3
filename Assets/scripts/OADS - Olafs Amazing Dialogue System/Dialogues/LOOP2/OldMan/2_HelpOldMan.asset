@@ -24,7 +24,7 @@ MonoBehaviour:
     Path: event:/Dialog/Oldman/OldMan_RemindOfWife
   options:
   - optionText: Give an approving nod at the man
-    karmaImpact: 0
+    karmaImpact: 3
     reactionText: He nods back, smiling.
     playerVoiceLine:
       Guid:

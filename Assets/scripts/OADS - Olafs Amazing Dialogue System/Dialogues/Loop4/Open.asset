@@ -23,7 +23,7 @@ MonoBehaviour:
     Path: 
   options:
   - optionText: Shit.
-    karmaImpact: 0
+    karmaImpact: 4
     reactionText: "Yeah, you definitely shouldn\u2019t have opened this.."
     playerVoiceLine:
       Guid:

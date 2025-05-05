@@ -23,7 +23,7 @@ MonoBehaviour:
     Path: 
   options:
   - optionText: No, thanks.
-    karmaImpact: 0
+    karmaImpact: 1
     reactionText: 
     playerVoiceLine:
       Guid:
@@ -43,7 +43,7 @@ MonoBehaviour:
     objectIDsToEnable:
     - Tea
   - optionText: I'll have some sugar.
-    karmaImpact: 0
+    karmaImpact: 1
     reactionText: 
     playerVoiceLine:
       Guid:
@@ -63,7 +63,7 @@ MonoBehaviour:
     objectIDsToEnable:
     - Tea
   - optionText: I'll take some milk and sugar.
-    karmaImpact: 0
+    karmaImpact: 1
     reactionText: 
     playerVoiceLine:
       Guid:

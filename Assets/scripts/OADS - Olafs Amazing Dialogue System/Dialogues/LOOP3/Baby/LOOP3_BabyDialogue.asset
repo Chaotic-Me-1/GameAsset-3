@@ -24,7 +24,7 @@ MonoBehaviour:
     Path: 
   options:
   - optionText: Make funny faces
-    karmaImpact: 5
+    karmaImpact: 3
     reactionText: The baby turns toward you as you start making funny faces.
     playerVoiceLine:
       Guid:
@@ -43,7 +43,7 @@ MonoBehaviour:
     followUpDialogue: {fileID: 11400000, guid: c9743969df900014a9f49f04afc461d7, type: 2}
     objectIDsToEnable: []
   - optionText: Yell back
-    karmaImpact: -5
+    karmaImpact: -3
     reactionText: 'You yell at the baby and its parents. '
     playerVoiceLine:
       Guid:
