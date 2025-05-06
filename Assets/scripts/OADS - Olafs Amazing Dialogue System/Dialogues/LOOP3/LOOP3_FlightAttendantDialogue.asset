@@ -65,7 +65,7 @@ MonoBehaviour:
     objectIDsToEnable:
     - PoisonAcid
   - optionText: '"Acid?!"'
-    karmaImpact: -1
+    karmaImpact: 0
     reactionText: '"Very well sir, ENJOY!" she grins at you.'
     playerVoiceLine:
       Guid:
