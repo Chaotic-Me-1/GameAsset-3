@@ -24,7 +24,8 @@ MonoBehaviour:
   options:
   - optionText: What the hell?
     karmaImpact: 1
-    reactionText: She just smiles at you and starts walking away.
+    reactionText: '"Heh.. It''s a good thing I can''t smell it!" - She smirks, "Are
+      you sure of that choice, aren''t you afraid?"'
     playerVoiceLine:
       Guid:
         Data1: 1733375247

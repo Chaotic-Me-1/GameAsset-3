@@ -16,15 +16,15 @@ MonoBehaviour:
     your tea, or perhaps some milk?
   promptVoiceLine:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 298607410
+      Data2: 1293160441
+      Data3: -1816266364
+      Data4: -1885897651
+    Path: event:/Dialog/Flight attendent/New voicelines/tea, suger cream
   options:
   - optionText: No, thanks, just keep it plain.
     karmaImpact: 1
-    reactionText: 
+    reactionText: '"Very creative, sir."'
     playerVoiceLine:
       Guid:
         Data1: 1445361654
@@ -42,9 +42,9 @@ MonoBehaviour:
     followUpDialogue: {fileID: 11400000, guid: d6dfd278f03486d4a998f5ab39cdd942, type: 2}
     objectIDsToEnable:
     - Tea2
-  - optionText: I'll have some sugar.
+  - optionText: A touch of sugar please.
     karmaImpact: 1
-    reactionText: 
+    reactionText: '"I''ll make the tea sweet for you!"'
     playerVoiceLine:
       Guid:
         Data1: 708857193
@@ -62,9 +62,9 @@ MonoBehaviour:
     followUpDialogue: {fileID: 11400000, guid: d6dfd278f03486d4a998f5ab39cdd942, type: 2}
     objectIDsToEnable:
     - Tea2
-  - optionText: I'll take some milk and sugar!
+  - optionText: Sugar and milk, please and thank you!
     karmaImpact: 1
-    reactionText: 
+    reactionText: '"Milk and sugar, you got it, sir!"'
     playerVoiceLine:
       Guid:
         Data1: 722382373
@@ -79,7 +79,7 @@ MonoBehaviour:
         Data2: 0
         Data3: 0
         Data4: 0
-      Path: e
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: d6dfd278f03486d4a998f5ab39cdd942, type: 2}
     objectIDsToEnable:
     - Tea2

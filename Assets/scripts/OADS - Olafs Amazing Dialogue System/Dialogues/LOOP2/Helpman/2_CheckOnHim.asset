@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
   m_Name: 2_CheckOnHim
   m_EditorClassIdentifier: 
-  promptText: "\"Hehe, you\u2019re afraid of boats? It\u2019s like a rocking bed
-    for kids!\" He's clearly amused by your answer."
+  promptText: "\"Hehe, you\u2019re afraid of boats? I like to think a boat is like
+    a rocking bed, to put me to sleep.\" He's clearly amused by your answer."
   promptVoiceLine:
     Guid:
       Data1: 157497678

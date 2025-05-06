@@ -26,7 +26,7 @@ MonoBehaviour:
   - optionText: Wait... Didn't you already ask me that?
     karmaImpact: 0
     reactionText: '"I''m sorry, sir, but I''m not sure what you mean. This is the
-      first time I''ve come around to you."'
+      first time I''ve come around."'
     playerVoiceLine:
       Guid:
         Data1: -1835986069

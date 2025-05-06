@@ -24,26 +24,26 @@ MonoBehaviour:
   options:
   - optionText: Notify the attendant
     karmaImpact: 10
-    reactionText: '"Uhm, hey - Rettana?!" - "Hmm?"'
+    reactionText: '"Uhm, hey, Rettana?!" - "Hmm?"'
     playerVoiceLine:
       Guid:
-        Data1: 2022860515
-        Data2: 1283135196
-        Data3: 859641274
-        Data4: 796380114
-      Path: event:/Dialog/Main character/Missing/Miss!
+        Data1: -1049531900
+        Data2: 1117809150
+        Data3: -506749794
+        Data4: 1538557385
+      Path: event:/Dialog/Main character/Uhm_Rettana
     npcReactionVoiceLine:
       Guid:
-        Data1: -1220399067
-        Data2: 1339795327
-        Data3: -682006093
-        Data4: -61372361
-      Path: event:/Dialog/Flight attendent/hmm
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 11400000, guid: e2320ebdd42fbb54ea88137f977232ab, type: 2}
     objectIDsToEnable: []
   - optionText: Get the thief's attention
     karmaImpact: -10
-    reactionText: '"Psst... Hey!" '
+    reactionText: '"Psst...!" '
     playerVoiceLine:
       Guid:
         Data1: -374213155

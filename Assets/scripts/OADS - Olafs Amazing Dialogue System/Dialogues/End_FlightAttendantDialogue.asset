@@ -22,7 +22,7 @@ MonoBehaviour:
       Data4: 51565086
     Path: event:/Dialog/Flight attendent/are you ready
   options:
-  - optionText: Yes
+  - optionText: Yeah, I'm ready.
     karmaImpact: 0
     reactionText: '"Very well, sir." Her gaze is fixated on you. She gives you a
       nod and smiles.'
@@ -35,11 +35,11 @@ MonoBehaviour:
       Path: event:/Dialog/Main character/Yeah_Im_ready
     npcReactionVoiceLine:
       Guid:
-        Data1: -559907420
-        Data2: 1340056901
-        Data3: 904891275
-        Data4: -1535941550
-      Path: event:/Dialog/Flight attendent/Very well sir
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     followUpDialogue: {fileID: 0}
     objectIDsToEnable:
     - Credits

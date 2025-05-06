@@ -23,7 +23,7 @@ MonoBehaviour:
   options:
   - optionText: Get me a real drink!
     karmaImpact: -5
-    reactionText: "\"Grab me one too, I won\u2019t say anything\""
+    reactionText: "\"Grab me one too, I won\u2019t say anything!\""
     playerVoiceLine:
       Guid:
         Data1: -1826034464
@@ -58,5 +58,6 @@ MonoBehaviour:
         Data4: 0
       Path: 
     followUpDialogue: {fileID: 0}
-    objectIDsToEnable: []
+    objectIDsToEnable:
+    - BabyCry
   requiredLoop: -1

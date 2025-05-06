@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptText: "\"Oh sir, let me help you out.\" You reach out and help him fasten
     his seatbelt. \"Ohhh, thank you, good sir! That\u2019s so nice of you. My wife
-    usually helps me with this.\""
+    usually helps me with this...\""
   promptVoiceLine:
     Guid:
       Data1: 276085480

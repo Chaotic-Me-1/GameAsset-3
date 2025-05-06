@@ -24,7 +24,8 @@ MonoBehaviour:
   options:
   - optionText: What the hell?
     karmaImpact: -1
-    reactionText: She just smiles at you and starts walking away.
+    reactionText: '"Oh god! Who''s blood is that?!!". She smiles at you, winks and
+      says "Relax there sir, it''s only a bloody mary!"'
     playerVoiceLine:
       Guid:
         Data1: 1058336651

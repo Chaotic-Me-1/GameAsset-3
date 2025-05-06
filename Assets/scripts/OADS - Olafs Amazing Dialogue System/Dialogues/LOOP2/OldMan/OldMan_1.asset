@@ -27,11 +27,11 @@ MonoBehaviour:
     reactionText: You reach out to help him with his seatbelt.
     playerVoiceLine:
       Guid:
-        Data1: 276085480
-        Data2: 1328326943
-        Data3: 1021757872
-        Data4: -1047253036
-      Path: event:/Dialog/Main character/Let_me_help_you_out
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     npcReactionVoiceLine:
       Guid:
         Data1: 0

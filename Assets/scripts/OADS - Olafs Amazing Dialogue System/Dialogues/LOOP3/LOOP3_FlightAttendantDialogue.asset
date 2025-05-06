@@ -12,20 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
   m_Name: LOOP3_FlightAttendantDialogue
   m_EditorClassIdentifier: 
-  promptText: The flight attendant stops next to you and smiles... Too much.... "What
-    do you choose, sir?" Her smile drives shivvers down your spine. She holds out
-    three options...
+  promptText: The flight attendant stops next to you and smiles... Too much.... "Would
+    you like something to drink, sir?" Her smile drives shivvers down your spine.
+    She holds out three options...
   promptVoiceLine:
     Guid:
-      Data1: 191704285
-      Data2: 1323732985
-      Data3: 2114429322
-      Data4: -42082161
-    Path: event:/Dialog/Flight attendent/What do you choice sir
+      Data1: -1946780191
+      Data2: 1274351080
+      Data3: -1046672709
+      Data4: -2104975346
+    Path: event:/Dialog/Flight attendent/New voicelines/Will you like something to
+      drink firm tone
   options:
   - optionText: '"Blood?!"'
     karmaImpact: -1
-    reactionText: '"Very well sir, ENJOY!" she grins at you.'
+    reactionText: '"Very well sir." She grins at you.'
     playerVoiceLine:
       Guid:
         Data1: 1081532684

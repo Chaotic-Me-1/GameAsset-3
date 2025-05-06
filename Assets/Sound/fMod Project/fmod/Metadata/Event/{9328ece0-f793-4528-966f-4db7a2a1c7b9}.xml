@@ -5,7 +5,7 @@
 			<value>Sly_Whisper</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{c3893539-75d6-4148-b129-207cf5d14576}</destination>
@@ -41,9 +41,6 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{d5181661-e936-4a64-a8ba-70cabb86cb95}">
-		<relationship name="modules">
-			<destination>{d4abf6a7-c5b0-4f26-b89f-68fb82b3805b}</destination>
-		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{9789c453-7d3f-4331-873b-27042a0776ec}</destination>
 		</relationship>
@@ -72,7 +69,6 @@
 	<object class="Timeline" id="{6e6480e0-e53c-4560-946d-ce7a42aa244c}">
 		<relationship name="modules">
 			<destination>{bfffbc48-9d4c-4c7e-8d0f-2310669db819}</destination>
-			<destination>{d4abf6a7-c5b0-4f26-b89f-68fb82b3805b}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{9789c453-7d3f-4331-873b-27042a0776ec}">
@@ -87,20 +83,6 @@
 		</relationship>
 		<relationship name="mixer">
 			<destination>{651f08b9-04e4-4a39-805d-ceb22e0c33d1}</destination>
-		</relationship>
-	</object>
-	<object class="EventSound" id="{d4abf6a7-c5b0-4f26-b89f-68fb82b3805b}">
-		<property name="start">
-			<value>3.3500000000000001</value>
-		</property>
-		<property name="length">
-			<value>3.5699999999999998</value>
-		</property>
-		<property name="volume">
-			<value>-17.5</value>
-		</property>
-		<relationship name="event">
-			<destination>{06d86d00-fe17-4dab-b71d-163aec5386b0}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{2d640dbe-ec9c-4122-95e1-d93c921521e9}">

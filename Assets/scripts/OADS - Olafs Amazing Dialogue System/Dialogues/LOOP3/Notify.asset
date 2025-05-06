@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
   m_Name: Notify
   m_EditorClassIdentifier: 
-  promptText: The flight attendant turns around and notices the passenger. "May I
-    help you, sir!?" "Ehh... no." - The passenger slumps back into his seat, looking
+  promptText: The flight attendant turns around and notices the passenger. "Sir!
+    May I help you!?" "Ehh... no." - The passenger slumps back into his seat, looking
     defeated.
   promptVoiceLine:
     Guid:
@@ -28,11 +28,11 @@ MonoBehaviour:
     reactionText: She smiles back at you, although not so eerily this time.
     playerVoiceLine:
       Guid:
-        Data1: 2022860515
-        Data2: 1283135196
-        Data3: 859641274
-        Data4: 796380114
-      Path: event:/Dialog/Main character/Missing/Miss!
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     npcReactionVoiceLine:
       Guid:
         Data1: 0

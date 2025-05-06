@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
   m_Name: Loop2_Choice
   m_EditorClassIdentifier: 
-  promptText: '"You have to make a choice, sir. Do you want tea, coffee or some alcohol,
-    perhaps?"'
+  promptText: '"You have to make a choice."'
   promptVoiceLine:
     Guid:
       Data1: -1788061243
@@ -61,10 +60,9 @@ MonoBehaviour:
       Path: 
     followUpDialogue: {fileID: 11400000, guid: 95e00afa34209d54b81a72c5313d72f9, type: 2}
     objectIDsToEnable: []
-  - optionText: "Screw this! Give me something strong to deal with this d\xE9j\xE0
-      vu!"
+  - optionText: Screw this! Give me something strong!
     karmaImpact: -1
-    reactionText: '"I guess that means alcohol, huh?"'
+    reactionText: "\"Give me something strong to deal with this d\xE9j\xE0 vu!\""
     playerVoiceLine:
       Guid:
         Data1: -1783275760

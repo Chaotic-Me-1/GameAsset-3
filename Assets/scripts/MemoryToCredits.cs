@@ -198,10 +198,15 @@ public class MemoryToCredits : MonoBehaviour
 
     IEnumerator FadeToCredits()
     {
+        // Stop all FMOD events before leaving
+        FMODUnity.RuntimeManager.GetBus("bus:/").stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
         StartCoroutine(FadeVCA(masterVCA, 0, 1, 2));
+
         if (animatedMemory1 != null) animatedMemory1.SetActive(false);
         if (animatedMemory2 != null) animatedMemory2.SetActive(false);
         if (fadeImage) yield return FadeScreen(Color.black, screenFadeDuration);
+
         SceneManager.LoadScene(creditsSceneName);
     }
 

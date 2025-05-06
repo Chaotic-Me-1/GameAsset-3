@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
   m_Name: Tea
   m_EditorClassIdentifier: 
-  promptText: She brings out the cettle and looks at you. Would you like sugar in
-    your tea, or perhaps some milk?
+  promptText: She brings out the cettle and looks at you. "Would you like sugar in
+    your tea, or perhaps some milk?"
   promptVoiceLine:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 298607410
+      Data2: 1293160441
+      Data3: -1816266364
+      Data4: -1885897651
+    Path: event:/Dialog/Flight attendent/New voicelines/tea, suger cream
   options:
-  - optionText: No, thanks.
+  - optionText: No, thanks. Keep it plain.
     karmaImpact: 1
-    reactionText: 
+    reactionText: '"Very creative, sir."'
     playerVoiceLine:
       Guid:
         Data1: 1445361654
@@ -44,7 +44,7 @@ MonoBehaviour:
     - Tea
   - optionText: I'll have some sugar.
     karmaImpact: 1
-    reactionText: 
+    reactionText: '"I''ll make the tea sweet for you!"'
     playerVoiceLine:
       Guid:
         Data1: -353056794
@@ -64,7 +64,7 @@ MonoBehaviour:
     - Tea
   - optionText: I'll take some milk and sugar.
     karmaImpact: 1
-    reactionText: 
+    reactionText: '"Milk and sugar, you got it, sir!"'
     playerVoiceLine:
       Guid:
         Data1: 2106732666

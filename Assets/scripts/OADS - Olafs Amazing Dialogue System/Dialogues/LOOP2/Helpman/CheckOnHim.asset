@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
   m_Name: CheckOnHim
   m_EditorClassIdentifier: 
-  promptText: "The man turns his head toward you. \"Yeah\u2026 hmm, just a bit scared
-    of flying.\""
+  promptText: "The man turns his head toward you. \"Yeah\u2026 uhmm, I'm just a bit
+    scared of flying...\""
   promptVoiceLine:
     Guid:
       Data1: -1959238036

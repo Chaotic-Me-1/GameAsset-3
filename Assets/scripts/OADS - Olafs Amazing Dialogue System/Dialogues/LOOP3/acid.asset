@@ -22,9 +22,9 @@ MonoBehaviour:
       Data4: 0
     Path: 
   options:
-  - optionText: What the hell?
+  - optionText: Huh.. Yolo!
     karmaImpact: -3
-    reactionText: She just smiles at you and starts walking away.
+    reactionText: '"Yes sir. You only live once."'
     playerVoiceLine:
       Guid:
         Data1: -1876770646

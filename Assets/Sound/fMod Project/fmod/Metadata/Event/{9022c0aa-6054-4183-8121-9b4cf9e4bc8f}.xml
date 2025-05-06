@@ -41,9 +41,6 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{6c1b27f1-ec52-449b-bc2a-4dfe0444c1d1}">
-		<relationship name="modules">
-			<destination>{43a97032-d425-4ad0-8ec4-3d86130915cd}</destination>
-		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{56953ace-0b8c-45ff-90d8-f35f198c3770}</destination>
 		</relationship>
@@ -64,6 +61,7 @@
 	<object class="GroupTrack" id="{d35a6c98-546e-4c8d-8669-1aba8cd6fa6e}">
 		<relationship name="modules">
 			<destination>{092cbb4c-0c0c-4823-b1ba-5c2520fbf47d}</destination>
+			<destination>{d498235c-5cf3-4139-a60f-dc6787f5cdd8}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{a6019fb9-ad55-4dc9-8120-6a19010ef674}</destination>
@@ -72,7 +70,7 @@
 	<object class="Timeline" id="{7e188272-6c8c-49b8-9b9a-42ba4e8a3bba}">
 		<relationship name="modules">
 			<destination>{092cbb4c-0c0c-4823-b1ba-5c2520fbf47d}</destination>
-			<destination>{43a97032-d425-4ad0-8ec4-3d86130915cd}</destination>
+			<destination>{d498235c-5cf3-4139-a60f-dc6787f5cdd8}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{56953ace-0b8c-45ff-90d8-f35f198c3770}">
@@ -87,20 +85,6 @@
 		</relationship>
 		<relationship name="mixer">
 			<destination>{a4491862-8290-4457-8de7-18e21f02aa33}</destination>
-		</relationship>
-	</object>
-	<object class="EventSound" id="{43a97032-d425-4ad0-8ec4-3d86130915cd}">
-		<property name="start">
-			<value>1.75</value>
-		</property>
-		<property name="length">
-			<value>4.2240000000000002</value>
-		</property>
-		<property name="volume">
-			<value>2.5</value>
-		</property>
-		<relationship name="event">
-			<destination>{aab67380-5053-41ad-aef4-83bcf34ccbb1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{bf15e499-8dab-4898-8a49-1bbe120f1d40}">
@@ -118,6 +102,20 @@
 		</relationship>
 		<relationship name="audioFile">
 			<destination>{fa332bb5-6ef9-4cf6-8b85-10bf4fddae1e}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{d498235c-5cf3-4139-a60f-dc6787f5cdd8}">
+		<property name="start">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.2240000000000002</value>
+		</property>
+		<property name="volume">
+			<value>8</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{2382cfb6-1e26-4056-8952-e922fe6808c9}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{a6019fb9-ad55-4dc9-8120-6a19010ef674}">

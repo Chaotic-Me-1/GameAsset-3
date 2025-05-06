@@ -21,9 +21,9 @@ MonoBehaviour:
       Data4: 0
     Path: 
   options:
-  - optionText: Thank her for the drink.
+  - optionText: Thank her
     karmaImpact: 1
-    reactionText: '"Thank you." - ""You''re welcome sir, enjoy."'
+    reactionText: '"Thanks." - "You''re welcome sir."'
     playerVoiceLine:
       Guid:
         Data1: -766698655

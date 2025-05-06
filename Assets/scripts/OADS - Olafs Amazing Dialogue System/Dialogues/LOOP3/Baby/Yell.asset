@@ -26,7 +26,7 @@ MonoBehaviour:
   - optionText: Answer back, "What's wrong with you?"
     karmaImpact: -3
     reactionText: "The mans face turns to a look of defeat. \"We've been trying all
-      day! He's fussy! Yelling won\u2019t help!\""
+      day! He iss fuzzy! Yelling won\u2019t help!\""
     playerVoiceLine:
       Guid:
         Data1: -2084705077
