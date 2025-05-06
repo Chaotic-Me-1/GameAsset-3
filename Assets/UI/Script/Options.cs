@@ -21,13 +21,14 @@ public class Options : MonoBehaviour
     private void Awake()
     {
         LoadVolume();
+
+        //Get the main Fmod bus
+        masterBus = RuntimeManager.GetBus("bus:/");
     }
 
     private void Start()
     {
-        //Get the main Fmod bus
-        masterBus = RuntimeManager.GetBus("bus:/");
-
+        
         LoadFullscreen();
     }
     
@@ -94,5 +95,12 @@ public class Options : MonoBehaviour
         // Sync the toggle if it's assigned
         if (fullscreenToggle != null)
             fullscreenToggle.isOn = savedFullscreen;
+    }
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape)&& OptionMenu.activeSelf)
+        {
+            OptionMenu.SetActive(false);
+        }
     }
 }
