@@ -23,7 +23,7 @@ MonoBehaviour:
     Path: 
   options:
   - optionText: What the hell?
-    karmaImpact: -3
+    karmaImpact: 0
     reactionText: She just smiles at you and starts walking away.
     playerVoiceLine:
       Guid:
