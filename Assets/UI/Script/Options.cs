@@ -18,12 +18,16 @@ public class Options : MonoBehaviour
     //Fmod Bus
     public Bus masterBus;
 
+    private void Awake()
+    {
+        LoadVolume();
+    }
+
     private void Start()
     {
         //Get the main Fmod bus
         masterBus = RuntimeManager.GetBus("bus:/");
 
-        LoadVolume();
         LoadFullscreen();
     }
     
