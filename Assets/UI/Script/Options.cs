@@ -20,6 +20,7 @@ public class Options : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         LoadVolume();
 
         //Get the main Fmod bus
@@ -53,6 +54,7 @@ public class Options : MonoBehaviour
 
         AudioListener.volume = currentVolume; //Unity's Master volume
         masterBus.setVolume(currentVolume); //Fmod Master Bus
+        PlayerPrefs.SetFloat("soundvolume", currentVolume);
     }
 
     public void SaveVolume()
@@ -66,7 +68,7 @@ public class Options : MonoBehaviour
         //Load saved volume, or use default 1 that is full volume
         float savedVolume = PlayerPrefs.GetFloat("soundVolume", 1);
         Mastersound.value = savedVolume;
-        SetVolume(Mastersound.value);//Making sure that both volume gets updates 
+        SetVolume(savedVolume);//Making sure that both volume gets updates 
     }
 
     //using an int to let it go from 0 to 2 to go between low, mid and high
