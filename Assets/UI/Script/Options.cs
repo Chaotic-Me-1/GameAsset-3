@@ -9,18 +9,18 @@ using FMOD.Studio;
 public class Options : MonoBehaviour
 {
     //Unity
-    public Slider Mastersound;
-    public AudioMixer audioMixer;
-    [SerializeField] private GameObject OptionMenu;
-    [SerializeField] private GameObject MainMenu;
-    [SerializeField] private Toggle fullscreenToggle;
+    public Slider Mastersound; //Gets the slider for the volume controll
+    public AudioMixer audioMixer; //Gets the audiomixer to controll sound
+    [SerializeField] private GameObject OptionMenu; // takes the options 
+    [SerializeField] private GameObject MainMenu; //takes the main menu or other menues such as the pause menu UI 
+    [SerializeField] private Toggle fullscreenToggle; //connects to the toggel in the mneu to add fullscreen setting to
 
     //Fmod Bus
     public Bus masterBus;
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);//To make sure the sound dont gets back to default to the next sceen 
         LoadVolume();
 
         //Get the main Fmod bus
@@ -50,7 +50,8 @@ public class Options : MonoBehaviour
 
     public void SetVolume(float volume)
     {
-        float currentVolume = Mastersound.value;
+        ///the currentVolume will be the value of the slider
+        float currentVolume = Mastersound.value; 
 
         AudioListener.volume = currentVolume; //Unity's Master volume
         masterBus.setVolume(currentVolume); //Fmod Master Bus
@@ -82,7 +83,8 @@ public class Options : MonoBehaviour
     public void SetToFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
-        PlayerPrefs.SetInt("fullscreen", isFullscreen ? 1 : 0); // Use "fullscreen" consistently
+        //saves the prefrence were 1 is fullscreen and 0 is windowed 
+        PlayerPrefs.SetInt("fullscreen", isFullscreen ? 1 : 0); 
         PlayerPrefs.Save();
         Debug.Log("Fullscreen button clicked"); //Sending a debut to see if the check boxs have been clicked 
     }
@@ -90,17 +92,18 @@ public class Options : MonoBehaviour
     // Load the fullscreen preference
     public void LoadFullscreen()
     {
-        // Use the same key "fullscreen" to match the saved value
+        //Loade the saved default fullscreen thats 1
         bool savedFullscreen = PlayerPrefs.GetInt("fullscreen", 1) == 1;
-        Screen.fullScreen = savedFullscreen;
+        Screen.fullScreen = savedFullscreen; //applies the fullscreen mode
 
-        // Sync the toggle if it's assigned
+        // If the fullscreen toggle exists in the scene, update its checked state to match the saved setting
         if (fullscreenToggle != null)
             fullscreenToggle.isOn = savedFullscreen;
     }
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)&& OptionMenu.activeSelf)
+        //when clicking escape the UI will desperate like the pause menu
+        if (Input.GetKeyDown(KeyCode.Escape)&& OptionMenu.activeSelf)
         {
             OptionMenu.SetActive(false);
         }

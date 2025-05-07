@@ -6650,7 +6650,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4862426682315119440}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4862426682315119441}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a6a137b0885ae84383ea6417da301e5, type: 3}
@@ -8352,6 +8352,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -2.1705
       objectReference: {fileID: 0}
+    - target: {fileID: 3706637356624596221, guid: bfd8368c71107864895f41a88c6cf2b8,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4862426682315119442}
+    - target: {fileID: 3706637356624596221, guid: bfd8368c71107864895f41a88c6cf2b8,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Optionpart2, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4535895797286557969, guid: bfd8368c71107864895f41a88c6cf2b8,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -8386,7 +8396,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fullscreenToggle
       value: 
-      objectReference: {fileID: 946497219}
+      objectReference: {fileID: 0}
     - target: {fileID: 7184861100662581496, guid: bfd8368c71107864895f41a88c6cf2b8,
         type: 3}
       propertyPath: m_fontStyle
@@ -8524,8 +8534,31 @@ PrefabInstance:
         type: 3}
       insertIndex: 5
       addedObject: {fileID: 1917056336}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7775346808201970937, guid: bfd8368c71107864895f41a88c6cf2b8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4862426682315119442}
   m_SourcePrefab: {fileID: 100100000, guid: bfd8368c71107864895f41a88c6cf2b8, type: 3}
+--- !u!1 &4862426682315119441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7775346808201970937, guid: bfd8368c71107864895f41a88c6cf2b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4862426682315119440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4862426682315119442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4862426682315119441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69f419e8e67b8a349b6251b9a3eb3261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullscreenToggle: {fileID: 946497219}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
