@@ -8,7 +8,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 0
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001B0AA462658 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001BCE88C9358 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,12 +17,111 @@
 [LOG] Manager::init                            : done.
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
 [LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] SystemI::closeInternal                   : Closed.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 49808736
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 217088
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000B459D4ECE8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFF9F97D3E0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFF9F97D3A0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFF9F97D4C0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFF9F97D580
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001BEA6E43328
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 4
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Are_you_okay', format=5, channels=1, frequency=48000, lengthbytes=43520, lengthpcm=247945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.385895.
+[LOG] SoundI::release                          :  (000001BDCB7390E8)
+[LOG] SoundI::release                          :     Are_you_okay (000001BEDC6319B8)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 49808736
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 217088
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000B459D4ECE8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFF9F97D3E0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFF9F97D3A0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFF9F97D4C0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFF9F97D580
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001BCF76CC058
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 4
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='ScaredOfFlying', format=5, channels=1, frequency=48000, lengthbytes=54176, lengthpcm=278360, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.512939.
+[LOG] SoundI::release                          :  (000001BEA282E1F8)
+[LOG] SoundI::release                          :     ScaredOfFlying (000001BCE9FE9518)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 49808736
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 217088
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000B459D4ECE8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFF9F97D3E0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFF9F97D3A0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFF9F97D4C0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFF9F97D580
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001BCF76CC058
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 4
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Its_okay_to_be_afraid', format=5, channels=1, frequency=48000, lengthbytes=75456, lengthpcm=411565, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.477875.
+[LOG] SoundI::release                          :  (000001BEA282EE58)
+[LOG] SoundI::release                          :     Its_okay_to_be_afraid (000001BCE9FE9698)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001BEC80E8F28, queue head = 000001BEC80E88A8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001BEC80E8F28
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Sound/fMod Project/fmod/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 49808736
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 217088
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001BDCB739228
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AfraidOfBoats', format=5, channels=1, frequency=48000, lengthbytes=104832, lengthpcm=565498, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.703857.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001BEC80E8F28
+[LOG] SoundI::release                          : AfraidOfBoats (000001BEC80E8F28)
+[LOG] SoundI::release                          :     AfraidOfBoats (000001BCE9FE9398)
+[LOG] SoundI::release                          :     AfraidOfBoats (000001BEF3DAD908)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] BankLoader::serializeBank                : fileversion = 146, compatVersion = 146 (oldest = 44, newest = 146)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 49808736
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 217088
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000B459D4ECE8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFF9F97D3E0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFF9F97D3A0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFF9F97D4C0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFF9F97D580
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001BEE322F898
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 4
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Doesnt_seem_logical', format=5, channels=1, frequency=48000, lengthbytes=39616, lengthpcm=212789, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.500122.
+[LOG] SoundI::release                          :  (000001BEA282EE58)
+[LOG] SoundI::release                          :     Doesnt_seem_logical (000001BCE9FE9398)

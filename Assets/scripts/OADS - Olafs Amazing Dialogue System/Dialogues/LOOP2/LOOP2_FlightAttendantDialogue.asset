@@ -29,11 +29,11 @@ MonoBehaviour:
       first time I''ve come around."'
     playerVoiceLine:
       Guid:
-        Data1: -1835986069
-        Data2: 1328557465
-        Data3: -1315300958
-        Data4: 795426203
-      Path: "event:/Dialog/Main character/Missing/Wait\u2026 you just gave me a snack"
+        Data1: 2095350367
+        Data2: 1135473161
+        Data3: 714141623
+        Data4: -1350505558
+      Path: event:/Dialog/Flight attendent/The first time coming with snacks
     npcReactionVoiceLine:
       Guid:
         Data1: 0

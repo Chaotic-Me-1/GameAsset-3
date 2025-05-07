@@ -47,11 +47,11 @@ MonoBehaviour:
     reactionText: You're about to let him know how you feel about people like him...
     playerVoiceLine:
       Guid:
-        Data1: -1257949319
-        Data2: 1162679414
-        Data3: 828532402
-        Data4: 817112799
-      Path: event:/Dialog/Main character/Get_your_shit_together
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     npcReactionVoiceLine:
       Guid:
         Data1: 0

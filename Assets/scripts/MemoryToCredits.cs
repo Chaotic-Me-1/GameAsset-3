@@ -141,7 +141,6 @@ public class MemoryToCredits : MonoBehaviour
                 yield return StartCoroutine(FadeImage(memoryImage, 0f, 0.6f, imageFadeDuration));
             }
 
-            // ✅ Wait for FMOD deep memory sound to finish
             PLAYBACK_STATE deepState;
             deep.getPlaybackState(out deepState);
             while (deepState == PLAYBACK_STATE.PLAYING)
@@ -198,7 +197,6 @@ public class MemoryToCredits : MonoBehaviour
 
     IEnumerator FadeToCredits()
     {
-        // Stop all FMOD events before leaving
         FMODUnity.RuntimeManager.GetBus("bus:/").stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 
         StartCoroutine(FadeVCA(masterVCA, 0, 1, 2));
