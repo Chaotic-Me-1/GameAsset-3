@@ -62,7 +62,8 @@ MonoBehaviour:
     objectIDsToEnable: []
   - optionText: Screw this! Give me something strong!
     karmaImpact: -1
-    reactionText: "\"Give me something strong to deal with this d\xE9j\xE0 vu!\""
+    reactionText: "\"Screw this! Give me something strong to deal with this d\xE9j\xE0
+      vu!\""
     playerVoiceLine:
       Guid:
         Data1: -1783275760

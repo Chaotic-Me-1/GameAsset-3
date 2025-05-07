@@ -24,7 +24,7 @@ MonoBehaviour:
   options:
   - optionText: Love?
     karmaImpact: -3
-    reactionText: "One word starts to repeat itself in your head\u2014love."
+    reactionText: "One word starts to repeat itself in your head \u2014 \"Love\"."
     playerVoiceLine:
       Guid:
         Data1: -1456043834

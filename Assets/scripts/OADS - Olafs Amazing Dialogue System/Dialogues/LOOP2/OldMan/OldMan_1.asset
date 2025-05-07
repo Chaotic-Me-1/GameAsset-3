@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9da8316cca96434b89229eaa553826f, type: 3}
   m_Name: OldMan_1
   m_EditorClassIdentifier: 
-  promptText: "You turn your attention to a new passenger\u2014an old man, struggling
+  promptText: "You turn your attention to another passenger \u2014 an old man, struggling
     to fasten his seatbelt."
   promptVoiceLine:
     Guid:
