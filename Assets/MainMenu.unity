@@ -8512,6 +8512,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8403943441627819714, guid: bfd8368c71107864895f41a88c6cf2b8,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403943441627819714, guid: bfd8368c71107864895f41a88c6cf2b8,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4862426682315119442}
+    - target: {fileID: 8403943441627819714, guid: bfd8368c71107864895f41a88c6cf2b8,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Optionpart2, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 9172513149911719573, guid: bfd8368c71107864895f41a88c6cf2b8,
         type: 3}
       propertyPath: m_AnchorMax.x
