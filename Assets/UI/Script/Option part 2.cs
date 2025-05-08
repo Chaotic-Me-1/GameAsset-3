@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Optionpart2 : MonoBehaviour
 {
-    [SerializeField] private Toggle fullscreenToggle;
+    [SerializeField] private Toggle fullscreenToggle;//connects to the toggel in the mneu to add fullscreen setting to
 
     private void Start()
     {
@@ -24,7 +24,8 @@ public class Optionpart2 : MonoBehaviour
     public void SetToFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
-        PlayerPrefs.SetInt("fullscreen", isFullscreen ? 1 : 0); // Use "fullscreen" consistently
+        //saves the prefrence were 1 is fullscreen and 0 is windowed 
+        PlayerPrefs.SetInt("fullscreen", isFullscreen ? 1 : 0);
         PlayerPrefs.Save();
         Debug.Log("Fullscreen button clicked"); //Sending a debut to see if the check boxs have been clicked 
     }
@@ -32,11 +33,11 @@ public class Optionpart2 : MonoBehaviour
     // Load the fullscreen preference
     public void LoadFullscreen()
     {
-        // Use the same key "fullscreen" to match the saved value
+        //Loade the saved default fullscreen thats 1
         bool savedFullscreen = PlayerPrefs.GetInt("fullscreen", 1) == 1;
-        Screen.fullScreen = savedFullscreen;
+        Screen.fullScreen = savedFullscreen; //applies the fullscreen mode
 
-        // Sync the toggle if it's assigned
+        // If the fullscreen toggle exists in the scene, update its checked state to match the saved setting
         if (fullscreenToggle != null)
             fullscreenToggle.isOn = savedFullscreen;
     }
