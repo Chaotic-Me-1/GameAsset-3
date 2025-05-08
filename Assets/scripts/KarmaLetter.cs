@@ -2,13 +2,18 @@ using UnityEngine;
 using FMODUnity;
 using TMPro;
 
+// Script by OlafRT
+// This script is the mysterious letter you get during the game.
+// It acts similarly to the other interactable objects in the scene, like the leaflet,
+// but also shows a dialogue when interacted with.
+
 public class KarmaLetter : MonoBehaviour, IInteractable
 {
     [Header("Dialogue")]
-    [Tooltip("The dialogue to open when the letter is picked up")]
+    [Tooltip("The dialogue data to open when the letter is picked up")]
     public DialogueData letterDialogue;
 
-    [Header("Glow (HDRP)")]
+    [Header("HDRP glow")]
     public Color  emissionColor         = Color.white;
     public float  emissionNitsIntensity = 2000f;
 
@@ -32,7 +37,7 @@ public class KarmaLetter : MonoBehaviour, IInteractable
     {
         if (letterDialogue == null)
         {
-            Debug.LogWarning("LetterDialogueInteractable: No DialogueData assigned!");
+            Debug.LogWarning("LetterDialogueInteractable: No DialogueData");
             return;
         }
 
@@ -44,12 +49,12 @@ public class KarmaLetter : MonoBehaviour, IInteractable
         if (!openLetterEvent.IsNull)
             RuntimeManager.PlayOneShot(openLetterEvent);
 
-        // Disable interaction after opening
+        // Disable interaction after opening, so we can't open it again.
         Collider col = GetComponent<Collider>();
         if (col != null)
             col.enabled = false;
 
-        // Disable glow to show it's no longer active
+        // Disable the glow to show that its no longer active
         DisableGlow();
     }
 
@@ -59,12 +64,12 @@ public class KarmaLetter : MonoBehaviour, IInteractable
         string playerName = PlayerNameManager.instance &&
                             !string.IsNullOrEmpty(PlayerNameManager.instance.playerName)
                             ? PlayerNameManager.instance.playerName
-                            : "Passenger";
+                            : "Passenger"; // passenger is the default name if no name was entered at hte main menu.
 
-        // replace in prompt
+        // this gets replaced in the prompt text of the dialoguedata
         data.promptText = data.promptText.Replace("{NAME}", playerName);
 
-        // replace inside each option / reaction
+        // this will replace inside each option / reaction if we want that too
         foreach (var opt in data.options)
         {
             if (opt == null) continue;

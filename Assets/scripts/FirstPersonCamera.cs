@@ -1,5 +1,8 @@
 using UnityEngine;
 
+// Script by OlafRT (unused)
+// Simple camera script, ended up using the FirstPersonBodyLook script instead for camera movement though.
+
 public class FirstPersonCamera : MonoBehaviour
 {
     public float mouseSensitivity = 100f;
@@ -16,7 +19,7 @@ public class FirstPersonCamera : MonoBehaviour
 
     void Update()
     {
-        if (!cameraActive) return; // ⛔ Pause camera movement during dialogue
+        if (!cameraActive) return; // Pause camera movement during dialogue
 
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;

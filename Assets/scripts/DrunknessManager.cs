@@ -2,14 +2,18 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
 
+// Script by OlafRT
+// Controls the players level of intoxication and visual effects to go along with it. 
+// It uses post-processing ((HDRP) blur, vignette, distortion) and decays the drunkenness over time. 
+// Other scripts can increase drunkenness, and effects dynamically scale with it
+
 public class DrunknessManager : MonoBehaviour
 {
     public static DrunknessManager instance;
 
-    [Range(0, 100)] public float currentDrunkness = 0f;
-    public float decayRate = 5f;
+    [Range(0, 100)] public float currentDrunkness = 0f; // How drunk we are
+    public float decayRate = 5f; // How fast you sober up
 
-    [Header("Post-processing Volume")]
     public Volume postProcessVolume;
 
     public FirstPersonBodyLook bodyLook;
@@ -50,7 +54,7 @@ public class DrunknessManager : MonoBehaviour
         currentDrunkness = Mathf.MoveTowards(currentDrunkness, 0f, decayRate * Time.deltaTime);
         float drunkPercent = currentDrunkness / 100f;
 
-        // Blur should only activate when there's enough drunkness
+        // Blur only activates when your drunkness is high enough!
         if (blur != null)
         {
             bool shouldBlur = drunkPercent > 0.01f;
@@ -67,11 +71,11 @@ public class DrunknessManager : MonoBehaviour
             }
         }
 
-        // Vignette: 0.32 → 0.42
+        // Vignette minimum to maximum
         if (vignette != null)
             vignette.intensity.value = Mathf.Lerp(0.32f, 0.42f, drunkPercent);
 
-        // Lens Distortion: 0 → -0.65
+        // Lens Distortion minimum to maximum
         if (distortion != null)
             distortion.intensity.value = Mathf.Lerp(0f, -0.65f, drunkPercent);
     }
@@ -83,7 +87,6 @@ public class DrunknessManager : MonoBehaviour
 
     public void TriggerBlur(float intensity)
     {
-        // Optional: immediately boost the blurFade target
         currentDrunkness = Mathf.Clamp(currentDrunkness + intensity, 0f, 100f);
     }
 }

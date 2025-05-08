@@ -3,6 +3,9 @@ using UnityEngine.UI;
 using FMODUnity;
 using FMOD.Studio;
 
+// Script by OlafRT
+// just lets us open/close the UI with a sound
+
 public class LeafletUI : MonoBehaviour
 {
     public GameObject leafletPanel;

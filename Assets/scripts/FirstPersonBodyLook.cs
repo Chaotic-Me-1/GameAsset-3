@@ -1,5 +1,10 @@
 using UnityEngine;
 
+// Script by OlafRT
+// Camera controller script where we are rotating joints aswell to get a more
+// realistic sense of looking around.
+// We're also adjusting the camera if you are drunk using Mathf.Sin to make you sway around you drunkard!
+
 public class FirstPersonBodyLook : MonoBehaviour
 {
     public float mouseSensitivity = 100f;

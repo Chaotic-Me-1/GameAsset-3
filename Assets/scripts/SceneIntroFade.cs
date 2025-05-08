@@ -6,6 +6,11 @@ using System.Collections;
 using FMODUnity;
 using FMOD.Studio;
 
+// Script by OlafRT
+// This script makes it look and sound like the player is waking up when the scene loads/reloads. We're adjusting the vignette for the opening of the eyes and also fading a black image.
+// We're playing this at the start of every scene, and also this script is where we fade in the master VCA again after 
+// muting it in the MemoryTrigger.cs script...
+
 public class SceneIntroFade : MonoBehaviour
 {
     [Header("Fade Settings")]
@@ -20,7 +25,7 @@ public class SceneIntroFade : MonoBehaviour
 
     void Start()
     {
-        // Restore Master VCA volume on scene start
+        // Fade back in Master VCA volume on scene start
         VCA masterVCA = RuntimeManager.GetVCA("vca:/Master");
         masterVCA.setVolume(1f);
 
@@ -83,7 +88,7 @@ public class SceneIntroFade : MonoBehaviour
         }
 
         if (fadeImage != null)
-            fadeImage.gameObject.SetActive(false); // when fully faded, disable the UI image
+            fadeImage.gameObject.SetActive(false); // when fully faded, disable the UI fade image
 
         if (vignette != null)
         {

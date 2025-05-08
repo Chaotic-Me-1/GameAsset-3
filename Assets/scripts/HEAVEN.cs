@@ -3,6 +3,14 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
 
+// Script by OlafRT
+// Heaven script, similar to Hell script.
+// We check for what loop we are on (using the LoopCycleManager) 
+// How much karma we have (using the KarmaManager). 
+// According to the amount that we have, it will enable a gameobject (a parent with other gameobjects)
+// The script also change the color of the directional light in the scene and the color of certain parts of the sky, like the zenith, horizon and aeorosol. 
+// The script also “animates” the flare size of the sun, making it larger and larger. We also pitch the plane either up.
+
 public class HEAVEN : MonoBehaviour
 {
     [Header("Karma / Loop")]
@@ -76,7 +84,7 @@ public class HEAVEN : MonoBehaviour
             if (hdLight != null)
                 hdLight.flareSize = initialFlareSize;
             else
-                Debug.LogWarning($"{name}: Sun light has no HDAdditionalLightData");
+                Debug.LogWarning($"{name}: Sun light has no HDAdditionalLightData, so fix that!");
         }
     }
 

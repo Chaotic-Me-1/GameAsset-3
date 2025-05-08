@@ -2,6 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
+// Script by OlafRT
+// Basically a tutorial that detects player input to advance through camera control, leaning, arm control, depth movement, and interaction steps. 
+// Uses fading UI text and saves progress with PlayerPrefs so that you never have to see it again after having learned how to play.
+
 public class MovementTutorial : MonoBehaviour
 {
     public Text tutorialText;
@@ -96,7 +100,7 @@ public class MovementTutorial : MonoBehaviour
     {
         isFading = true;
 
-        // Fade out current message
+        // Fade out message
         yield return FadeText(1f, 0f);
         currentStep = nextStep;
 
@@ -137,7 +141,7 @@ public class MovementTutorial : MonoBehaviour
         }
     }
 
-    // Call this externally from your interact system when the player actually interacts
+    // Call this from interact system when the player interacts with stuffs
     public void MarkAsInteracted()
     {
         hasInteracted = true;

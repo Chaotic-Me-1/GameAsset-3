@@ -1,6 +1,10 @@
 using UnityEngine;
 using FMODUnity;
 
+// Script by OlafRT
+// This interactable drink lets us pick it up and hold it in our IK arms hand, drink it by pressing E, get drunk if it has alcohol in it (alcoholstrength)
+// it deletes the liquid afterwards, and then we cant drink it again.
+
 public class DrinkInteractable : MonoBehaviour, IInteractable
 {
     [Range(0, 100)]
@@ -12,12 +16,12 @@ public class DrinkInteractable : MonoBehaviour, IInteractable
     [Header("References")]
     public DrunknessManager drunknessManager;
     public GameObject hintTextUI;
-    public GameObject objectToDestroyOnDrink; // 🍷 like the liquid inside
-    public EventReference drinkSound;         // 🎧 FMOD one-shot
+    public GameObject objectToDestroyOnDrink; // The liquid inside the drink
+    public EventReference drinkSound;         // FMOD one-shot sound
 
     [Header("Hand Pose")]
-    public Transform jointToTwist; // 👋 Assign your wrist/thumb/etc. joint here
-    public Vector3 jointRotationOffset = new Vector3(0f, -30f, 0f); // example offset
+    public Transform jointToTwist; // Assign wrist/thumb joint
+    public Vector3 jointRotationOffset = new Vector3(0f, -30f, 0f);
     private Quaternion originalJointRotation;
     
     private bool isTwistingJoint = false;
@@ -68,7 +72,7 @@ public class DrinkInteractable : MonoBehaviour, IInteractable
         }
 
         if (hintTextUI != null && !hasBeenDrunk)
-            hintTextUI.SetActive(true); // Only show hint if there's something to drink
+            hintTextUI.SetActive(true); // Only show hint if there's something to drink (so, not when its empty)
 
         if (jointToTwist != null)
         {
@@ -79,10 +83,10 @@ public class DrinkInteractable : MonoBehaviour, IInteractable
 
     void Update()
     {
-        // ☕️ Press E to drink only if not already drunk
+        // Press E to drink only if not already drunk
         if (isHeld && !hasBeenDrunk && Input.GetKeyDown(KeyCode.E))
         {
-            // 🎧 Play drink sound
+            // Play drink sound
             if (!drinkSound.IsNull)
             {
                 FMOD.Studio.EventInstance sfx = RuntimeManager.CreateInstance(drinkSound);
@@ -91,14 +95,14 @@ public class DrinkInteractable : MonoBehaviour, IInteractable
                 sfx.release();
             }
 
-            // 💫 Get tipsy
+            // Get tipsy
             if (drunknessManager != null)
             {
                 drunknessManager.ApplyDrunkness(alcoholStrength);
                 drunknessManager.TriggerBlur(alcoholStrength);
             }
 
-            // 🍷 Hide liquid only
+            // Hide liquid
             if (objectToDestroyOnDrink != null)
             {
                 objectToDestroyOnDrink.SetActive(false);
@@ -110,7 +114,7 @@ public class DrinkInteractable : MonoBehaviour, IInteractable
                 hintTextUI.SetActive(false); // Hide prompt after drinking
         }
 
-        // 🖱 Let go of the object
+        // Let go of the object
         if (isHeld && Input.GetMouseButtonUp(0))
         {
             Release();

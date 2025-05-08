@@ -1,6 +1,10 @@
 using UnityEngine;
 using TMPro;
 
+// Script by OlafRT
+// We're getting the players name from the playernamemanager and using this
+// script to display the name on a textmeshpro.
+
 public class DisplayPlayerName : MonoBehaviour
 {
     public TextMeshProUGUI uiText;
@@ -21,7 +25,7 @@ public class DisplayPlayerName : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("PlayerNameManager instance doesnt exist!!!.");
+            Debug.LogWarning("PlayerNameManager doesnt exist!!!.");
         }
     }
 }

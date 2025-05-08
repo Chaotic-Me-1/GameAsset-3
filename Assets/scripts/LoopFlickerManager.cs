@@ -2,6 +2,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
 
+// Script by OlafRT
+// This script flickers some lights and emissives (in groups) on materials on certain loops, we can set what lights and emissives
+// we want to change, and how much we want to flicker them. We also tint the lights color depending on karma points.
+
 public class LoopFlickerManager : MonoBehaviour
 {
     [System.Serializable]
@@ -12,7 +16,7 @@ public class LoopFlickerManager : MonoBehaviour
         [Range(0f, 10f)] public float flickerEVRange = 1f;
     }
 
-    [Header("Loop Flicker Configuration")]
+    [Header("Loop Flicker config")]
     public List<FlickerGroup> flickerByLoop = new List<FlickerGroup>();
     public float baseEV100 = 10f;
     public float flickerSpeed = 2f;
@@ -47,8 +51,7 @@ public class LoopFlickerManager : MonoBehaviour
 
             FlickerGroup group = flickerByLoop[i];
 
-            // Threshold-based flicker: below threshold = OFF
-            float flickerThreshold = 0.3f; // adjust for how frequent the "off" is
+            float flickerThreshold = 0.3f;
             bool flickerOn = currentFlicker > flickerThreshold;
 
             float ev100Value = flickerOn ? baseEV100 : 0f;

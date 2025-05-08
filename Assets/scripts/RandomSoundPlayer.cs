@@ -3,17 +3,20 @@ using System.Collections;
 using FMODUnity; 
 using FMOD.Studio;
 
+// Script by OlafRT
+// Plays those cabin chime sounds everyone once in a while, depending on how much we set the intervals to. Also plays it at the start of the game.
+
 public class RandomSoundPlayer : MonoBehaviour
 {
     [SerializeField]
     private EventReference fmodEvent;
 
-    public float minInterval = 180f; // 3 minutes
-    public float maxInterval = 600f; // 10 minutes
+    public float minInterval = 180f;
+    public float maxInterval = 600f;
 
     private void Start()
     {
-        // Play sound when game starts
+        // Play the chime sound when the game starts
         if (!fmodEvent.IsNull)
         {
             RuntimeManager.PlayOneShot(fmodEvent, transform.position);

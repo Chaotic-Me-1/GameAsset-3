@@ -3,6 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+// Script by OlafRT (unused)
+// Fades to the credits scene by gradually fading in an image on the canvas, but we ended up using the MemoryToCredits.cs instead.
+
 public class FadeToCredits : MonoBehaviour
 {
     [Header("UI")]

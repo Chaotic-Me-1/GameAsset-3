@@ -1,6 +1,10 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+// Script by OlafRT
+// Let's us interact with things using our hand.
+// If you are touching something and click it, it interacts.
+
 public class HandInteraction : MonoBehaviour
 {
     public MovementTutorial tutorial;
@@ -14,7 +18,7 @@ public class HandInteraction : MonoBehaviour
 
     void Update()
     {
-        // Skip during dialogue or magazine interaction
+        // During dialogue or magazine interaction, we don't want to interact
         if (GameState.IsMagazineOpen || DialogueManager.IsDialogueActive)
             return;
 

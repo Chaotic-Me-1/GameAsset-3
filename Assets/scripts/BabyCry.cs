@@ -3,14 +3,22 @@ using System.Collections;
 using FMODUnity;
 using FMOD.Studio;
 
+// Script by OlafRT
+// This crying baby is a nuisance!
+// After a delay that we set in the inspector, the baby starts crying, plays fMod audio, 
+// and triggers dialogue. Depending on the players choice, crying may stop, 
+// continue forever, or finish naturally. 
+
 public class BabyCry : MonoBehaviour
 {
+
+
     [SerializeField] private Animator animator;
     [SerializeField] private EventReference cryEvent;
 
     [Header("Timing")]
-    public float delayBeforeCry = 5f; // ⏱ Time after enable before crying starts
-    public float cryDuration = 5f;    // How long the baby cries
+    public float delayBeforeCry = 5f; // Time after we enable the gameobject before the baby starts screeching horribly
+    public float cryDuration = 5f;    // How long the baby cries for
 
     [Header("Dialogue")]
     public DialogueData cryingBabyDialogue;
@@ -23,7 +31,7 @@ public class BabyCry : MonoBehaviour
 
     void OnEnable()
     {
-        StopAllCoroutines(); // In case it's already running
+        StopAllCoroutines();
         StartCoroutine(DelayedCryStart());
     }
 
@@ -108,7 +116,7 @@ public class BabyCry : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No DialogueData assigned to BabyCry!", this);
+            Debug.LogWarning("You didn't put a DialogueData on the babycry you idiot!!", this);
         }
     }
 
@@ -122,14 +130,14 @@ public class BabyCry : MonoBehaviour
         else if (choiceIndex == 1)
         {
             isCryingForever = true;
-            Debug.Log("The baby is now crying forever! >:)");
+            Debug.Log("The baby is now crying forever!! >:)");
             StopAllCoroutines();
             StopCrying();
             StartCoroutine(CryForeverLoop());
         }
         else if (choiceIndex == 2)
         {
-            // Let it finish naturally
+            // Just let the baby finish crying naturally
         }
     }
 }

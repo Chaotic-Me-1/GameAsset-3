@@ -1,20 +1,20 @@
 using UnityEngine;
 
+// Script by OlafRT
+// Sloooooowly rotates the directional light (sun), this also has a starry dome attached to it, so the stars will also rotate with the sun.
+// This script turned out to be a bit redundant as you won't really ever stay in a loop long enough that you get to see a full day/night cycle.
+
 public class SunRotation : MonoBehaviour
 {
-    // Rotation speed in degrees per second.
+    // Rotation speed (degrees per second)
     public float rotationSpeed = 1.0f;
     
-    // Current X rotation.
     private float currentX;
-    
-    // Store the initial Y and Z rotations.
     private float initialY;
     private float initialZ;
 
     void Start()
     {
-        // Use localEulerAngles in case this object is part of a hierarchy.
         currentX = transform.localEulerAngles.x;
         initialY = transform.localEulerAngles.y;
         initialZ = transform.localEulerAngles.z;
@@ -22,10 +22,10 @@ public class SunRotation : MonoBehaviour
 
     void Update()
     {
-        // Increase the X rotation.
+        // Increase X rotation.
         currentX += rotationSpeed * Time.deltaTime;
         
-        // Wrap the angle when a full rotation is reached.
+        // Wrap the angle when a full rotation is reached, so we dont get high numbers.
         if (currentX >= 360f)
         {
             currentX -= 360f;

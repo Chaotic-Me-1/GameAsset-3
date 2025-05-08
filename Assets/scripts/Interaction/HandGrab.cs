@@ -1,5 +1,10 @@
 using UnityEngine;
 
+// Script by OlafRT
+// Makes it so your hand opens/closes when you press the mouse button.
+// just makes it a bit more immersive and fun.
+// using very specific rotations because of the rig of the players model.
+
 public class HandGrab : MonoBehaviour
 {
     [Header("Joints")]
@@ -20,7 +25,7 @@ public class HandGrab : MonoBehaviour
 
     void LateUpdate()
     {
-        // Automatically update grab state based on left mouse
+        // Update grab based on left mouse click
         bool isGrabbing = Input.GetMouseButton(0);
 
         float target = isGrabbing ? 1f : 0f;

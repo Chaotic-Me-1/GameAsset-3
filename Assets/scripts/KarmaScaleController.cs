@@ -1,5 +1,10 @@
 using UnityEngine;
 
+// Script by OlafRT
+// the scales of Ma'at (truth)
+// this script adjusts the scales depending on your current amount of karma
+// by adjusting the rotation of the arm and the height (Y) poistion of the bowls.
+
 public class KarmaScaleController : MonoBehaviour
 {
     [Header("References")]
@@ -10,7 +15,7 @@ public class KarmaScaleController : MonoBehaviour
     [Header("Karma Settings")]
     [Range(0, 100)]
     public int karmaPoints = 50; // Default neutral
-    private float targetZRotation; // Calculated target rotation for the arm
+    private float targetZRotation; // Target rotation for the arm
 
     [Header("Bowl Vertical Movement")]
     public float defaultBowlY = 1f; // Default Y position for bowls at neutral
@@ -18,23 +23,23 @@ public class KarmaScaleController : MonoBehaviour
 
     void Update()
     {
-        // Get current karma from KarmaManager (if you’re using the singleton system)
+        // Get current karma from KarmaManager
         if (KarmaManager.instance != null)
             karmaPoints = KarmaManager.instance.karmaPoints;
 
-        // Map karma (0–100) to rotation (-15 to 15)
+        // Adjust karma (0–100) to the rotation (-15 to 15)
         targetZRotation = Mathf.Lerp(-15f, 15f, karmaPoints / 100f);
 
         // Apply rotation to arm
         Quaternion armRotation = Quaternion.Euler(0f, 0f, targetZRotation);
         arm.localRotation = armRotation;
 
-        // Calculate vertical offset based on rotation
+        // Vertical offset based on rotation
         float normalizedRotation = targetZRotation / 15f; // -1 to 1
-        float leftBowlY = defaultBowlY + (-normalizedRotation * bowlYOffset);  // Inverse for left
-        float rightBowlY = defaultBowlY + (normalizedRotation * bowlYOffset);  // Direct for right
+        float leftBowlY = defaultBowlY + (-normalizedRotation * bowlYOffset);
+        float rightBowlY = defaultBowlY + (normalizedRotation * bowlYOffset);
 
-        // Apply bowl positions (only change Y)
+        // Apply bowl positions on the Y axis
         Vector3 leftPos = leftBowl.localPosition;
         leftBowl.localPosition = new Vector3(leftPos.x, leftBowlY, leftPos.z);
 

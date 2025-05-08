@@ -1,10 +1,17 @@
 using UnityEngine;
 
+// Script by OlafRT
+// Controls an IK arm target using mouse input. 
+// While holding the right mouse button, you can move the arm target in 3D space relative to the camera, 
+// including adjusting the depth via using the scroll wheel. 
+// It restricts movement within a maximum distance from the shoulder 
+// and orients the arm to face the direction we are looking in with the camera! 
+
 public class ArmTargetController : MonoBehaviour
 {
     public Transform armTarget;
     public Transform shoulder;
-    public Transform cameraTransform; // Main camera reference
+    public Transform cameraTransform;
 
     public float moveSpeed = 0.2f;
     public float depthSpeed = 0.5f;
@@ -15,7 +22,7 @@ public class ArmTargetController : MonoBehaviour
 
     void Start()
     {
-        // Store initial offset from shoulder in world space
+        // Store offset from shoulder (in world)
         defaultOffset = armTarget.position - shoulder.position;
     }
 
@@ -57,7 +64,7 @@ public class ArmTargetController : MonoBehaviour
         }
     }
 
-    void LateUpdate() // Make sure it runs after movement
+    void LateUpdate()
     {
         if (isControlling)
         {

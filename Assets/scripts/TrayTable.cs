@@ -1,13 +1,17 @@
 using System.Collections;
 using UnityEngine;
 
+// Script by OlafRT
+// Rotates the tray table stuff when the drink is served so the drink has somewhere to stay!
+// otherwise it would just fall right to the floor, you know...
+
 public class TrayTable : MonoBehaviour
 {
     [System.Serializable]
     public class ObjectRotation
     {
         public Transform targetObject;
-        public Vector3 desiredRotation; // in Euler angles
+        public Vector3 desiredRotation;
     }
 
     public ObjectRotation[] targetsToRotate;
@@ -16,7 +20,7 @@ public class TrayTable : MonoBehaviour
 
     void OnEnable()
     {
-        // Apply rotations immediately
+        // Rotate immediately
         foreach (var entry in targetsToRotate)
         {
             if (entry.targetObject != null)
@@ -25,7 +29,7 @@ public class TrayTable : MonoBehaviour
             }
         }
 
-        // Handle Rigidbody delay
+        // Rigidbody delay so that the drink cant clip through the table.
         rb = GetComponent<Rigidbody>();
         if (rb != null)
         {

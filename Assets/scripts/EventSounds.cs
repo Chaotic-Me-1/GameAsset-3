@@ -3,6 +3,9 @@ using FMODUnity;
 using FMOD.Studio;
 using System.Collections;
 
+// Script by OlafRT, possibly edited by Odin?
+// plays fmod sounds on animation events. Used on the flight attendant
+
 public class EventSounds : MonoBehaviour
 {
     [Header("FMOD Events")]

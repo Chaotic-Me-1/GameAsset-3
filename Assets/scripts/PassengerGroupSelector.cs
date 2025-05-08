@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script by OlafRT
+// Lets us set a group of passengers (gameobject) for the different loops, so they can be positioned differently.
+
 public class PassengerGroupSelector : MonoBehaviour
 {
     [Header("Passenger Groups (Index = Loop Number)")]
@@ -14,7 +17,7 @@ public class PassengerGroupSelector : MonoBehaviour
         {
             LoopCycleManager.instance.OnLoopStarted += SetGroupForLoop;
 
-            // Also set up immediately in case this is the first load
+            // Set up immediately in case this is the first load
             SetGroupForLoop(LoopCycleManager.instance.loopCount);
         }
     }

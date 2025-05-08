@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script by OlafRT
+// The interactable part of the entertainment system, this is the part that lets us open it
+// by touching it and clicking on it with our hand. Like the other interactable stuff, this glows when touched and then
+// opens UI when clicked on.
+
 public class EntertainmentInteractable : MonoBehaviour, IInteractable
 {
     public EntertainmentUIManager uiManager;
@@ -9,7 +14,7 @@ public class EntertainmentInteractable : MonoBehaviour, IInteractable
     private Renderer rend;
     private MaterialPropertyBlock propBlock;
 
-    [Header("Glow Settings (HDRP Nits)")]
+    [Header("Glow")]
     public Color emissionColor = Color.white;
     public float emissionNitsIntensity = 2000f;
 

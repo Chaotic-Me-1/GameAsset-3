@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 using FMODUnity;
 using FMOD.Studio;
 
+// Script by OlafRT
+// Lets us pause the game, that means setting the timescale to 0, showing the cursor, showing UI, pausing all sounds (fmod), videos and particles
+// We're also not toggling the pause menu if any of the interactable UIs are open.
+
 public class PauseManager : MonoBehaviour
 {
     [Header("Pause Menu")]
@@ -135,7 +139,7 @@ public class PauseManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Main menu scene name not set!");
+            Debug.LogWarning("Main menu scene not set!");
         }
     }
 }

@@ -4,6 +4,14 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
 
+// Script by OlafRT
+// Hell script, similar to Heaven script.
+// We check for what loop we are on (using the LoopCycleManager) 
+// How much karma we have (using the KarmaManager). 
+// According to the amount that we have, it will enable a gameobject (a parent with other gameobjects)
+// The script also change the color of the directional light in the scene and the color of certain parts of the sky, like the zenith, horizon and aeorosol. 
+// We also pitch the plane down and animate a vignette to make it seem like the smoke is getting in your eyes.
+
 public class HELL : MonoBehaviour
 {
     [Header("Karma")]

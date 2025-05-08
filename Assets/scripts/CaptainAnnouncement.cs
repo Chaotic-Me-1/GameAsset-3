@@ -2,6 +2,7 @@ using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
 
+// Script by OlafRT
 // Here we are changing the broadcast sound depending on what loop we are on
 // we are checking the LoopCycleManager script to see what loop we are on, 
 // and then playing the fmod event made for that loop!
@@ -14,7 +15,7 @@ public class CaptainAnnouncement : MonoBehaviour
     public EventReference loop2Announcement;
     public EventReference loop3Announcement;
     public EventReference loop4Announcement;
-    public EventReference fallbackAnnouncement;
+    public EventReference fallbackAnnouncement; // just in case something is not assigned
 
     void Start()
     {

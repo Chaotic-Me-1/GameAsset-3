@@ -1,5 +1,9 @@
 using UnityEngine;
 
+// Script by OlafRT
+// Lets us open and close the window shutter by dragging it up/down.
+// We're interacting with a handle part of it, not the whole shutter.
+
 public class WindowShutter : MonoBehaviour
 {
     [Header("Shutter Setup")]
@@ -10,7 +14,7 @@ public class WindowShutter : MonoBehaviour
     [Header("Movement Settings")]
     public float movementSensitivity = 0.5f;
     public float smoothing = 10f;
-    public float handStickiness = 20f; // Higher = more stuck feeling
+    public float handStickiness = 20f;
 
     [Header("Shutter Movement Offset")]
     public Vector3 shutterOffset = new Vector3(0f, -0.543f, 0.125f);
@@ -19,7 +23,7 @@ public class WindowShutter : MonoBehaviour
     private bool isGrabbing = false;
 
     private Vector3 initialPosition;
-    private float movePercent = 0f; // 0 = open, 1 = closed
+    private float movePercent = 0f;
 
     void Start()
     {
@@ -45,7 +49,7 @@ public class WindowShutter : MonoBehaviour
             movePercent -= mouseY * movementSensitivity;
             movePercent = Mathf.Clamp01(movePercent);
 
-            // Stick the hand to the handle
+            // Stick hand to the handle
             handTarget.position = Vector3.Lerp(handTarget.position, handleTransform.position, Time.deltaTime * handStickiness);
         }
 

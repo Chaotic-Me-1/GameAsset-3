@@ -6,6 +6,12 @@ using TMPro;
 using FMODUnity;
 using FMOD.Studio;
 
+// Script by OlafRT
+// This script is basically the same as MemoryTrigger.cs, but we're going to the credits scene here, not adding a loop and
+// restarting the same scene.
+// Plays a memory with animated/static visuals, fading out background audio via FMOD, 
+// The player can skip by pressing a key (default is space) multiple times or wake up after a delay. 
+
 public class MemoryToCredits : MonoBehaviour
 {
     [Header("Timings")]

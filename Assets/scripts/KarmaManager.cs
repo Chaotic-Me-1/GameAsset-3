@@ -1,5 +1,9 @@
 using UnityEngine;
 
+// Script by OlafRT
+// This keeps track of the karma points the player has,
+// starting at a neutral 50.
+
 public class KarmaManager : MonoBehaviour
 {
     public static KarmaManager instance;
@@ -12,7 +16,7 @@ public class KarmaManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Keep across scenes if needed
+            DontDestroyOnLoad(gameObject); // Makes sure we still have the current amount of karma across the loops.
         }
         else
         {
@@ -23,19 +27,18 @@ public class KarmaManager : MonoBehaviour
     public void AddKarma(int amount)
     {
         karmaPoints = Mathf.Clamp(karmaPoints + amount, 0, 100);
-        Debug.Log("Karma Changed: " + karmaPoints);
+        Debug.Log("Karma changed: " + karmaPoints);
     }
 
     public void SubtractKarma(int amount)
     {
         karmaPoints = Mathf.Clamp(karmaPoints - amount, 0, 100);
-        Debug.Log("Karma Changed: " + karmaPoints);
+        Debug.Log("Karma changed: " + karmaPoints);
     }
 
-    // Optional: For future scale visuals
     public float GetKarmaPercentage()
     {
-        return karmaPoints / 100f; // Useful for animations later
+        return karmaPoints / 100f;
     }
 }
 

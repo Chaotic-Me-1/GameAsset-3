@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script by OlafRT
+// This is where we "save" the players name by setting it from the input field and then
+// making sure it doesn't get destroyed on load.
+
 public class PlayerNameManager : MonoBehaviour
 {
     public static PlayerNameManager instance;

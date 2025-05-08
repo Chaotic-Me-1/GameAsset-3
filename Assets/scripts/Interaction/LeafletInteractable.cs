@@ -2,6 +2,11 @@ using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
 
+// Script by OlafRT
+// The first interaction script, and not very interesting, however it was a nice test of the interaction system.
+// Glows when the hand touches it
+// Opens a UI when interacted with and plays a sound.
+
 public class LeafletInteractable : MonoBehaviour, IInteractable
 {
     public LeafletUI leafletUI;
@@ -9,9 +14,9 @@ public class LeafletInteractable : MonoBehaviour, IInteractable
     private Renderer rend;
     private MaterialPropertyBlock propBlock;
 
-    [Header("Glow Settings (HDRP Nits)")]
+    [Header("Glow")]
     public Color emissionColor = Color.white;
-    public float emissionNitsIntensity = 2000f; // Strong glow
+    public float emissionNitsIntensity = 2000f;
 
     [Header("Audio")]
     public EventReference openLeafletEvent;
@@ -62,7 +67,7 @@ public class LeafletInteractable : MonoBehaviour, IInteractable
             EventInstance instance = RuntimeManager.CreateInstance(openLeafletEvent);
             RuntimeManager.AttachInstanceToGameObject(instance, transform, GetComponent<Rigidbody>());
             instance.start();
-            instance.release(); // Let FMOD handle cleanup
+            instance.release();
         }
     }
 }

@@ -7,10 +7,10 @@ public class AnimTrigger : MonoBehaviour
     [Tooltip("GameObject that has (or is) the Animator")]
     public GameObject targetObject;
 
-    [Tooltip("Trigger name in the Animator. Leave empty to just Play the default state.")]
+    [Tooltip("Trigger name in the Animator.")]
     public string triggerName = "Play";
 
-    [Header("Optional delay")]
+    [Header("Delay")]
     [Min(0f)]
     public float delayBeforePlay = 0f;
 
@@ -22,7 +22,7 @@ public class AnimTrigger : MonoBehaviour
             anim = targetObject.GetComponent<Animator>();
 
         if (anim == null)
-            Debug.LogWarning($"{name}: No Animator found on targetObject.");
+            Debug.LogWarning($"{name}: No Animator!!!!.");
     }
 
     void OnEnable()

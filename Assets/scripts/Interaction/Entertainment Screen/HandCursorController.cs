@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Script by OlafRT
+// Overlays a hand image on top of the cursor, where the pivot point of the image should be set to the
+// point where you want the cursor to be. In this case that would mean the tip of the index finger.
+
 public class HandCursorController : MonoBehaviour
 {
     public Image handImage;
@@ -22,7 +26,7 @@ public class HandCursorController : MonoBehaviour
 
     void Update()
     {
-        // 🔥 Force cursor to remain hidden every frame (especially after UI clicks)
+        // Force cursor to remain hidden every frame
         Cursor.visible = false;
 
         if (handImage == null || !handImage.gameObject.activeInHierarchy)
@@ -46,7 +50,6 @@ public class HandCursorController : MonoBehaviour
 
     void OnDisable()
     {
-        // 🟢 Optional: Restore system cursor when leaving this UI
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Locked;
     }

@@ -8,6 +8,11 @@ using FMODUnity;
 using FMOD.Studio;
 using TMPro;
 
+// Script by OlafRT
+// Loooong script that handles all the entertainment system stuff
+// Here we are displaying different UIs for the different things like Music, Movies, Shows, currently playing and several buttons and sliders.
+// We are getting music from fmod, videos from both locally stored and streaming from URL!!
+
 public class EntertainmentUIManager : MonoBehaviour
 {
     [Header("Main UI Panels")]
@@ -23,7 +28,7 @@ public class EntertainmentUIManager : MonoBehaviour
     public Sprite clickHandSprite;
     public float clickDuration = 0.5f;
 
-    [Header("Shared Controls")]
+    [Header("Controls")]
     public Button playPauseButton;
     public Sprite playIcon;
     public Sprite pauseIcon;
@@ -250,7 +255,7 @@ public class EntertainmentUIManager : MonoBehaviour
     {
         if (isSeeking)
         {
-            SeekInMedia(value); // only seek while dragging
+            SeekInMedia(value);
         }
     }
 

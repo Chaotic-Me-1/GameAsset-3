@@ -1,9 +1,13 @@
 using UnityEngine;
 using FMODUnity;
 
+// Script by OlafRT
+// We're enabling a UI image on the screen or a sprite renderer, playing a sound with fmod and scaling the image up a little bit when it flashes
+// This will hopefully scare the player a little bit!!
+
 public class JumpScare : MonoBehaviour
 {
-    [Header("UI Image or Sprite Renderer, only one at a time pls")]
+    [Header("UI Image or Sprite Renderer, only pick one at a time pls")]
     public UnityEngine.UI.Image uiImage;
     public SpriteRenderer       worldSprite;
 
