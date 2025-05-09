@@ -4,6 +4,7 @@ using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
 
+// script by OLAF - This is just a version that has been slightly altered by Ragnar for use in the Magazine
 public class MagazineInteractable : MonoBehaviour, IInteractable
 {
     public MagazineUI magazineUI;
@@ -15,7 +16,7 @@ public class MagazineInteractable : MonoBehaviour, IInteractable
 
     [Header("Glow Settings (HDRP Nits)")]
     public Color emissionColor = Color.white;
-    public float emissionNitsIntensity = 2000f; // Strong glow
+    public float emissionNitsIntensity = 2000f; 
 
     [Header("Audio")]
     public EventReference openMagazineEvent;
@@ -25,7 +26,7 @@ public class MagazineInteractable : MonoBehaviour, IInteractable
         propBlock = new MaterialPropertyBlock();
 
         if (glowRenderer != null)
-            DisableGlow(); // Ensure it's off by default
+            DisableGlow(); 
     }
 
     [Header("Audio")]

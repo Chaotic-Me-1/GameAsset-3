@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using static UnityEngine.EventSystems.EventTrigger;
 using static UnityEngine.Rendering.DebugUI.Table;
 
+//Script by Ragnar
+//This is the manager for the Crossword. Responsible for the other crossword script and for populating the crossword with cells
 public class CrosswordManager : MonoBehaviour
 {
     public static CrosswordManager Instance;
@@ -30,7 +32,7 @@ public class CrosswordManager : MonoBehaviour
         GenerateGrid();
         PopulateCrossword();
 
-        // Optional: Start at word 1
+        
         currentWord = CrosswordData.Entries.Find(e => e.ClueNumber == 1);
         if (currentWord != null)
         {
@@ -119,10 +121,10 @@ public class CrosswordManager : MonoBehaviour
 
         TextMeshProUGUI text = numberObj.AddComponent<TextMeshProUGUI>();
         text.text = clueNumber.ToString();
-        text.fontSize = 20; // Bigger font
+        text.fontSize = 20; // THIS IS WHERE I CHANGE FONT SIZE!!!
         text.enableAutoSizing = true;
         text.alignment = TextAlignmentOptions.TopLeft;
-        text.color = Color.black;
+        text.color = Color.black; // CHANGE FONT COLOR HERE
 
         RectTransform rt = numberObj.GetComponent<RectTransform>();
         rt.anchorMin = new Vector2(0, 1);

@@ -6,6 +6,9 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.Events;
+
+// This is the main script for the function of the BOOK / Magazine. Slightly altered by Ragnar to incorporate other magazine features
+// 90% Of this script is as it came in the ASSET from Unity Asset Store
 public enum FlipMode
 {
     RightToLeft,

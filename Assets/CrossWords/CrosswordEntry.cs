@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script is by Ragnar
+// This is responsible for holding the words, columns and rows. Also has a cluenumber at the start of each word, but this has dissappeared. 
+
 public enum Direction { Across, Down }
 
 [System.Serializable]
 public class CrosswordEntry
 {
-    public int ClueNumber;     // Number to display in the corner
+    public int ClueNumber;     // NOTE: Fix broken number display
     public string Word;
     public int Row;
     public int Col;

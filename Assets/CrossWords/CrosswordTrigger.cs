@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+// Script by Ragnar
+// This script simply recognizes if the crossword is clicked
+
 public class CrosswordTrigger : MonoBehaviour, IPointerClickHandler
 {
     public GameObject crosswordCanvas;

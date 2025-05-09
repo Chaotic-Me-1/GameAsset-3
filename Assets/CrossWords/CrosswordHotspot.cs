@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+//Script by Ragnar
+// This script makes it possible to click on the magazine to open the crossword
 public class CrosswordHotspot : MonoBehaviour, IPointerClickHandler
 {
     [Header("Reference to the crossword canvas UI")]

@@ -3,6 +3,8 @@ using TMPro;
 using static UnityEngine.Rendering.DebugUI.Table;
 using UnityEngine.UI;
 
+//Script by Ragnar
+// This is where information on each cell in the crossword canvas is. 
 public class CellData : MonoBehaviour
 {
     public int row;

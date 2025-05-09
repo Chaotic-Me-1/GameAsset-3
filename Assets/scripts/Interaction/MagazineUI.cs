@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using FMODUnity;
 using FMOD.Studio;
 
+//Script by Ragnar
+//This script is responsible for opening the magazine
+
 public class MagazineUI : MonoBehaviour
 {
     public GameObject magazinePanel;

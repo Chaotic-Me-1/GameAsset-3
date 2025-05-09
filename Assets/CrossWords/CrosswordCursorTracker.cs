@@ -2,10 +2,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//Script by Ragnar
+//This tracks the cursor over the crossword. Intention was to try to make the pen follow each written letter
+// I don't think this script is working properly
+
 public class CrosswordCursorTracker : MonoBehaviour
 {
-    public RectTransform handCursor; // Assign the CrosswordHand image here
-    public Canvas canvas;             // Reference to the canvas
+    public RectTransform handCursor; 
+    public Canvas canvas;             
 
     public static CrosswordCursorTracker Instance;
 
